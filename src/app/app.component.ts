@@ -9,6 +9,4 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
   styleUrl: './app.component.scss',
   standalone: true,
 })
-export class AppComponent {
-  title = 'Formula1';
-}
+export class AppComponent {}

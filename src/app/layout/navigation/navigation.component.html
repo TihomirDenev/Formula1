@@ -1,1 +1,24 @@
-<p>navigation works!</p>
+<nav>
+  <ul>
+    <li>
+      <a
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        >Home</a
+      >
+    </li>
+
+    <li>
+      <a routerLink="/photos" routerLinkActive="active">Photos</a>
+    </li>
+
+    <li>
+      <a routerLink="/point-system" routerLinkActive="active">Point System</a>
+    </li>
+
+    <li>
+      <a routerLink="/hall-of-fame" routerLinkActive="active">Hall of Fame</a>
+    </li>
+  </ul>
+</nav>

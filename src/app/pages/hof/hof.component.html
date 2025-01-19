@@ -1,1 +1,28 @@
-<p>hof works!</p>
+<h2>Hall of Fame</h2>
+
+<div
+  class="hall-of-fame-container"
+  infinite-scroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollUpDistance]="1.5"
+  [infiniteScrollThrottle]="300"
+  (scrolled)="loadMoreRacers()"
+>
+  <div class="card" *ngFor="let racer of displayedRacers">
+    <img [src]="racer.photo" alt="{{ racer.name }}" class="racer-photo" />
+
+    <div class="racer-info">
+      <h3>{{ racer.name }}</h3>
+      <p>
+        <strong>Country:</strong>
+        {{ racer.country }}
+        <img
+          [src]="'assets/images/flags/' + racer.flag + '.svg'"
+          [alt]="racer.country + ' flag'"
+          class="country-flag"
+        />
+      </p>
+      <p><strong>Win Date:</strong> {{ racer.winDate }}</p>
+    </div>
+  </div>
+</div>

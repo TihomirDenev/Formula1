@@ -7,3 +7,12 @@ export interface PointsSystem {
   pointsByEra5: string;
   pointsByEra6: string;
 }
+
+export interface Racer {
+  id: number;
+  name: string;
+  country: string;
+  winDate: string;
+  photo: string;
+  flag: string;
+}

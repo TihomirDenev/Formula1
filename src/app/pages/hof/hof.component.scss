@@ -1,0 +1,113 @@
+h2 {
+  color: var(--accent-yellow);
+  text-transform: uppercase;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.hall-of-fame-container {
+  padding: 0 2rem 4rem 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+
+  .card {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(
+      90deg,
+      var(--background-main),
+      var(--background-green-end)
+    );
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+    }
+
+    .racer-info {
+      padding: 0 2rem;
+
+      h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: var(--accent-yellow);
+        text-transform: uppercase;
+      }
+
+      p {
+        display: flex;
+        margin: 0.5rem 0;
+        font-size: 1rem;
+        align-items: center;
+        gap: 0.5rem;
+
+        strong {
+          color: var(--text-muted);
+        }
+      }
+
+      .country-flag {
+        width: 24px;
+        height: 16px;
+        border-radius: 3px;
+        border: 1px solid var(--text-light);
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.8px;
+  }
+
+  .hall-of-fame-container {
+    padding: 0 0.5rem 2rem 0.5rem;
+
+    .card {
+      flex-direction: column;
+      text-align: center;
+      max-width: 100%;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      .racer-info {
+        padding: 1rem;
+        font-size: 1rem;
+
+        h3 {
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+          margin: 0.5rem 0;
+        }
+
+        .country-flag {
+          width: 24px;
+          height: 16px;
+        }
+      }
+    }
+  }
+}

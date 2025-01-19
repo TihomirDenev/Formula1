@@ -6,17 +6,36 @@
         routerLink="/"
         routerLinkActive="active"
         [routerLinkActiveOptions]="{ exact: true }"
-        >Home</a
+        >{{ "navigation.home" | translate }}</a
       >
     </li>
     <li>
-      <a routerLink="/point-system" routerLinkActive="active">Point System</a>
+      <a routerLink="/point-system" routerLinkActive="active">{{
+        "navigation.pointSystem" | translate
+      }}</a>
     </li>
     <li>
-      <a routerLink="/hall-of-fame" routerLinkActive="active">Hall of Fame</a>
+      <a routerLink="/hall-of-fame" routerLinkActive="active">{{
+        "navigation.hof" | translate
+      }}</a>
     </li>
     <li>
-      <a routerLink="/photos" routerLinkActive="active">Gallery</a>
+      <a routerLink="/photos" routerLinkActive="active">{{
+        "navigation.gallery" | translate
+      }}</a>
     </li>
   </ul>
+
+  <div>
+    <img
+      src="assets/images/flags/bg.svg"
+      alt="BG"
+      (click)="translateText('bg')"
+    />
+    <img
+      src="assets/images/flags/gb.svg"
+      alt="EN"
+      (click)="translateText('en')"
+    />
+  </div>
 </nav>

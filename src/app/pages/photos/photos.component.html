@@ -1,1 +1,14 @@
-<p>photos works!</p>
+<div
+  class="photos-container"
+  infinite-scroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollUpDistance]="1.5"
+  [infiniteScrollThrottle]="300"
+  (scrolled)="loadMorePhotos()"
+>
+  <div class="photo" *ngFor="let photo of photos">
+    <a [href]="photo" target="_blank" rel="noopener noreferrer">
+      <img [src]="photo" alt="Formula One" />
+    </a>
+  </div>
+</div>

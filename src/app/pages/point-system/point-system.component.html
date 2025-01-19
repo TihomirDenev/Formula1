@@ -1,5 +1,5 @@
 <div class="points-system-container">
-  <h2>Evolution of Formula 1 Points System</h2>
+  <h2>{{ "pointSystem.evolutionOfPoints" | translate }}</h2>
 
   <table>
     <thead>
@@ -17,12 +17,24 @@
     <tbody>
       <tr *ngFor="let system of pointsSystems">
         <td>{{ system.position }}</td>
-        <td>{{ system.pointsByEra1 }} points</td>
-        <td>{{ system.pointsByEra2 }} points</td>
-        <td>{{ system.pointsByEra3 }} points</td>
-        <td>{{ system.pointsByEra4 }} points</td>
-        <td>{{ system.pointsByEra5 }} points</td>
-        <td>{{ system.pointsByEra6 }} points</td>
+        <td>
+          {{ system.pointsByEra1 }} {{ "pointSystem.points" | translate }}
+        </td>
+        <td>
+          {{ system.pointsByEra2 }} {{ "pointSystem.points" | translate }}
+        </td>
+        <td>
+          {{ system.pointsByEra3 }} {{ "pointSystem.points" | translate }}
+        </td>
+        <td>
+          {{ system.pointsByEra4 }} {{ "pointSystem.points" | translate }}
+        </td>
+        <td>
+          {{ system.pointsByEra5 }} {{ "pointSystem.points" | translate }}
+        </td>
+        <td>
+          {{ system.pointsByEra6 }} {{ "pointSystem.points" | translate }}
+        </td>
       </tr>
     </tbody>
   </table>

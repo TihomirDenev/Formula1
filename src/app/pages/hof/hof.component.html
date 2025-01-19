@@ -1,4 +1,4 @@
-<h2>Hall of Fame</h2>
+<h2>{{ "hof.hallOfFame" | translate }}</h2>
 
 <div
   class="hall-of-fame-container"
@@ -14,7 +14,7 @@
     <div class="racer-info">
       <h3>{{ racer.name }}</h3>
       <p>
-        <strong>Country:</strong>
+        <strong>{{ "hof.country" | translate }}:</strong>
         {{ racer.country }}
         <img
           [src]="'assets/images/flags/' + racer.flag + '.svg'"
@@ -22,7 +22,9 @@
           class="country-flag"
         />
       </p>
-      <p><strong>Win Date:</strong> {{ racer.winDate }}</p>
+      <p>
+        <strong>{{ "hof.winDate" | translate }}:</strong> {{ racer.winDate }}
+      </p>
     </div>
   </div>
 </div>

@@ -4,10 +4,11 @@ import { Component, OnInit } from '@angular/core';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { Racer } from '../../interfaces';
 import { HALL_OF_FAME } from './hof.data';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hof',
-  imports: [InfiniteScrollModule, CommonModule],
+  imports: [InfiniteScrollModule, CommonModule, TranslateModule],
   templateUrl: './hof.component.html',
   styleUrl: './hof.component.scss',
 })

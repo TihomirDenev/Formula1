@@ -4,5 +4,17 @@
     "pointSystem": "Point System",
     "hof": "Hall Of Fame",
     "gallery": "Gallery"
+  },
+  "pointSystem": {
+    "evolutionOfPoints": "Evolution of Formula 1 Points System",
+    "points": "points"
+  },
+  "gallery": {
+    "f1Photos": "Formula 1 Photo Gallery"
+  },
+  "hof": {
+    "hallOfFame": "Hall of Fame",
+    "country": "Country",
+    "winDate": "Win Date"
   }
 }

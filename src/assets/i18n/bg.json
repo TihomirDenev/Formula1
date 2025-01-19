@@ -1,8 +1,20 @@
 {
   "navigation": {
     "home": "Начало",
-    "pointSystem": "Точкова Система",
+    "pointSystem": "Система за Точки",
     "hof": "Зала на Славата",
     "gallery": "Галерия"
+  },
+  "pointSystem": {
+    "evolutionOfPoints": "Еволюция на системата за точки във Формула 1",
+    "points": "точки"
+  },
+  "gallery": {
+    "f1Photos": "Галерия със снимки от Формула 1"
+  },
+  "hof": {
+    "hallOfFame": "Зала на славата",
+    "country": "Държава",
+    "winDate": "Победа"
   }
 }

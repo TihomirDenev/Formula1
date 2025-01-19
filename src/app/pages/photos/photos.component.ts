@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 @Component({
   selector: 'app-photos',
-  imports: [InfiniteScrollModule, CommonModule],
+  imports: [InfiniteScrollModule, CommonModule, TranslateModule],
   templateUrl: './photos.component.html',
   styleUrl: './photos.component.scss',
 })

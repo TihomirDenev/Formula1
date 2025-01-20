@@ -3,7 +3,9 @@
     "home": "Home",
     "pointSystem": "Point System",
     "hof": "Hall Of Fame",
-    "gallery": "Gallery"
+    "teams": "Teams",
+    "gallery": "Gallery",
+    "contacts": "Contacts"
   },
   "pointSystem": {
     "evolutionOfPoints": "Evolution of Formula 1 Points System",
@@ -16,5 +18,8 @@
     "hallOfFame": "Hall of Fame",
     "country": "Country",
     "winDate": "Win Date"
+  },
+  "footer": {
+    "content": "Bringing you the best of Formula 1 since 2011."
   }
 }

@@ -7,6 +7,8 @@ import { PhotosComponent } from './pages/photos/photos.component';
 import { PointSystemComponent } from './pages/point-system/point-system.component';
 import { HofComponent } from './pages/hof/hof.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { ContactsComponent } from './pages/contacts/contacts.component';
+import { TeamsComponent } from './pages/teams/teams.component';
 
 export const routes: Routes = [
   {
@@ -17,6 +19,8 @@ export const routes: Routes = [
       { path: 'photos', component: PhotosComponent },
       { path: 'point-system', component: PointSystemComponent },
       { path: 'hall-of-fame', component: HofComponent },
+      { path: 'teams', component: TeamsComponent },
+      { path: 'contacts', component: ContactsComponent },
       { path: '**', component: NotFoundComponent },
     ],
   },

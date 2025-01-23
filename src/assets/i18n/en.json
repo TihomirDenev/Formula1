@@ -1,25 +1,46 @@
 {
-  "navigation": {
-    "home": "Home",
-    "pointSystem": "Point System",
-    "hof": "Hall Of Fame",
-    "teams": "Teams",
-    "gallery": "Gallery",
-    "contacts": "Contacts"
-  },
-  "pointSystem": {
-    "evolutionOfPoints": "Evolution of Formula 1 Points System",
-    "points": "points"
+  "footer": {
+    "allRightsReserved": "All rights reserved.",
+    "content": "Bringing you the best of Formula 1 since 2011."
   },
   "gallery": {
     "f1Photos": "Formula 1 Photo Gallery"
   },
   "hof": {
-    "hallOfFame": "Hall of Fame",
     "country": "Country",
+    "hallOfFame": "Hall of Fame",
     "winDate": "Win Date"
   },
-  "footer": {
-    "content": "Bringing you the best of Formula 1 since 2011."
+  "navigation": {
+    "contacts": "Contacts",
+    "gallery": "Gallery",
+    "hof": "Hall Of Fame",
+    "home": "Home",
+    "pointSystem": "Point System",
+    "teams": "Teams"
+  },
+  "pointSystem": {
+    "evolutionOfPoints": "Evolution of Formula 1 Points System",
+    "points": "points"
+  },
+  "teamInfo": {
+    "Alpine": "Alpine's headquarters is based in Enstone, England. Their base has a storied history in Formula One, having previously served as the headquarters for the Benetton and Renault F1 teams - and you can see nods to that with iconic old cars in the building and trophies from the successes of former drivers like Michael Schumacher and Fernando Alonso. The facility houses the team's design and manufacturing departments, whilst the engine side of the team is based in Viry-Châtillon, France.",
+    "Aston Martin": "Aston Martin's headquarters is situated in Silverstone, England - right over the road from the iconic Grand Prix circuit. Nestled in the heart of British motorsport, their recently built facility serves as a vibrant, brand-new center for car production, design, and testing. The ambition they are showing with their new HQ fits in with what they are doing on the track. With a rich heritage in Formula One, the area was once home to predecessors Jordan among others, it's a great place to base your F1 team.",
+    "Ferrari": "Scuderia Ferrari's HQ is located in Maranello, Italy, and it is an iconic complex steeped in racing history. The Ferrari headquarters houses the team's manufacturing, design, and development departments, serving as the beating heart of their Formula One endeavors. The facility combines tradition and innovation, with plenty of cues to their storied motorsport past all over the place. It is arguably the most evocative of all the HQs in F1, given the Prancing Horse has been in the sport since the very beginning of the championship back in 1950.",
+    "Haas": "The Haas headquarters is located in Kannapolis, North Carolina, United States, but they also have a UK base in 'motorsport valley,' where a number of the teams are located. Their Banbury site houses many of their operations functions – including Logistics, Electrical Engineering, Vehicle Performance and Programme Management, as well as Race Team Support and the Communications Department.",
+    "Kick Sauber": "The Sauber F1 team, branded as Alfa Romeo in recent years, is headquartered in Hinwil, Switzerland. The Hinwil facility is known for its advanced wind tunnel and state-of-the-art manufacturing capabilities. Sauber has a long-standing reputation in Formula One, acting as a springboard for drivers like Kimi Räikkönen and Sebastian Vettel in their early careers. With the partnership with Audi on the horizon, the team is set for an exciting future.",
+    "McLaren": "McLaren are based at the McLaren Technology Centre, located in Woking, England. Renowned for its striking architecture, this futuristic-looking facility combines workspace, research laboratories, and an upcoming new wind tunnel. The McLaren Technology Centre exemplifies the team's commitment to excellence, but also has plenty of nods to its past - with trophies and old cars from yesteryear dotted around the building.",
+    "Mercedes": "The Mercedes team is based in Brackley, England. Their headquarters serves as a hub for design, engineering, and production, and in recent years it has produced some of the most dominant cars in F1 history - as well as being home to the likes of Brawn GP in the past. Nearby Brixworth is home to Mercedes' renowned power unit factory, meanwhile. The HPP (High Performance Powertrains) Technology Centre boasts cutting-edge facilities, enabling the team to produce some of the best engines in the sport - with them being the top force for much of the turbo hybrid era.",
+    "Racing Bulls": "Racing Bulls, a fictional or placeholder team, could be based on Red Bull Racing's success or a similar theme. If this team is intended as a separate entity, please provide more context for accurate information.",
+    "Red Bull Racing": "Red Bull Racing has its headquarters in Milton Keynes, England, which is known as the Red Bull Technology Campus. This expansive site encompasses the team's factory and design areas, and was once home to predecessors Stewart Grand Prix and Jaguar Racing. The Red Bull Technology Campus showcases the team's dedication to pushing boundaries and thinking outside the box, resulting in their impressive success on the Formula One grid, with them also in recent years striving to produce their own power units in-house.",
+    "Williams": "Williams, named after founder Sir Frank Williams, have their headquarters in Grove, England. The Williams headquarters is home to the team's design and engineering departments, and also houses a number of their old cars which were so successful in the sport at the hands of the likes of Nigel Mansell and Damon Hill."
+  },
+  "teams": {
+    "constructorChampionships": "Constructor Championships",
+    "foundedYear": "Founded Year",
+    "grandPrixWins": "Grand Prix Wins",
+    "header": "Formula 1 Teams",
+    "headquarters": "Headquarters",
+    "originCountry": "Origin Country"
   }
 }

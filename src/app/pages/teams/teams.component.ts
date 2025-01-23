@@ -10,7 +10,7 @@ import { F1_TEAMS } from './teams.data';
   styleUrl: './teams.component.scss',
 })
 export class TeamsComponent implements OnInit {
-  readonly TEAMS_PHOTO_COUNT = 10;
+  readonly TEAMS_PHOTO_COUNT = 14;
 
   F1_TEAMS = F1_TEAMS;
 

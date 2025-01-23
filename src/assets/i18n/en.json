@@ -19,6 +19,10 @@
     "pointSystem": "Point System",
     "teams": "Teams"
   },
+  "notFound": {
+    "home": "Back To Home",
+    "message": "It seems you've taken a wrong turn. Let's get you back on track!"
+  },
   "pointSystem": {
     "evolutionOfPoints": "Evolution of Formula 1 Points System",
     "points": "points"

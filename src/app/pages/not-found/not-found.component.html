@@ -1,1 +1,15 @@
-<p>not-found works!</p>
+<div class="not-found-container">
+  <div class="not-found-content">
+    <img
+      src="assets/images/not-found.jpg"
+      alt="Not Found"
+      class="not-found-image"
+    />
+    <p class="not-found-message">
+      {{ "notFound.message" | translate }}
+    </p>
+    <a [routerLink]="['/']" class="back-home-button">{{
+      "notFound.home" | translate
+    }}</a>
+  </div>
+</div>

@@ -1,11 +1,30 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
+import { F1_TEAMS } from './teams.data';
 
 @Component({
   selector: 'app-teams',
-  imports: [],
+  imports: [TranslateModule, CommonModule],
   templateUrl: './teams.component.html',
-  styleUrl: './teams.component.scss'
+  styleUrl: './teams.component.scss',
 })
-export class TeamsComponent {
+export class TeamsComponent implements OnInit {
+  readonly TEAMS_PHOTO_COUNT = 10;
 
+  F1_TEAMS = F1_TEAMS;
+
+  teamsPhotos: string[] = [];
+  logoPhotos: string[] = [];
+
+  ngOnInit(): void {
+    this.loadTeamsAndLogos();
+  }
+
+  loadTeamsAndLogos(): void {
+    for (let i = 1; i <= this.TEAMS_PHOTO_COUNT; i++) {
+      this.teamsPhotos.push(`assets/images/teams/${i}.jpg`);
+      this.logoPhotos.push(`assets/images/logos/${i}.png`);
+    }
+  }
 }

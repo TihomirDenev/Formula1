@@ -1,10 +1,11 @@
 <footer class="app-footer">
   <div class="footer-content">
-    <p>&copy; 2011-2025 My Application. All rights reserved.</p>
-    <p>Bringing you the best of Formula 1 since 2011.</p>
+    <p>&copy; 2011-2025. {{ "footer.allRightsReserved" | translate }}</p>
+    <p>{{ "footer.content" | translate }}</p>
   </div>
   <div class="footer-links">
-    <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> |
-    <a href="#">Contact Us</a>
+    <a [routerLink]="['/']">{{ "navigation.home" | translate }}</a> |
+    <a [routerLink]="['/not-found']">Not Found</a> |
+    <a [routerLink]="['/contacts']">{{ "navigation.contacts" | translate }}</a>
   </div>
 </footer>

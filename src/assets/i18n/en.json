@@ -1,4 +1,9 @@
 {
+  "contacts": {
+    "checkoutMyPortfolio": "Check out my portfolio:",
+    "message": "I'm a passionate developer specializing in creating modern, responsive web applications. Feel free to explore my work and reach out for collaborations or projects!",
+    "visitPortfolio": "Visit Portfolio"
+  },
   "footer": {
     "allRightsReserved": "All rights reserved.",
     "content": "Bringing you the best of Formula 1 since 2011."

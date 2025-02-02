@@ -1,0 +1,43 @@
+.contacts-container {
+  display: flex;
+  justify-content: center;
+
+  .contacts-content {
+    margin: 2rem;
+    max-width: 600px;
+    padding: 20px;
+    border-radius: 2rem;
+    background: var(--accent-orange-white);
+    text-align: center;
+
+    .avatar-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+
+      .portfolio-link {
+        color: red;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s, text-decoration 0.3s;
+
+        &:hover {
+          color: rgb(157, 9, 9);
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .avatar {
+      height: 150px;
+      margin-bottom: 10px;
+    }
+
+    .text-section {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--text-brown);
+    }
+  }
+}

@@ -1,1 +1,21 @@
-<p>contacts works!</p>
+<div class="contacts-container">
+  <div class="contacts-content">
+    <div class="avatar-section">
+      <img src="assets/images/avatar.png" alt="Avatar" class="avatar" />
+      <p class="text-section">
+        {{ "contacts.checkoutMyPortfolio" | translate }}
+        <a
+          href="https://portfolio-tihomirdenevs-projects.vercel.app/"
+          target="_blank"
+          class="portfolio-link"
+        >
+          {{ "contacts.visitPortfolio" | translate }}
+        </a>
+      </p>
+    </div>
+
+    <div class="text-section">
+      <p>{{ "contacts.message" | translate }}</p>
+    </div>
+  </div>
+</div>

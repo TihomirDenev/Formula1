@@ -4,6 +4,9 @@
   --text-light: #e0e0e0;
   --text-brown: #524343;
   --text-caption: #d1d1d1;
+  --text-red: #ff0000;
+  --text-blue: #3a7bfd;
+  --text-orange: #ff8700;
 
   --background-main: #000000;
   --background-navigation: red;
@@ -21,12 +24,13 @@
 }
 
 body {
-  background-color: var(--background-main);
-  color: var(--text-color);
-  font-size: 1rem;
-  font-family: Arial, sans-serif;
+  box-sizing: border-box;
+  height: 100%;
   margin: 0;
   padding: 0;
-  height: 100%;
-  box-sizing: border-box;
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  overflow-x: hidden;
+  background-color: var(--background-main);
 }

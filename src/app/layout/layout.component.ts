@@ -7,6 +7,7 @@ import { FooterComponent } from './footer/footer.component';
 @Component({
   selector: 'app-layout',
   templateUrl: './layout.component.html',
+  styles: [`main { max-width: 85rem; margin: auto; }`],  
   imports: [RouterOutlet, NavigationComponent, FooterComponent],
 })
 export class LayoutComponent {}

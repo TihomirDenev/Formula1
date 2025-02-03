@@ -1,1 +1,24 @@
-<p>home works!</p>
+<div class="home">
+  <section class="intro">
+    <h1>{{ "home.welcome" | translate }}</h1>
+    <p>
+      {{ "home.description" | translate }}
+    </p>
+    <img src="assets/images/gallery" alt="Formula 1 Racing" />
+  </section>
+
+  <section class="connect-with-us">
+    <h2>{{ "home.diveDeeper" | translate }}</h2>
+    <div class="social-links">
+      <a href="https://youtube.com/f1" target="_blank"
+        ><i class="fab fa-youtube"></i> {{ "home.youtube" | translate }}</a
+      >
+      <a href="https://facebook.com/formula1" target="_blank"
+        ><i class="fab fa-facebook-f"></i> {{ "home.facebook" | translate }}</a
+      >
+      <a href="http://www.formula1.com" target="_blank"
+        ><i class="fas fa-globe"></i> {{ "home.web" | translate }}</a
+      >
+    </div>
+  </section>
+</div>

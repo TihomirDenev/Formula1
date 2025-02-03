@@ -16,6 +16,14 @@
     "hallOfFame": "Hall of Fame",
     "winDate": "Win Date"
   },
+  "home": {
+    "description": "Experience the speed, the thrill, and the excitement of the Formula One World Championship. Dive into the world of motorsport's pinnacle with races held across the globe, featuring the world's best drivers and the most advanced racing technologies.",
+    "diveDeeper": "Dive Deeper into the World of F1",
+    "facebook": "Facebook",
+    "web": "Formula One",
+    "welcome": "Welcome to Formula One",
+    "youtube": "YouTube"
+  },
   "navigation": {
     "contacts": "Contacts",
     "gallery": "Gallery",

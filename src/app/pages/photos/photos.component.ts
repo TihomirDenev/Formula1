@@ -11,7 +11,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
   styleUrl: './photos.component.scss',
 })
 export class PhotosComponent implements OnInit {
-  readonly ALL_PHOTOS_COUNT: number = 100;
+  readonly ALL_PHOTOS_COUNT: number = 132;
   readonly PHOTOS_PER_PAGE: number = 20;
 
   photos: string[] = [];

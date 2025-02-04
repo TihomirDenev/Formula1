@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
+import { TranslateModule } from '@ngx-translate/core';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+
 import { Racer } from '../../interfaces';
 import { HALL_OF_FAME } from './hof.data';
-import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-hof',
@@ -13,6 +15,8 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './hof.component.scss',
 })
 export class HofComponent implements OnInit {
+  constructor(private router: Router) {}
+
   readonly RACERS_PER_PAGE: number = 10;
 
   hallOfFame: Racer[] = [];
@@ -36,5 +40,10 @@ export class HofComponent implements OnInit {
       this.displayedRacers.length + this.RACERS_PER_PAGE
     );
     this.displayedRacers.push(...nextRacers);
+  }
+
+  viewRacerDetails(racer: Racer): void {
+    const formattedName = racer.name.split(' ').join('');
+    this.router.navigate(['/hall-of-fame', formattedName]);
   }
 }

@@ -8,7 +8,11 @@
   [infiniteScrollThrottle]="300"
   (scrolled)="loadMoreRacers()"
 >
-  <div class="card" *ngFor="let racer of displayedRacers">
+  <div
+    class="card"
+    *ngFor="let racer of displayedRacers"
+    (click)="viewRacerDetails(racer)"
+  >
     <img [src]="racer.photo" alt="{{ racer.name }}" class="racer-photo" />
 
     <div class="racer-info">

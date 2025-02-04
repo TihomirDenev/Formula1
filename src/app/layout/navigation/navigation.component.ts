@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -9,9 +9,16 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrl: './navigation.component.scss',
 })
 export class NavigationComponent {
-  constructor(private translateService: TranslateService) {}
+  constructor(
+    private translateService: TranslateService,
+    private router: Router
+  ) {}
 
   translateText(lang: string) {
     this.translateService.use(lang);
+  }
+
+  navigateToHome() {
+    this.router.navigate(['/']);
   }
 }

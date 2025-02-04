@@ -10,7 +10,7 @@
 >
   <div class="photo" *ngFor="let photo of photos">
     <a [href]="photo" target="_blank" rel="noopener noreferrer">
-      <img [src]="photo" alt="Formula One" />
+      <img [src]="photo" loading="lazy" alt="Formula One" />
     </a>
   </div>
 </div>

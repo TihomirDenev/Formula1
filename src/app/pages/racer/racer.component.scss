@@ -89,11 +89,11 @@
 @media (max-width: 768px) {
   .racer-profile {
     margin: 0;
-    border-radius: 0;
+    border: none;
     background-color: transparent;
 
     .racer-photo {
-      width: 19rem !important;
+      width: 20rem !important;
       border-radius: 2rem !important;
     }
 

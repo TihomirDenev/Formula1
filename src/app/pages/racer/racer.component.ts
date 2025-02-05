@@ -1,12 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { CommonModule } from '@angular/common';
+
+import { TranslateModule } from '@ngx-translate/core';
 
 import { RACERS_INFO } from './racer.data';
 import { RacerInfo } from '../../interfaces';
 
 @Component({
   selector: 'app-racer',
-  imports: [],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './racer.component.html',
   styleUrl: './racer.component.scss',
 })

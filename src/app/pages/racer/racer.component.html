@@ -1,0 +1,60 @@
+<article class="racer-profile">
+  <header class="racer-header">
+    <img
+      [src]="'assets/images/hof/' + racer?.id + '.jpg'"
+      alt="Photo of {{ racer?.name }}"
+      class="racer-photo"
+    />
+
+    <h1>{{ racer?.name }}</h1>
+  </header>
+
+  <section class="racer-info">
+    <div class="info-section">
+      <div>
+        <p>
+          <strong>{{ "racer.country" | translate }}</strong>
+          {{ racer?.country }}
+        </p>
+        <p>
+          <strong>{{ "racer.dateOfBirth" | translate }}</strong>
+          {{ racer?.dateOfBirth }}
+        </p>
+        <p *ngIf="racer?.dateOfDeath">
+          <strong>{{ "racer.dateOfDeath" | translate }}</strong>
+          {{ racer?.dateOfDeath }}
+        </p>
+        <p>
+          <strong>{{ "racer.placeOfBirth" | translate }}</strong>
+          {{ racer?.placeOfBirth }}
+        </p>
+        <p>
+          <strong>{{ "racer.totalWins" | translate }}</strong> {{ racer?.wins }}
+        </p>
+      </div>
+
+      <img
+        [src]="'assets/images/flags/' + racer?.flag + '.svg'"
+        alt="{{ racer?.country }} flag"
+        class="country-flag"
+      />
+    </div>
+
+    <div class="team-section">
+      <h3>{{ "racer.teams" | translate }}</h3>
+      <ul>
+        <li *ngFor="let team of racer?.f1Teams">{{ team }}</li>
+      </ul>
+    </div>
+
+    <div>
+      <p class="bio-summary">
+        {{ "racer." + racer?.identifier + ".main" | translate }}
+      </p>
+
+      <p class="bio-additional">
+        {{ "racer." + racer?.identifier + ".additional" | translate }}
+      </p>
+    </div>
+  </section>
+</article>

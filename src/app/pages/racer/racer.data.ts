@@ -47,7 +47,7 @@ export const RACERS_INFO: RacerInfo[] = [
     placeOfBirth: 'Mexborough, United Kingdom',
     dateOfBirth: '10 April 1929',
     dateOfDeath: '22 January 1959',
-    f1Teams: ['Ferrari', 'Cooper', 'Vanwall', 'BRM', 'Maserati'],
+    f1Teams: ['Cooper', 'Ferrari', 'Vanwall', 'BRM', 'Maserati'],
   },
   {
     id: 5,
@@ -71,7 +71,7 @@ export const RACERS_INFO: RacerInfo[] = [
     placeOfBirth: 'Miami, United States',
     dateOfBirth: '20 April 1927',
     dateOfDeath: '28 August 2008',
-    f1Teams: ['Ferrari', 'Maserati', 'Cooper', 'Lotus'],
+    f1Teams: ['Maserati', 'Ferrari', 'ATS', 'Cooper', 'Lotus'],
   },
   {
     id: 7,
@@ -83,7 +83,7 @@ export const RACERS_INFO: RacerInfo[] = [
     placeOfBirth: 'Hampstead, United Kingdom',
     dateOfBirth: '15 February 1929',
     dateOfDeath: '29 November 1975',
-    f1Teams: ['Lotus', 'BRM', 'Brabham'],
+    f1Teams: ['Lotus', 'BRM', 'Brabham', 'Shadow'],
   },
   {
     id: 8,
@@ -107,7 +107,7 @@ export const RACERS_INFO: RacerInfo[] = [
     placeOfBirth: 'Tatsfield, United Kingdom',
     dateOfBirth: '11 February 1934',
     dateOfDeath: '10 March 2017',
-    f1Teams: ['Ferrari', 'Honda', 'Cooper'],
+    f1Teams: ['Lotus', 'Cooper', 'Ferrari', 'Honda', 'BRM', 'McLaren'],
   },
   {
     id: 10,
@@ -222,7 +222,7 @@ export const RACERS_INFO: RacerInfo[] = [
     placeOfBirth: 'Melbourne, Australia',
     dateOfBirth: '2 November 1946',
     dateOfDeath: '',
-    f1Teams: ['Williams', 'Shadow'],
+    f1Teams: ['Hesketh', 'Shadow', 'Williams', 'Arrows', 'Haas'],
   },
   {
     id: 19,
@@ -234,7 +234,7 @@ export const RACERS_INFO: RacerInfo[] = [
     placeOfBirth: 'Rio de Janeiro, Brazil',
     dateOfBirth: '17 August 1952',
     dateOfDeath: '',
-    f1Teams: ['Brabham', 'Williams', 'Lotus', 'Benetton'],
+    f1Teams: ['Ensign', 'McLaren', 'Brabham', 'Williams', 'Lotus', 'Benetton'],
   },
   {
     id: 20,
@@ -246,7 +246,7 @@ export const RACERS_INFO: RacerInfo[] = [
     placeOfBirth: 'Solna, Sweden',
     dateOfBirth: '6 December 1948',
     dateOfDeath: '',
-    f1Teams: ['Williams', 'Fittipaldi', 'McLaren'],
+    f1Teams: ['Wolf', 'Fittipaldi', 'Williams', 'McLaren'],
   },
   {
     id: 21,
@@ -342,7 +342,14 @@ export const RACERS_INFO: RacerInfo[] = [
     placeOfBirth: 'Oviedo, Spain',
     dateOfBirth: '29 July 1981',
     dateOfDeath: '',
-    f1Teams: ['Minardi', 'Renault', 'McLaren', 'Ferrari', 'Alpine'],
+    f1Teams: [
+      'Minardi',
+      'Renault',
+      'McLaren',
+      'Ferrari',
+      'Alpine',
+      'Aston Martin',
+    ],
   },
   {
     id: 29,

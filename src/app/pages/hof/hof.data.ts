@@ -228,7 +228,7 @@ export const HALL_OF_FAME = [
     id: 34,
     name: 'Max Verstappen',
     country: 'Netherlands',
-    winDate: '2021, 2022, 2023',
+    winDate: '2021, 2022, 2023, 2024',
     flag: 'nl',
   },
 ];

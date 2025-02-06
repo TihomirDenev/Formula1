@@ -222,7 +222,7 @@ export const RACERS_INFO: RacerInfo[] = [
     placeOfBirth: 'Melbourne, Australia',
     dateOfBirth: '2 November 1946',
     dateOfDeath: '',
-    f1Teams: ['Williams', 'Shadow', 'Hill'],
+    f1Teams: ['Williams', 'Shadow'],
   },
   {
     id: 19,
@@ -366,7 +366,7 @@ export const RACERS_INFO: RacerInfo[] = [
     placeOfBirth: 'Stevenage, United Kingdom',
     dateOfBirth: '7 January 1985',
     dateOfDeath: '',
-    f1Teams: ['McLaren', 'Mercedes'],
+    f1Teams: ['McLaren', 'Mercedes', 'Ferrari'],
   },
   {
     id: 31,
@@ -398,13 +398,7 @@ export const RACERS_INFO: RacerInfo[] = [
     placeOfBirth: 'Heppenheim, Germany',
     dateOfBirth: '3 July 1987',
     dateOfDeath: '',
-    f1Teams: [
-      'BMW Sauber',
-      'Toro Rosso',
-      'Red Bull',
-      'Ferrari',
-      'Aston Martin',
-    ],
+    f1Teams: ['Sauber', 'Toro Rosso', 'Red Bull', 'Ferrari', 'Aston Martin'],
   },
   {
     id: 33,

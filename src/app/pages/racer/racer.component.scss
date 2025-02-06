@@ -62,11 +62,20 @@
         list-style-type: none;
 
         li {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          min-height: 3rem;
           margin: 0.8rem 0;
-          padding: 0.5rem;
+          padding: 0 2rem;
           border-radius: 0.5rem;
           background: var(--background-gray);
           transition: 0.2s ease-in-out;
+
+          .logo-img {
+            width: 4rem;
+            object-fit: cover;
+          }
 
           &:hover {
             background: var(--background-light-gray);

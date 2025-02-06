@@ -43,7 +43,14 @@
     <div class="team-section">
       <h3>{{ "racer.teams" | translate }}</h3>
       <ul>
-        <li *ngFor="let team of racer?.f1Teams">{{ team }}</li>
+        <li *ngFor="let team of racer?.f1Teams">
+          {{ team }}
+          <img
+            src="assets/images/logos/{{ team }}.png"
+            class="logo-img"
+            alt="{{ team }} logo"
+          />
+        </li>
       </ul>
     </div>
 

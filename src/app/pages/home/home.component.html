@@ -1,14 +1,108 @@
 <div class="home">
   <section class="intro">
-    <h1>{{ "home.welcome" | translate }}</h1>
+    <h1>{{ "home.welcomeTitle" | translate }}</h1>
     <p>
-      {{ "home.description" | translate }}
+      {{ "home.welcomeDescription" | translate }}
     </p>
-    <img src="assets/images/gallery" alt="Formula 1 Racing" />
+    <div class="f1-info-container">
+      <div class="text-content">
+        <p>
+          {{ "home.f1Introduction" | translate }}
+        </p>
+        <p>
+          {{ "home.f1Championship" | translate }}
+        </p>
+        <p>
+          {{ "home.f1SprintRaces" | translate }}
+        </p>
+      </div>
+
+      <div class="image-container">
+        <img src="assets/images/logo.jpg" alt="Formula 1 Racing" />
+      </div>
+    </div>
+  </section>
+
+  <section class="tyre">
+    <h1>{{ "home.tyreTitle" | translate }}</h1>
+    <p>
+      {{ "home.tyreIntro" | translate }}
+    </p>
+    <div class="f1-info-container">
+      <div class="image-container">
+        <img src="assets/images/tyres.jpg" alt="Formula 1 Racing" />
+      </div>
+
+      <div class="text-content">
+        <p>
+          {{ "home.supplier" | translate }}
+        </p>
+        <p>
+          {{ "home.compounds" | translate }}
+        </p>
+        <p>
+          {{ "home.technology" | translate }}
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="circuit">
+    <h1>{{ "home.circuitTitle" | translate }}</h1>
+    <p>
+      {{ "home.circuitIntro" | translate }}
+    </p>
+    <div class="f1-info-container">
+      <div class="text-content">
+        <p>
+          {{ "home.circuitMonaco" | translate }}
+        </p>
+        <p>
+          {{ "home.circuitSilverstone" | translate }}
+        </p>
+        <p>
+          {{ "home.circuitSuzuka" | translate }}
+        </p>
+        <p>
+          {{ "home.circuitSpa" | translate }}
+        </p>
+        <p>
+          {{ "home.circuitMonza" | translate }}
+        </p>
+      </div>
+
+      <div class="image-container">
+        <img src="assets/images/circuit.jpg" alt="Formula 1 Racing" />
+      </div>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <h1>{{ "home.formulaOneVid" | translate }}</h1>
+    <div class="video-container">
+      <video src="assets/videos/This is Formula One.mp4" controls></video>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <h1>{{ "home.grosjeanVid" | translate }}</h1>
+    <div class="video-container">
+      <video
+        src="assets/videos/Grosjean's Insane Fireball Crash.mp4"
+        controls
+      ></video>
+    </div>
+  </section>
+
+  <section class="video-section">
+    <h1>{{ "home.topFiveVid" | translate }}</h1>
+    <div class="video-container">
+      <video src="assets/videos/Most Nail-Biting Moments.mp4" controls></video>
+    </div>
   </section>
 
   <section class="connect-with-us">
-    <h2>{{ "home.diveDeeper" | translate }}</h2>
+    <h1>{{ "home.exploreMore" | translate }}</h1>
     <div class="social-links">
       <a href="https://youtube.com/f1" target="_blank"
         ><i class="fab fa-youtube"></i> {{ "home.youtube" | translate }}</a
@@ -17,7 +111,8 @@
         ><i class="fab fa-facebook-f"></i> {{ "home.facebook" | translate }}</a
       >
       <a href="http://www.formula1.com" target="_blank"
-        ><i class="fas fa-globe"></i> {{ "home.web" | translate }}</a
+        ><i class="fas fa-globe"></i>
+        {{ "home.officialWebsite" | translate }}</a
       >
     </div>
   </section>

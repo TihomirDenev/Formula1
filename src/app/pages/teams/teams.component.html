@@ -1,7 +1,11 @@
 <h2>{{ "teams.header" | translate }}</h2>
 
 <div class="teams-container">
-  <div class="team-card" *ngFor="let team of F1_TEAMS; let i = index">
+  <div
+    class="team-card"
+    *ngFor="let team of F1_TEAMS; let i = index"
+    (click)="viewTeamDetails(team)"
+  >
     <div class="team-photo">
       <img [src]="teamsPhotos[i]" alt="{{ team.name }} photo" />
     </div>

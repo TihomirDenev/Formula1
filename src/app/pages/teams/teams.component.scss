@@ -23,6 +23,7 @@ h2 {
     background: linear-gradient(165deg,
         var(--background-main),
         var(--background-green-start));
+    cursor: pointer;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 

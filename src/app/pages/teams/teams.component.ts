@@ -3,20 +3,22 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 import { TranslateModule } from '@ngx-translate/core';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 import { F1_TEAMS } from './teams.data';
 import { F1_Team } from '../../interfaces';
 
 @Component({
   selector: 'app-teams',
-  imports: [TranslateModule, CommonModule],
+  imports: [TranslateModule, CommonModule, InfiniteScrollModule],
   templateUrl: './teams.component.html',
   styleUrl: './teams.component.scss',
 })
 export class TeamsComponent implements OnInit {
-  readonly TEAMS_PHOTO_COUNT = 14;
+  readonly TEAMS_PER_PAGE: number = 2;
 
-  F1_TEAMS = F1_TEAMS;
+  allTeams: F1_Team[] = [];
+  displayedTeams: F1_Team[] = [];
 
   teamsPhotos: string[] = [];
   logoPhotos: string[] = [];
@@ -24,14 +26,24 @@ export class TeamsComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.loadTeamsAndLogos();
+    this.loadTeams();
+    this.loadMoreTeams();
   }
 
-  loadTeamsAndLogos(): void {
-    for (let i = 1; i <= this.TEAMS_PHOTO_COUNT; i++) {
-      this.teamsPhotos.push(`assets/images/teams/${i}.jpg`);
-      this.logoPhotos.push(`assets/images/logos/${i}.png`);
-    }
+  loadTeams(): void {
+    this.allTeams = F1_TEAMS.map((team, index) => ({
+      ...team,
+      photo: `assets/images/teams/${index + 1}.jpg`,
+      logo: `assets/images/logos/${index + 1}.png`,
+    }));
+  }
+
+  loadMoreTeams(): void {
+    const nextTeams = this.allTeams.slice(
+      this.displayedTeams.length,
+      this.displayedTeams.length + this.TEAMS_PER_PAGE
+    );
+    this.displayedTeams.push(...nextTeams);
   }
 
   viewTeamDetails(team: F1_Team): void {

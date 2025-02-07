@@ -1,13 +1,20 @@
 <h2>{{ "teams.header" | translate }}</h2>
 
-<div class="teams-container">
+<div
+  class="teams-container"
+  infinite-scroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollUpDistance]="1.5"
+  [infiniteScrollThrottle]="300"
+  (scrolled)="loadMoreTeams()"
+>
   <div
     class="team-card"
-    *ngFor="let team of F1_TEAMS; let i = index"
+    *ngFor="let team of displayedTeams"
     (click)="viewTeamDetails(team)"
   >
     <div class="team-photo">
-      <img [src]="teamsPhotos[i]" alt="{{ team.name }} photo" />
+      <img [src]="team.photo" alt="{{ team.name }} photo" />
     </div>
 
     <div class="team-details">
@@ -55,11 +62,7 @@
       </div>
 
       <div class="team-logo-container">
-        <img
-          [src]="logoPhotos[i]"
-          alt="{{ team.name }} logo"
-          class="team-logo"
-        />
+        <img [src]="team.logo" alt="{{ team.name }} logo" class="team-logo" />
       </div>
     </div>
   </div>

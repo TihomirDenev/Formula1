@@ -27,6 +27,8 @@ export interface F1_Team {
   foundedYear: number;
   grandPrixWins: number;
   constructorChampionships: number;
+  photo?: string;
+  logo?: string;
 }
 
 export interface RacerInfo {

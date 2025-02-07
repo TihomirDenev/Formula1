@@ -15,12 +15,12 @@ import { HALL_OF_FAME } from './hof.data';
   styleUrl: './hof.component.scss',
 })
 export class HofComponent implements OnInit {
-  constructor(private router: Router) {}
-
   readonly RACERS_PER_PAGE: number = 10;
 
   hallOfFame: Racer[] = [];
   displayedRacers: Racer[] = [];
+
+  constructor(private router: Router) {}
 
   ngOnInit(): void {
     this.loadRacers();

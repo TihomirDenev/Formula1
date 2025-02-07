@@ -7,10 +7,15 @@
   .contacts-content {
     max-width: 600px;
     margin: 2rem;
-    padding: 3rem;
+    padding: 1.5rem;
     border-radius: 2rem;
     background: var(--accent-orange-white);
     text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
 
     .avatar-section {
       display: flex;

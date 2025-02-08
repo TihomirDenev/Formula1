@@ -14,9 +14,15 @@
     text-align: center;
 
     .racer-photo {
-      position: relative;
-      width: 30rem;
-      border-radius: 50%;
+      width: 20rem;
+      height: 20rem;
+      object-fit: cover;
+      border-radius: 2rem;
+      transition: transform 0.3s ease-in-out;
+
+      &:hover {
+        transform: scale(1.05);
+      }
     }
 
     h1 {
@@ -105,9 +111,11 @@
     border: none;
     background-color: transparent;
 
-    .racer-photo {
-      width: 20rem !important;
-      border-radius: 2rem !important;
+    .racer-header {
+      .racer-photo {
+        width: 15rem !important;
+        border-radius: 1.5rem !important;
+      }
     }
 
     .racer-info {

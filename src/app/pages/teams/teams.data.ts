@@ -9,7 +9,7 @@ export const F1_TEAMS: F1_Team[] = [
     headquarters: 'Maranello, Italy',
     headquartersFlag: 'it',
     foundedYear: 1950,
-    grandPrixWins: 242,
+    grandPrixWins: 249,
     constructorChampionships: 16,
   },
   {

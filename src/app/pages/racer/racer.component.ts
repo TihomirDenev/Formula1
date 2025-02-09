@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { TranslateModule } from '@ngx-translate/core';
 
-import { RACERS_INFO } from './racer.data';
+import { RACERS_INFO } from './racers.data';
 import { RacerInfo } from '../../interfaces';
 
 @Component({
@@ -16,7 +16,6 @@ import { RacerInfo } from '../../interfaces';
 export class RacerComponent implements OnInit {
   RACER = 'racer';
   RACERS_INFO = RACERS_INFO;
-  racerName: string = '';
 
   racer: RacerInfo | undefined;
 

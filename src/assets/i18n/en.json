@@ -208,9 +208,24 @@
     "teams": "Teams",
     "totalWins": "Total Wins: "
   },
+  "team": {
+    "base": "Base",
+    "chassis": "Chassis",
+    "fastestLaps": "Fastest Laps",
+    "firstTeamEntry": "First Team Entry",
+    "fullName": "Full Name",
+    "highestRaceFinish": "Highest Race Finish",
+    "polePositions": "Pole Positions",
+    "powerUnit": "Power Unit",
+    "racingAchievements": "Racing Achievements",
+    "teamChief": "Team Chief",
+    "teamOverview": "Team Overview",
+    "technicalChief": "Technical Chief",
+    "worldChampionships": "World Championships"
+  },
   "teamInfo": {
     "Alfa Romeo": "The headquarters of Alfa Romeo is based in Hinwil, Switzerland. Situated amidst the picturesque Swiss countryside, the Hinwil facility accommodates the team's administrative offices, manufacturing facilities, and wind tunnel. With a rich motorsport heritage, the area has been home to the Sauber operation for many years, with them carrying the Alfa Romeo name for the final time in 2023.",
-    "AlphaTauri": "AlphaTauri operate out of Faenza, Italy, with their headquarters known as the Scuderia AlphaTauri Factory. This purpose-built facility houses the team's design, manufacturing, and engineering departments, and used to be home to the Minardi team - who AlphaTauri were before Red Bull bought them. The town of Faenza is a stone's throw from the Imola circuit, making that their home race.",
+    "Alpha Tauri": "AlphaTauri operate out of Faenza, Italy, with their headquarters known as the Scuderia AlphaTauri Factory. This purpose-built facility houses the team's design, manufacturing, and engineering departments, and used to be home to the Minardi team - who AlphaTauri were before Red Bull bought them. The town of Faenza is a stone's throw from the Imola circuit, making that their home race.",
     "Alpine": "Alpine's headquarters is based in Enstone, England. Their base has a storied history in Formula One, having previously served as the headquarters for the Benetton and Renault F1 teams - and you can see nods to that with iconic old cars in the building and trophies from the successes of former drivers like Michael Schumacher and Fernando Alonso. The facility houses the team's design and manufacturing departments, whilst the engine side of the team is based in Viry-Châtillon, France.",
     "Aston Martin": "Aston Martin's headquarters is situated in Silverstone, England - right over the road from the iconic Grand Prix circuit. Nestled in the heart of British motorsport, their recently built facility serves as a vibrant, brand-new center for car production, design, and testing. The ambition they are showing with their new HQ fits in with what they are doing on the track. With a rich heritage in Formula One, the area was once home to predecessors Jordan among others, it's a great place to base your F1 team.",
     "Ferrari": "Scuderia Ferrari's HQ is located in Maranello, Italy, and it is an iconic complex steeped in racing history. The Ferrari headquarters houses the team's manufacturing, design, and development departments, serving as the beating heart of their Formula One endeavors. The facility combines tradition and innovation, with plenty of cues to their storied motorsport past all over the place. It is arguably the most evocative of all the HQs in F1, given the Prancing Horse has been in the sport since the very beginning of the championship back in 1950.",

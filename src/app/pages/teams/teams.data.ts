@@ -113,7 +113,7 @@ export const F1_TEAMS: F1_Team[] = [
   },
   {
     id: 11,
-    name: 'AlphaTauri',
+    name: 'Alpha Tauri',
     originCountry: 'Italy',
     originCountryFlag: 'it',
     headquarters: 'Faenza, Italy',

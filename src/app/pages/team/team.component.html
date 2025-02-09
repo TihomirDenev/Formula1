@@ -1,1 +1,86 @@
-<p>team works!</p>
+<div class="team">
+  <header class="team-header">
+    <img
+      [src]="'assets/images/cars/' + team?.identifier + '.png'"
+      alt="Photo of {{ team?.name }}"
+      class="team-photo"
+    />
+
+    <h1>{{ team?.name }}</h1>
+  </header>
+
+  <div class="team-info">
+    <div class="info-section">
+      <div>
+        <div class="team-overview">
+          <h1>{{ "team.teamOverview" | translate }}</h1>
+
+          <img
+            [src]="'assets/images/flags/' + team?.flag + '.svg'"
+            alt="{{ team?.flag }} flag"
+            class="country-flag"
+          />
+        </div>
+
+        <p>
+          <strong>{{ "team.fullName" | translate }}: </strong>
+          {{ team?.fullName }}
+        </p>
+        <p>
+          <strong>{{ "team.base" | translate }}: </strong>
+          {{ team?.base }}
+        </p>
+        <p>
+          <strong>{{ "team.teamChief" | translate }}: </strong>
+          {{ team?.teamChief }}
+        </p>
+        <p>
+          <strong>{{ "team.technicalChief" | translate }}: </strong>
+          {{ team?.technicalChief }}
+        </p>
+        <p>
+          <strong>{{ "team.chassis" | translate }}: </strong>
+          {{ team?.chassis }}
+        </p>
+        <p>
+          <strong>{{ "team.powerUnit" | translate }}: </strong>
+          {{ team?.powerUnit }}
+        </p>
+        <p>
+          <strong>{{ "team.firstTeamEntry" | translate }}: </strong>
+          {{ team?.firstTeamEntry }}
+        </p>
+      </div>
+    </div>
+
+    <div class="info-section">
+      <div>
+        <div class="team-overview">
+          <h1>{{ "team.racingAchievements" | translate }}</h1>
+
+          <img
+            [src]="'assets/images/logos/' + team?.name + '.png'"
+            alt="{{ team?.name }} logo"
+            class="logo"
+          />
+        </div>
+        <p>
+          <strong>{{ "team.worldChampionships" | translate }}: </strong>
+          {{ team?.worldChampionships }}
+        </p>
+        <p>
+          <strong>{{ "team.highestRaceFinish" | translate }}: </strong>
+          {{ team?.highestRaceFinish }}
+        </p>
+        <p>
+          <strong>{{ "team.polePositions" | translate }}: </strong>
+          {{ team?.polePositions }}
+        </p>
+        <p>
+          <strong>{{ "team.fastestLaps" | translate }}: </strong>
+          {{ team?.fastestLaps }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

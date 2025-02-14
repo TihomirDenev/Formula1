@@ -19,7 +19,7 @@ export class PhotosComponent implements OnInit {
 
   ngOnInit(): void {
     for (let i = 1; i <= this.ALL_PHOTOS_COUNT; i++) {
-      this.allPhotos.push(`assets/images/gallery/${i}.jpg`);
+      this.allPhotos.push(`assets/images/gallery/${i}.webp`);
     }
 
     this.loadMorePhotos();

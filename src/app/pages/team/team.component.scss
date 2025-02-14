@@ -87,3 +87,24 @@
     }
   }
 }
+
+@media (max-width: 768px) {
+  .team {
+    margin: 0 !important;
+    border: none !important;
+    background-color: transparent !important;
+  }
+
+  .team-photo {
+    height: auto;
+    max-height: 100px;
+  }
+
+  .info-section {
+    padding: 1rem !important;
+
+    h1 {
+      font-size: 1.3rem;
+    }
+  }
+}

@@ -82,5 +82,17 @@
         </p>
       </div>
     </div>
+
+    <div>
+      <p class="bio-summary">
+        {{ "team." + team?.identifier + ".main" | translate }}
+      </p>
+      <p class="bio-additional">
+        {{ "team." + team?.identifier + ".additional" | translate }}
+      </p>
+      <p class="bio-additional">
+        {{ "team." + team?.identifier + ".secondary" | translate }}
+      </p>
+    </div>
   </div>
 </div>

@@ -33,7 +33,7 @@ export class TeamsComponent implements OnInit {
   loadTeams(): void {
     this.allTeams = F1_TEAMS.map((team, index) => ({
       ...team,
-      photo: `assets/images/teams/${index + 1}.jpg`,
+      photo: `assets/images/teams/${index + 1}.webp`,
       logo: `assets/images/logos/${index + 1}.png`,
     }));
   }

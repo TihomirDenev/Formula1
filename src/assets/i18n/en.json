@@ -201,6 +201,7 @@
       "main": "The first American to become World Champion had a love/hate relationship with the sport. Profoundly intelligent and deeply sensitive, he was also remarkably candid about personal demons that caused inner turmoil and made his racing life a bittersweet experience. He was always fearful and throughout his career he struggled to find a balance between the perils and pleasures of his profession. Yet driving became a way of expressing himself and racing took him on a journey to places he never expected to go."
     },
     "placeOfBirth": "Place of Birth: ",
+    "racerDetails": "Racer Details",
     "SebastianVettel": {
       "additional": "Just three years and half years after he was born, on July 3, 1987, Sebastian Vettel began the way of life that would take him to the very pinnacle of motorsport. His method of transport was a miniature kart, the venue was the yard at his home in Heppenheim, a town in south-western Germany. Little Sebastian quickly mastered the machine and began lapping faster and faster, shrieking with glee and refusing to stop until he was exhausted. The source of little Seb's joy soon became a focal point of family life for the Vettels. Norbert, a carpenter by trade and in his spare time an enthusiastic karter and occasional hillclimber, and his wife Heike had three other children: older daughters Stefanie and Melanie, and a younger son Fabian. His family's support helped the would-be racer fulfil a destiny that would make the Vettel name a household word around the world.",
       "main": "The youngest ever world champion's accumulation of age-related records that began in 2010 continued for four consecutive seasons, culminating in a one-sided 2013 title triumph that confirmed his status as one of the sport’s all-time greats. Sebastian Vettel’s first championship, at the age of 23, provided a surprise ending to an intensely competitive 2010 campaign. There was surely more to come from this fast rising racer, and it came quickly when he completely dominated in 2011 to become the youngest double world champion. In 2012, with a series of comebacks from setbacks against the strongest opposition in the longest ever season, his third driving title in a row was hard-earned and well-deserved. In 2013, and still just 26 years old, he made short work of becoming the youngest ever quadruple world champion. In truth the precocious youngster who came so far so fast was in a hurry from the time he was a toddler..."
@@ -209,18 +210,88 @@
     "totalWins": "Total Wins: "
   },
   "team": {
+    "AlfaRomeo": {
+      "additional": "Alfa Romeo's involvement in motorsport dates back to the early 20th century, and its return to Formula 1 marks a renewed commitment to competing at the highest levels. The team leverages the extensive technical expertise of Sauber Motorsport to develop competitive cars that reflect Alfa Romeo's iconic brand.",
+      "main": "Alfa Romeo Racing, operated by Sauber Motorsport, brings a storied brand back to the forefront of Formula 1, combining a rich legacy with the latest in racing technology. The team, re-entering the sport in 2019, aims to blend tradition with innovation.",
+      "secondary": "Their focus on integrating classic Italian design with cutting-edge technology not only enriches their racing strategy but also strengthens their identity in the sport, making them a unique presence in Formula 1."
+    },
+    "AlphaTauri": {
+      "additional": "While originally established as a junior team to Red Bull Racing, AlphaTauri has set its sights on achieving independent success, focusing on innovative approaches to car design and race strategy. This shift reflects a broader ambition to not just support but also compete alongside the leading teams.",
+      "main": "AlphaTauri, formerly known as Toro Rosso, represents more than just a Formula 1 team; it embodies a fashion-forward brand that seeks to blend style with substance on the racetrack. Rebranded in 2020, the team aims to carve out a unique identity in Formula 1.",
+      "secondary": "AlphaTauri's dual commitment to competitive racing and brand development showcases its unique position in Formula 1, striving to push the boundaries of what is expected from a racing team."
+    },
+    "Alpine": {
+      "additional": "The rebranding to Alpine in 2021 brought a renewed focus on luxury and performance, characteristic of the Alpine sports car brand. This shift reflects a broader ambition to blend high performance with French elegance, aiming to make a distinct mark in the highly competitive environment of Formula 1.",
+      "main": "Alpine F1 Team, emerging from its past as Renault Sport Formula One Team, strives to marry French racing tradition with modern technological innovation. The team aims to leverage its deep roots in motorsport to climb the competitive ranks of Formula 1.",
+      "secondary": "Alpine's approach includes a strong emphasis on sustainable racing practices and the development of next-generation racing technologies. Their strategic vision is focused on achieving long-term success and promoting environmental sustainability within the sport."
+    },
+    "AstonMartin": {
+      "additional": "With substantial investment from Lawrence Stroll and strategic partnerships, Aston Martin is positioning itself as a formidable competitor in Formula 1. The team draws on a deep reservoir of racing history and combines it with significant technological investments to challenge the established hierarchy.",
+      "main": "Aston Martin has returned to Formula 1 with grand ambitions, underpinned by a rich legacy in luxury automobile manufacturing and motorsports. The team, rebranded from Racing Point in 2021, aims to leverage this heritage to compete at the highest levels of the sport.",
+      "secondary": "The iconic British racing green livery of Aston Martin not only reflects its prestigious automotive heritage but also symbolizes a new era for the team in Formula 1, where luxury meets competitive racing."
+    },
     "base": "Base",
     "chassis": "Chassis",
     "fastestLaps": "Fastest Laps",
+    "Ferrari": {
+      "additional": "The origin of Ferrari dates back to 1939 when Enzo Ferrari founded Auto Avio Costruzioni in Modena, Italy, initially focusing on the production of machine tools and aircraft parts. The transition to automobile manufacturing began in 1940 with the completion of the company's first race car, the AAC 815. It wasn’t until 1947, however, that the first car bearing the iconic Ferrari badge was completed, marking the official establishment of Ferrari as a major player in the automotive industry.",
+      "main": "Ferrari is not just a name but an emblem of motorsport excellence, embodying an unrivaled passion, exceptional performance, and quintessential Italian craftsmanship. As one of the most illustrious teams in Formula 1 history, Ferrari boasts an extensive record of success, including numerous constructors' and drivers' championships, making it a perennial symbol of racing prestige.",
+      "secondary": "Through decades of competition, Ferrari's commitment to technological innovation and strategic prowess has kept them at the forefront of Formula 1. The team's storied history, marked by a distinctive red racing livery and a fervent global fanbase, continues to enhance its legacy, while its pursuit of excellence ensures its status as a formidable competitor on the global motorsport stage."
+    },
     "firstTeamEntry": "First Team Entry",
     "fullName": "Full Name",
+    "Haas": {
+      "additional": "Utilizing a unique model that emphasizes efficiency and strategic partnerships, Haas has challenged traditional Formula 1 paradigms. The team focuses on smart resource management and has formed collaborations that allow for competitive development despite a smaller budget.",
+      "main": "Haas F1 Team has brought a fresh American perspective to Formula 1, introducing innovative approaches to the business and competitive aspects of the sport. Founded in 2016 by industrialist Gene Haas, the team has quickly established itself as a capable competitor.",
+      "secondary": "While Haas continues to evolve, their pragmatic approach and focus on long-term strategic planning aim to secure their place in the sport, targeting consistent improvements and aiming to challenge more established teams."
+    },
     "highestRaceFinish": "Highest Race Finish",
+    "KickSauber": {
+      "additional": "The team has experienced various partnerships and rebrandings over the years, adapting to the changing dynamics of Formula 1. Today, KickSauber remains committed to fostering young drivers and pushing technological boundaries, ensuring its relevance and competitiveness.",
+      "main": "Operating under its latest brand identity, KickSauber continues to maintain its reputation as a hub for emerging talent and innovative engineering within Formula 1. Originally founded as Sauber Motorsport in 1993, the team has undergone several transformations to stay competitive.",
+      "secondary": "Their commitment to innovation and the nurturing of new talent has kept them at the cutting edge of the sport, continually adapting and evolving to meet the challenges of modern Formula 1 racing."
+    },
+    "Lotus": {
+      "additional": "Lotus's influence in Formula 1 is characterized by significant innovations, particularly in aerodynamics and lightweight construction, which have shaped the direction of the sport. Their emphasis on performance and efficiency set new standards during their time in the competition.",
+      "main": "Though currently not active in Formula 1, Lotus remains a legendary name in the sport, celebrated for its innovative contributions and revolutionary approach to race car design. Known for its pioneering spirit under the guidance of Colin Chapman, Lotus has left a lasting legacy.",
+      "secondary": "While they are not currently competing, the historical impact of Lotus on Formula 1 is undeniable. The brand's philosophy of 'simplify, then add lightness' continues to influence modern racing, underlining the enduring relevance of their engineering principles."
+    },
+    "McLaren": {
+      "additional": "Founded in 1963 by racer Bruce McLaren from New Zealand, McLaren quickly distinguished itself as a technological innovator. Over the decades, McLaren has been at the forefront of many of Formula 1's engineering breakthroughs, including pioneering developments in car design and aerodynamics.",
+      "main": "McLaren Racing, a beacon of innovation and competition in Formula 1, has a storied history of pushing the boundaries of what is technologically possible in motorsport. The team is renowned for its engineering prowess and has secured multiple championships with a relentless drive for excellence.",
+      "secondary": "With their signature papaya orange livery, McLaren not only stands out on the track but also symbolizes a heritage of racing passion. The team's commitment to technological innovation and development continues to make it a formidable force in the Formula 1 world."
+    },
+    "Mercedes": {
+      "additional": "The legacy of Mercedes-Benz in motorsport stretches back to the 1930s, but it was their return to Formula 1 in 2010 that marked the beginning of a new dominance. Under the leadership of Toto Wolff, the team has utilized cutting-edge technology and strategic genius to set new performance standards.",
+      "main": "Mercedes AMG Petronas Formula One Team has redefined success in the modern era of Formula 1, achieving an unprecedented streak of consecutive championships since their re-entry as a constructor. Their approach combines meticulous strategic planning with superior engineering.",
+      "secondary": "Mercedes' philosophy extends beyond their technological achievements, emphasizing a strong team culture and continuous innovation. This approach has not only led to dominance on the track but has also influenced the sport's technical and strategic landscapes."
+    },
     "polePositions": "Pole Positions",
     "powerUnit": "Power Unit",
     "racingAchievements": "Racing Achievements",
+    "RacingBulls": {
+      "additional": "Established to support up-and-coming drivers and to trial new technologies, Racing Bulls has become a significant part of Red Bull's overall Formula 1 strategy. The team not only develops young drivers but also tests innovations that may be crucial for the advancement of their main team.",
+      "main": "Racing Bulls serves as a vital developmental stepping stone within the Red Bull racing family, nurturing young talent and preparing them for the highest levels of competition. As a sister team to Red Bull Racing, it plays a crucial role in the development of future racing stars.",
+      "secondary": "Racing Bulls' contribution to developing new talent and strategies is integral to the sustainability and success of the Red Bull racing legacy, demonstrating the importance of continuous development and adaptation in the competitive world of Formula 1."
+    },
+    "RedBullRacing": {
+      "additional": "Starting as a rebrand of Jaguar Racing, Red Bull infused the team with a new energy and ambition, quickly establishing a reputation for daring on-track tactics and a commitment to performance. The team's ability to integrate cutting-edge technology and out-of-the-box thinking has reshaped their competitive edge.",
+      "main": "Red Bull Racing, known for its aggressive and innovative approach to Formula 1, has quickly become one of the sport's most successful teams since its inception in 2005. The team consistently challenges for championships, thanks to its bold strategies and dynamic driver lineup.",
+      "secondary": "Red Bull Racing's investment in young talent and its global marketing strategy have not only contributed to the team's success but have also helped expand Formula 1's appeal worldwide, making it a central figure in the sport's growing popularity."
+    },
+    "Renault": {
+      "additional": "Active intermittently since the late 1970s, Renault has been at the forefront of F1's technological advancements, contributing significantly to the development of turbocharged engines and hybrid technology. Their commitment to innovation has seen them through periods of great success and challenges alike.",
+      "main": "Renault has played a pivotal role in Formula 1 as both a team and an engine supplier, with a history rich in innovation and championship success that has significantly shaped the sport's evolution.",
+      "secondary": "Renault's focus on hybrid technology and engine development continues to influence the competitive landscape of Formula 1, underscoring their long-term impact and dedication to the sport. Their engineering prowess and strategic approach aim to keep them at the cutting edge of Formula 1 competition."
+    },
     "teamChief": "Team Chief",
     "teamOverview": "Team Overview",
     "technicalChief": "Technical Chief",
+    "Williams": {
+      "additional": "Established by Sir Frank Williams and Patrick Head, Williams quickly made its mark with a focus on aerodynamic efficiency and mechanical reliability. Over the years, the team has been home to some of the greatest drivers and has been at the forefront of many technical advancements in Formula 1.",
+      "main": "Williams Racing is one of Formula 1's most revered teams, known for its rich history of innovation and success. The team has played a pivotal role in the development of some of the sport's most groundbreaking technologies and remains a symbol of technical excellence.",
+      "secondary": "Despite facing financial and competitive challenges in recent years, Williams is actively working to reclaim its status at the forefront of F1, focusing on leveraging its rich heritage to inspire new innovations and achieve future successes."
+    },
     "worldChampionships": "World Championships"
   },
   "teamInfo": {

@@ -142,7 +142,7 @@ src/
 │   │   ├── teams/       # Teams listing
 │   │   ├── team/        # Individual team details
 │   │   ├── racer/       # Driver profiles
-│   │   ├── point-system/ # Points and standings
+│   │   ├── point-system/# Points and standings
 │   │   ├── hof/         # Hall of Fame
 │   │   ├── photos/      # Photo gallery
 │   │   ├── contacts/    # Contact form

@@ -1,71 +1,175 @@
-<h2 align="center">
-  Welcome to the Formula One! <br/>
-  <a href="https://github.com/TihomirDenev/Formula1" target="_blank">Check it out on GitHub</a>
-</h2>
 <div align="center">
-  <img src="public/logo.png" alt="Formula One" style="height: 160px;" />
+  <img src="public/logo.png" alt="Formula One Central" width="200" />
+  
+  # 🏎️ Formula One Central
+  
+  **A comprehensive Formula One fan platform built with Angular 19**
+  
+  [![Angular](https://img.shields.io/badge/Angular-19-red.svg)](https://angular.io/) [![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue.svg)](https://www.typescriptlang.org/) [![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+  
+  [🌐 Live Demo](https://formula1-omega.vercel.app/) 
 </div>
 
-# 📝 Description
+---
 
-- Formula One Central is a comprehensive web application designed for Formula One enthusiasts. It provides a translation service, a point system, a Hall of Fame, team profiles, a gallery, and a detailed page for each racer and team. The app also includes a contact form for easy communication.
+## 🎯 About
 
-# 🗃️ Technologies Used
+Formula One is a modern, responsive web application designed for Formula One enthusiasts worldwide. It provides a comprehensive platform featuring real-time statistics, team profiles, driver information, and interactive features that bring the excitement of Formula One racing to fans everywhere.
 
-- **_Angular 19:_** For building a responsive and dynamic single-page application.
-- **_TypeScript:_** To ensure type safety and scalable application development.
-- **_CSS:_** For custom styling and responsive design.
-- **_HTML:_** Forms the backbone of the application's structure, used to define the content and semantics of the web pages.
-- **_Shared Components:_** Implements reusable UI components, such as buttons and icons, to ensure consistency and reduce redundancy throughout the application.
+### Key Highlights
 
-# 💡 Features
+- 🌍 **Multi-language Support** - Internationalization for global accessibility
+- 📊 **Real-time Statistics** - Live points system and performance tracking
+- 🏆 **Hall of Fame** - Celebrating legendary drivers and achievements
+- 🏁 **Team & Driver Profiles** - Comprehensive information and statistics
+- 📸 **Photo Gallery** - High-quality images from F1 events
+- 📞 **Contact System** - Easy communication with the development team
 
-- **_Translation Service:_** Offers multi-language support to cater to a global audience of Formula One fans.
+## ✨ Features
 
-- **_Home Page:_** The landing page provides a welcoming entry point with quick access to all features of the app.
+🏠 **Home Page**
 
-- **_Point System:_** Tracks and displays points accumulated by Formula One teams and drivers throughout each season, reflecting their performance over the year.
+- Welcoming landing page with quick navigation
+- Overview of latest F1 news and updates
+- Quick access to all major features
 
-- **_Hall of Fame:_** Highlights the achievements of top racers with detailed profiles and historical performance data.
+🌐 **Translation Service**
 
-- **_Team Profiles:_** Provides comprehensive information about each Formula One team, including their history and current lineup.
+- Multi-language support using ngx-translate
+- Seamless language switching
+- Localized content for global users
 
-- **_Gallery:_** Showcases high-quality images from past and current Formula One events.
+📊 **Point System**
 
-- **_Contact Form:_** Enables users to easily get in touch with the development team for inquiries or support.
+- Real-time driver and team standings
+- Season-long performance tracking
+- Historical data visualization
+- Interactive leaderboards
 
-# ✅ Getting Started
+🏆 **Hall of Fame**
 
-1. Clone the TrafficWatch [GitHub repository](https://github.com/TihomirDenev/Formula1) locally:
+- Legendary driver profiles
+- Historical achievements
+- Career statistics and milestones
+- Interactive timeline of F1 history
 
-```bash
-https://github.com/TihomirDenev/Formula1.git
+🏁 **Team Profiles**
+
+- Comprehensive team information
+- Current driver lineups
+- Team history and achievements
+- Technical specifications
+
+### 🏎️ Driver Profiles
+
+- Detailed driver statistics
+- Career highlights and records
+- Personal information and background
+- Performance analytics
+
+### 📸 Gallery
+
+- High-quality F1 event photos
+- Infinite scroll for smooth browsing
+- Categorized image collections
+- Responsive image display
+
+### 📞 Contact Form
+
+- User-friendly contact interface
+- Support for inquiries and feedback
+- Direct communication with developers
+
+## 🛠️ Tech Stack
+
+### Frontend Framework
+
+- **Angular 19** - Modern, scalable frontend framework
+- **TypeScript 5.7** - Type-safe development
+- **SCSS** - Advanced CSS preprocessing
+
+### Key Libraries
+
+- **@ngx-translate/core** - Internationalization
+- **ngx-infinite-scroll** - Smooth scrolling gallery
+- **RxJS** - Reactive programming
+- **Angular Router** - Client-side routing
+
+### Development Tools
+
+- **Angular CLI** - Development and build tools
+- **TypeScript Compiler** - Type checking and compilation
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js (v18 or higher)
+- npm (v9 or higher)
+- Angular CLI (v19)
+
+### Installation
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/TihomirDenev/Formula1.git
+   cd Formula1
+   ```
+
+2. **Install dependencies**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+
+   ```bash
+   npm start
+   ```
+
+4. **Open your browser**
+   Navigate to `http://localhost:4200` to view the application
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── pages/           # Feature pages
+│   │   ├── home/        # Landing page
+│   │   ├── teams/       # Teams listing
+│   │   ├── team/        # Individual team details
+│   │   ├── racer/       # Driver profiles
+│   │   ├── point-system/ # Points and standings
+│   │   ├── hof/         # Hall of Fame
+│   │   ├── photos/      # Photo gallery
+│   │   ├── contacts/    # Contact form
+│   │   └── not-found/   # 404 page
+│   ├── layout/          # Shared layout components
+│   ├── interfaces.ts    # TypeScript interfaces
+│   ├── app.routes.ts    # Application routing
+│   └── app.config.ts    # App configuration
+├── assets/              # Static assets
+└── styles.scss          # Global styles
 ```
 
-2. Navigate to the project directory:
+## 📄 License
 
-```bash
-cd Formula1
-```
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-3. Install Dependencies Before running the project.
+## 🙏 Acknowledgments
 
-```bash
-npm install
-```
+- Formula One community for inspiration
+- Angular team for the amazing framework
+- All contributors and supporters
 
-4. To run the project, use the following command:
+---
 
-```bash
-npm run start
-```
-
-5. Open localhost link in browser to view web-platform.
-
-# ✨ Contributing
-
-- We welcome contributions to the Formula One project! If you have suggestions, feel free to open an issue or submit a pull request. Please follow the contribution guidelines to ensure smooth collaboration.
-
-# 📇 License
-
-- This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+<div align="center">
+  <p>
+    <a href="https://github.com/TihomirDenev/Formula1">View on GitHub</a> •
+    <a href="https://formula1-omega.vercel.app">View Live Demo</a>
+  </p>
+</div>

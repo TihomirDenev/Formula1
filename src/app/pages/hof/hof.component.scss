@@ -19,11 +19,9 @@ h2 {
     width: 100%;
     max-width: 600px;
     border-radius: 1rem;
-    background: linear-gradient(
-      90deg,
-      var(--background-main),
-      var(--background-green-end)
-    );
+    background: linear-gradient(90deg,
+        var(--background-main),
+        var(--background-green-end));
     cursor: pointer;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -33,10 +31,20 @@ h2 {
       transform: scale(1.02);
     }
 
-    img {
+    .racer-photo {
       width: 150px;
       height: 150px;
       object-fit: cover;
+      transition: opacity 0.3s ease;
+      opacity: 0;
+
+      &.loaded {
+        opacity: 1;
+      }
+
+      &.loading {
+        opacity: 0.3;
+      }
     }
 
     .racer-info {
@@ -83,7 +91,7 @@ h2 {
       max-width: 100%;
       text-align: center;
 
-      img {
+      .racer-photo {
         width: 100%;
         height: auto;
       }

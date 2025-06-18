@@ -10,11 +10,38 @@
 >
   <div
     class="team-card"
-    *ngFor="let team of displayedTeams"
+    *ngFor="let team of displayedTeams; trackBy: trackByTeam"
     (click)="viewTeamDetails(team)"
   >
     <div class="team-photo">
-      <img [src]="team.photo" alt="{{ team.name }} photo" />
+      <!-- Loading skeleton -->
+      <div
+        class="photo-skeleton"
+        *ngIf="
+          team.photo &&
+          !isImageLoaded(team.photo) &&
+          !isImageLoading(team.photo)
+        "
+      >
+        <div class="skeleton-placeholder"></div>
+      </div>
+
+      <!-- Loading spinner -->
+      <div
+        class="photo-loading"
+        *ngIf="team.photo && isImageLoading(team.photo)"
+      >
+        <div class="loading-spinner"></div>
+      </div>
+
+      <!-- Actual image -->
+      <img
+        [src]="team.photo"
+        [alt]="team.name + ' photo'"
+        [class.loaded]="team.photo && isImageLoaded(team.photo)"
+        [class.loading]="team.photo && isImageLoading(team.photo)"
+        loading="lazy"
+      />
     </div>
 
     <div class="team-details">
@@ -57,13 +84,45 @@
         </p>
 
         <span class="additional-info">
-          {{ "teamInfo." + team.name | translate }}
+          {{ getTeamInfoTranslation(team.name) | translate }}
         </span>
       </div>
 
       <div class="team-logo-container">
-        <img [src]="team.logo" alt="{{ team.name }} logo" class="team-logo" />
+        <!-- Logo loading skeleton -->
+        <div
+          class="logo-skeleton"
+          *ngIf="
+            team.logo && !isImageLoaded(team.logo) && !isImageLoading(team.logo)
+          "
+        >
+          <div class="skeleton-placeholder"></div>
+        </div>
+
+        <!-- Logo loading spinner -->
+        <div
+          class="logo-loading"
+          *ngIf="team.logo && isImageLoading(team.logo)"
+        >
+          <div class="loading-spinner"></div>
+        </div>
+
+        <!-- Actual logo -->
+        <img
+          [src]="team.logo"
+          [alt]="team.name + ' logo'"
+          class="team-logo"
+          [class.loaded]="team.logo && isImageLoaded(team.logo)"
+          [class.loading]="team.logo && isImageLoading(team.logo)"
+          loading="lazy"
+        />
       </div>
     </div>
   </div>
+</div>
+
+<!-- Loading indicator for infinite scroll -->
+<div class="infinite-loading" *ngIf="displayedTeams.length < allTeams.length">
+  <div class="loading-spinner"></div>
+  <p>Load More Teams</p>
 </div>

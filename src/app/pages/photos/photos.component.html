@@ -8,9 +8,20 @@
   [infiniteScrollThrottle]="300"
   (scrolled)="loadMorePhotos()"
 >
-  <div class="photo" *ngFor="let photo of photos">
+  <div class="photo" *ngFor="let photo of photos; trackBy: trackByPhoto">
     <a [href]="photo" target="_blank" rel="noopener noreferrer">
-      <img [src]="photo" loading="lazy" alt="Formula One" />
+      <img
+        [src]="photo"
+        [alt]="'Formula One'"
+        [class.loaded]="isImageLoaded(photo)"
+        [class.loading]="isImageLoading(photo)"
+        loading="lazy"
+      />
     </a>
   </div>
+</div>
+
+<div class="infinite-loading" *ngIf="photos.length < allPhotos.length">
+  <div class="loading-spinner"></div>
+  <p>Load More Photos</p>
 </div>

@@ -10,10 +10,17 @@
 >
   <div
     class="card"
-    *ngFor="let racer of displayedRacers"
+    *ngFor="let racer of displayedRacers; trackBy: trackByRacer"
     (click)="viewRacerDetails(racer)"
   >
-    <img [src]="racer.photo" alt="{{ racer.name }}" class="racer-photo" />
+    <img
+      [src]="racer.photo"
+      [alt]="racer.name"
+      class="racer-photo"
+      [class.loaded]="isImageLoaded(racer.photo)"
+      [class.loading]="isImageLoading(racer.photo)"
+      loading="lazy"
+    />
 
     <div class="racer-info">
       <h3>{{ racer.name }}</h3>
@@ -24,6 +31,7 @@
           [src]="'assets/images/flags/' + racer.flag + '.svg'"
           [alt]="racer.country + ' flag'"
           class="country-flag"
+          loading="lazy"
         />
       </p>
       <p>

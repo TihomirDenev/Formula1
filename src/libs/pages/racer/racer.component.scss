@@ -1,125 +1,317 @@
-.racer-profile {
-  max-width: 800px;
-  margin: 2rem auto;
-  padding: 2rem;
-  border: 2px solid var(--border-gray);
-  border-radius: 1rem;
-  background-color: var(--background-darker);
+$max-width: 960px;
 
-  .racer-header {
+// ── Hero ──────────────────────────────────────────────────
+.racer-hero {
+  position: relative;
+  background: linear-gradient(
+    115deg,
+    #0a0000 0%,
+    #1a0000 20%,
+    #6b0000 55%,
+    #3a0000 80%,
+    #0a0000 100%
+  );
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 70% 50%, rgba(255, 0, 0, 0.1) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  &__inner {
+    position: relative;
+    z-index: 1;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 2.5rem 2rem 3rem;
     display: flex;
-    align-items: center;
-    gap: 1rem;
+    align-items: flex-end;
+    gap: 2.5rem;
+  }
+
+  // ── Photo ────────────────────────────────────────────────
+  &__photo-wrap {
+    flex-shrink: 0;
+  }
+
+  &__photo {
+    width: 220px;
+    height: 260px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 10px;
+    border: 3px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.6);
+    display: block;
+  }
+
+  // ── Text side ────────────────────────────────────────────
+  &__info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
     flex-direction: column;
-    text-align: center;
+    gap: 0.75rem;
+  }
 
-    .racer-photo {
-      width: 20rem;
-      height: 20rem;
-      border-radius: 2rem;
-      transition: transform 0.3s ease-in-out;
-      object-fit: cover;
+  &__back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.55);
+    text-decoration: none;
+    transition: color 0.2s;
 
-      &:hover {
-        transform: scale(1.05);
-      }
+    &:hover {
+      color: #fff;
     }
 
-    h1 {
-      margin-top: 0;
-      color: var(--accent-yellow);
+    i {
+      font-size: 0.7rem;
     }
   }
 
-  .racer-info {
+  &__flag-name {
     display: flex;
-    gap: 1rem;
-    flex-direction: column;
-    padding: 1rem;
-    border-radius: 10px;
-    background: var(--background-light-gray);
+    align-items: center;
+    gap: 0.85rem;
+    flex-wrap: wrap;
+  }
 
-    .info-section {
-      display: flex;
-      justify-content: space-between;
+  &__flag {
+    width: 44px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 3px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    flex-shrink: 0;
+  }
 
-      .country-flag {
-        width: 3rem;
-        height: 2.4rem;
-        border: 2px solid var(--text-color);
-        border-radius: 0.5rem;
-        object-fit: cover;
-      }
-    }
+  &__name {
+    margin: 0;
+    font-size: clamp(1.8rem, 4vw, 3rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    color: #fff;
+    line-height: 1.05;
+  }
 
-    .info-section,
-    .team-section {
-      padding: 1rem;
-      border: 2px solid var(--border-gray);
-      border-radius: 10px;
-      background-color: var(--background-darker);
+  &__country {
+    margin: 0;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
 
-      strong {
-        color: var(--text-muted);
-      }
+  &__stripe {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--text-red);
+  }
+}
 
-      h3 {
-        margin: 0;
-        color: var(--accent-yellow);
-      }
+// ── Stat Pills ────────────────────────────────────────────
+.racer-hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.25rem;
+}
 
-      ul {
-        padding: 0;
-        list-style-type: none;
+.stat-pill {
+  display: flex;
+  flex-direction: column;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  padding: 0.45rem 0.85rem;
+  min-width: 80px;
 
-        li {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          min-height: 3rem;
-          margin: 0.8rem 0;
-          padding: 0 2rem;
-          border-radius: 0.5rem;
-          background: var(--background-gray);
-          transition: 0.2s ease-in-out;
+  &__value {
+    font-size: 0.88rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+  }
 
-          .logo-img {
-            width: 4rem;
-            object-fit: cover;
-          }
+  &__label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: rgba(255, 255, 255, 0.45);
+    margin-top: 0.1rem;
+  }
 
-          &:hover {
-            background: var(--background-light-gray);
-          }
-        }
-      }
-    }
+  &--death {
+    border-color: rgba(255, 0, 0, 0.25);
 
-    .bio-summary,
-    .bio-additional {
-      padding: 15px;
-      border-left: 5px solid var(--accent-yellow);
-      font-size: 1rem;
-      line-height: 1.8;
-      background-color: var(--background-darker);
+    .stat-pill__label {
+      color: rgba(255, 100, 100, 0.7);
     }
   }
 }
 
-@media (max-width: 768px) {
-  .racer-profile {
+// ── Content wrapper ───────────────────────────────────────
+.racer {
+  padding-bottom: 4rem;
+}
+
+// ── Teams ─────────────────────────────────────────────────
+.racer-teams {
+  max-width: $max-width;
+  margin: 2.5rem auto 0;
+  padding: 0 2rem;
+
+  &__title {
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-yellow);
+    margin: 0 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--text-red);
+    display: inline-block;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+
+.team-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: var(--background-darker);
+  border: 1px solid var(--border-gray);
+  border-radius: 8px;
+  padding: 0.5rem 1rem 0.5rem 0.6rem;
+  transition: border-color 0.2s, background 0.2s;
+
+  &:hover {
+    border-color: var(--text-red);
+    background: #1a0000;
+  }
+
+  &__logo {
+    width: 40px;
+    height: 28px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  &__name {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--text-light);
+    white-space: nowrap;
+  }
+}
+
+// ── Biography ─────────────────────────────────────────────
+.racer-bio {
+  max-width: $max-width;
+  margin: 2rem auto 0;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  &__block {
+    background: var(--background-darker);
+    border: 1px solid var(--border-gray);
+    border-left: 4px solid var(--text-red);
+    border-radius: 0 8px 8px 0;
+    padding: 1.5rem 1.75rem;
+
+    &--secondary {
+      border-left-color: var(--accent-yellow);
+    }
+  }
+
+  &__heading {
+    margin: 0 0 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-yellow);
+  }
+
+  &__text {
     margin: 0;
-    border: none;
-    background-color: transparent;
+    font-size: 0.92rem;
+    line-height: 1.85;
+    color: var(--text-light);
+  }
+}
 
-    .racer-header {
-      .racer-photo {
-        border-radius: 1.5rem !important;
-      }
+// ── Responsive ────────────────────────────────────────────
+@media (max-width: 768px) {
+  .racer-hero {
+    &__inner {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 1.5rem;
+      padding: 2rem 1.25rem 2.5rem;
     }
 
-    .racer-info {
-      border: 2px solid var(--border-light-gray);
+    &__flag-name {
+      justify-content: center;
     }
+
+    &__country {
+      text-align: center;
+    }
+
+    &__stats {
+      justify-content: center;
+    }
+
+    &__back {
+      align-self: flex-start;
+    }
+  }
+
+  .racer-teams,
+  .racer-bio {
+    padding: 0 1.25rem;
+  }
+
+  .racer-teams__list {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .racer-hero {
+    &__photo {
+      width: 160px;
+      height: 190px;
+    }
+
+    &__name {
+      font-size: 1.6rem;
+    }
+  }
+
+  .stat-pill {
+    flex: 1 1 calc(50% - 0.3rem);
   }
 }

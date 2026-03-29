@@ -11,7 +11,7 @@ export const RACERS_INFO: RacerInfo[] = [
     placeOfBirth: 'Turin, Italy',
     dateOfBirth: '30 October 1906',
     dateOfDeath: '30 June 1966',
-    f1Teams: ['Alfa Romeo', 'Ferrari'],
+    f1Teams: ['Alfa Romeo', 'Ferrari', 'Maserati'],
   },
   {
     id: 2,
@@ -59,7 +59,7 @@ export const RACERS_INFO: RacerInfo[] = [
     placeOfBirth: 'Hurstville, Australia',
     dateOfBirth: '2 April 1926',
     dateOfDeath: '19 May 2014',
-    f1Teams: ['Cooper', 'Brabham', 'Lotus', 'Maserati'],
+    f1Teams: ['Cooper', 'Brabham'],
   },
   {
     id: 6,
@@ -222,7 +222,7 @@ export const RACERS_INFO: RacerInfo[] = [
     placeOfBirth: 'Melbourne, Australia',
     dateOfBirth: '2 November 1946',
     dateOfDeath: '',
-    f1Teams: ['Hesketh', 'Shadow', 'Williams', 'Arrows', 'Haas'],
+    f1Teams: ['Hesketh', 'Surtees', 'Shadow', 'Williams', 'Arrows'],
   },
   {
     id: 19,
@@ -234,7 +234,7 @@ export const RACERS_INFO: RacerInfo[] = [
     placeOfBirth: 'Rio de Janeiro, Brazil',
     dateOfBirth: '17 August 1952',
     dateOfDeath: '',
-    f1Teams: ['Ensign', 'McLaren', 'Brabham', 'Williams', 'Lotus', 'Benetton'],
+    f1Teams: ['Ensign', 'Brabham', 'Williams', 'Lotus', 'Benetton'],
   },
   {
     id: 20,
@@ -425,7 +425,7 @@ export const RACERS_INFO: RacerInfo[] = [
     name: 'Max Verstappen',
     country: 'Netherlands',
     flag: 'nl',
-    wins: 20,
+    wins: 63,
     placeOfBirth: 'Hasselt, Belgium',
     dateOfBirth: '30 September 1997',
     dateOfDeath: '',
@@ -437,7 +437,7 @@ export const RACERS_INFO: RacerInfo[] = [
     name: 'Lando Norris',
     country: 'United Kingdom',
     flag: 'gb',
-    wins: 7,
+    wins: 16,
     placeOfBirth: 'Bristol, United Kingdom',
     dateOfBirth: '13 November 1999',
     dateOfDeath: '',

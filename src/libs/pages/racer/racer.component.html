@@ -1,72 +1,91 @@
-<article class="racer-profile">
-  <header class="racer-header">
-    <img
-      [src]="'assets/images/hof/' + racer?.id + '.jpg'"
-      alt="Photo of {{ racer?.name }}"
-      class="racer-photo"
-    />
+@if (racer) {
+  <article class="racer">
 
-    <h1>{{ racer?.name }}</h1>
-  </header>
+    <!-- ── Hero ──────────────────────────────────────────── -->
+    <section class="racer-hero">
+      <div class="racer-hero__bg"></div>
 
-  <section class="racer-info">
-    <div class="info-section">
-      <div>
-        <h3>{{ "racer.racerDetails" | translate }}</h3>
-        <p>
-          <strong>{{ "racer.country" | translate }}</strong>
-          {{ racer?.country }}
-        </p>
-        <p>
-          <strong>{{ "racer.dateOfBirth" | translate }}</strong>
-          {{ racer?.dateOfBirth }}
-        </p>
-        @if (racer?.dateOfDeath) {
-          <p>
-            <strong>{{ "racer.dateOfDeath" | translate }}</strong>
-            {{ racer?.dateOfDeath }}
-          </p>
-        }
-        <p>
-          <strong>{{ "racer.placeOfBirth" | translate }}</strong>
-          {{ racer?.placeOfBirth }}
-        </p>
-        <p>
-          <strong>{{ "racer.totalWins" | translate }}</strong> {{ racer?.wins }}
-        </p>
+      <div class="racer-hero__inner">
+        <div class="racer-hero__photo-wrap">
+          <img
+            [src]="c.photoBasePath + racer.id + c.photoExtension"
+            [alt]="racer.name"
+            class="racer-hero__photo"
+          />
+        </div>
+
+        <div class="racer-hero__info">
+          <a [routerLink]="c.hofRoute" class="racer-hero__back">
+            <i class="fas fa-arrow-left"></i>
+            {{ "racer.backToHof" | translate }}
+          </a>
+
+          <div class="racer-hero__flag-name">
+            <img
+              [src]="c.flagBasePath + racer.flag + c.flagExtension"
+              [alt]="racer.country"
+              class="racer-hero__flag"
+            />
+            <h1 class="racer-hero__name">{{ racer.name }}</h1>
+          </div>
+
+          <p class="racer-hero__country">{{ racer.country }}</p>
+
+          <!-- Stat pills -->
+          <div class="racer-hero__stats">
+            <div class="stat-pill">
+              <span class="stat-pill__value">{{ racer.wins }}</span>
+              <span class="stat-pill__label">{{ "racer.careerWins" | translate }}</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-pill__value">{{ racer.dateOfBirth }}</span>
+              <span class="stat-pill__label">{{ "racer.born" | translate }}</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-pill__value">{{ racer.placeOfBirth }}</span>
+              <span class="stat-pill__label">{{ "racer.birthplace" | translate }}</span>
+            </div>
+            @if (racer.dateOfDeath) {
+              <div class="stat-pill stat-pill--death">
+                <span class="stat-pill__value">{{ racer.dateOfDeath }}</span>
+                <span class="stat-pill__label">{{ "racer.deceased" | translate }}</span>
+              </div>
+            }
+          </div>
+        </div>
       </div>
 
-      <img
-        [src]="'assets/images/flags/' + racer?.flag + '.svg'"
-        alt="{{ racer?.country }} flag"
-        class="country-flag"
-      />
-    </div>
+      <div class="racer-hero__stripe"></div>
+    </section>
 
-    <div class="team-section">
-      <h3>{{ "racer.teams" | translate }}</h3>
-      <ul>
-        @for (team of racer?.f1Teams; track team) {
-          <li>
-            {{ team }}
+    <!-- ── Teams ─────────────────────────────────────────── -->
+    <section class="racer-teams">
+      <h2 class="racer-teams__title">{{ "racer.teams" | translate }}</h2>
+      <div class="racer-teams__list">
+        @for (team of racer.f1Teams; track team) {
+          <div class="team-chip">
             <img
-              src="assets/images/logos/{{ team }}.png"
-              class="logo-img"
-              alt="{{ team }} logo"
+              [src]="c.logoBasePath + team + c.logoExtension"
+              [alt]="team"
+              class="team-chip__logo"
             />
-          </li>
+            <span class="team-chip__name">{{ team }}</span>
+          </div>
         }
-      </ul>
-    </div>
+      </div>
+    </section>
 
-    <div>
-      <p class="bio-summary">
-        {{ "racer." + racer?.identifier + ".main" | translate }}
-      </p>
+    <!-- ── Biography ─────────────────────────────────────── -->
+    <section class="racer-bio">
+      <div class="racer-bio__block">
+        <h2 class="racer-bio__heading">{{ "racer.racerDetails" | translate }}</h2>
+        <p class="racer-bio__text">{{ "racer." + racer.identifier + ".main" | translate }}</p>
+      </div>
 
-      <p class="bio-additional">
-        {{ "racer." + racer?.identifier + ".additional" | translate }}
-      </p>
-    </div>
-  </section>
-</article>
+      <div class="racer-bio__block racer-bio__block--secondary">
+        <p class="racer-bio__text">{{ "racer." + racer.identifier + ".additional" | translate }}</p>
+      </div>
+    </section>
+
+  </article>
+}

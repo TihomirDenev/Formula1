@@ -22,7 +22,14 @@
   "hof": {
     "country": "Country",
     "hallOfFame": "Hall of Fame",
+    "heroSubtitle": "Every name. Every title. Every legend.",
+    "heroDescription": "Celebrating the greatest drivers in the history of Formula One — from Nino Farina's inaugural crown in 1950 to today's champions.",
+    "sectionTitle": "World Champions",
+    "sectionSubtitle": "Click on a driver to explore their full story",
+    "championsSuffix": "Champions",
     "winDate": "Win Date",
+    "championships": "Championship",
+    "championshipsPlural": "Championships",
     "loadMore": "Load More Racers"
   },
   "home": {
@@ -49,7 +56,12 @@
     "tyreTitle": "F1 Tyre Brands",
     "welcomeDescription": "Experience the speed, the thrill, and the excitement of the Formula One World Championship. Dive into the world of motorsport's pinnacle with races held across the globe, featuring the world's best drivers and the most advanced racing technologies.",
     "welcomeTitle": "Welcome to Formula One",
-    "youtube": "YouTube"
+    "youtube": "YouTube",
+    "statYears": "Years of F1",
+    "statRaces": "Races in 2025",
+    "statTeams": "Teams",
+    "statDrivers": "Drivers",
+    "exploreHof": "Explore Hall of Fame"
   },
   "navigation": {
     "contacts": "Contacts",
@@ -209,6 +221,11 @@
     },
     "placeOfBirth": "Place of Birth: ",
     "racerDetails": "Racer Details",
+    "backToHof": "Back to Hall of Fame",
+    "careerWins": "Career Wins",
+    "born": "Born",
+    "birthplace": "Birthplace",
+    "deceased": "Deceased",
     "SebastianVettel": {
       "additional": "Just three years and half years after he was born, on July 3, 1987, Sebastian Vettel began the way of life that would take him to the very pinnacle of motorsport. His method of transport was a miniature kart, the venue was the yard at his home in Heppenheim, a town in south-western Germany. Little Sebastian quickly mastered the machine and began lapping faster and faster, shrieking with glee and refusing to stop until he was exhausted. The source of little Seb's joy soon became a focal point of family life for the Vettels. Norbert, a carpenter by trade and in his spare time an enthusiastic karter and occasional hillclimber, and his wife Heike had three other children: older daughters Stefanie and Melanie, and a younger son Fabian. His family's support helped the would-be racer fulfil a destiny that would make the Vettel name a household word around the world.",
       "main": "The youngest ever world champion's accumulation of age-related records that began in 2010 continued for four consecutive seasons, culminating in a one-sided 2013 title triumph that confirmed his status as one of the sport’s all-time greats. Sebastian Vettel’s first championship, at the age of 23, provided a surprise ending to an intensely competitive 2010 campaign. There was surely more to come from this fast rising racer, and it came quickly when he completely dominated in 2011 to become the youngest double world champion. In 2012, with a series of comebacks from setbacks against the strongest opposition in the longest ever season, his third driving title in a row was hard-earned and well-deserved. In 2013, and still just 26 years old, he made short work of becoming the youngest ever quadruple world champion. In truth the precocious youngster who came so far so fast was in a hurry from the time he was a toddler..."

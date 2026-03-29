@@ -18,10 +18,10 @@ export interface HomeVideo {
 }
 
 export const HOME_STATS: HomeStat[] = [
-  { value: '75', labelKey: 'home.statYears' },
-  { value: '24', labelKey: 'home.statRaces' },
-  { value: '10', labelKey: 'home.statTeams' },
-  { value: '20', labelKey: 'home.statDrivers' },
+  { value: '77th', labelKey: 'home.statYears' },
+  { value: '22', labelKey: 'home.statRaces' },
+  { value: '11', labelKey: 'home.statTeams' },
+  { value: '22', labelKey: 'home.statDrivers' },
 ];
 
 export const HOME_INFO_SECTIONS: HomeInfoSection[] = [
@@ -68,4 +68,5 @@ export const HOME_CONSTANTS = {
   heroBgAlt: 'Formula 1',
   videoPoster: 'assets/images/play.png',
   hofRoute: '/hall-of-fame',
+  heroIcon: 'fas fa-star',
 } as const;

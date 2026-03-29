@@ -2,33 +2,43 @@
 
   <!-- ── Hero ─────────────────────────────────────────── -->
   <section class="hero">
-    <img [src]="c.heroBg" [alt]="c.heroBgAlt" class="hero__bg" />
-    <div class="hero__overlay">
-      <div class="hero__content">
-        <span class="hero__eyebrow">
-          <i class="fas fa-flag-checkered"></i>
+    <img [src]="c.heroBg" [alt]="c.heroBgAlt" class="hero-bg" />
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <span class="hero-eyebrow">
+          <i [class]="c.heroIcon"></i>
           FIA Formula One World Championship
         </span>
-        <h1 class="hero__title">{{ "home.welcomeTitle" | translate }}</h1>
-        <p class="hero__subtitle">{{ "home.welcomeDescription" | translate }}</p>
+        <h1 class="hero-title">{{ "home.welcomeTitle" | translate }}</h1>
+        <p class="hero-subtitle">{{ "home.welcomeDescription" | translate }}</p>
       </div>
     </div>
-    <div class="hero__red-stripe"></div>
+    <div class="hero-red-stripe"></div>
+  </section>
+
+  <!-- ── Stats Bar ─────────────────────────────────────── -->
+  <section class="stats-bar">
+    @for (stat of stats; track stat.labelKey) {
+      <div class="stats-bar-item">
+        <span class="stats-bar-value">{{ stat.value }}</span>
+        <span class="stats-bar-label">{{ stat.labelKey | translate }}</span>
+      </div>
+    }
   </section>
 
   <!-- ── Info Sections ─────────────────────────────────── -->
   @for (section of sections; track section.titleKey) {
-    <section class="info" [class.info--reverse]="section.reverse">
-      <div class="info__image-col">
-        <img [src]="section.image" [alt]="section.imageAlt" class="info__img" />
+    <section class="info" [class.info-reverse]="section.reverse">
+      <div class="info-image-col">
+        <img [src]="section.image" [alt]="section.imageAlt" class="info-img" />
       </div>
-      <div class="info__text-col">
-        <h2 class="info__title">{{ section.titleKey | translate }}</h2>
+      <div class="info-text-col">
+        <h2 class="info-title">{{ section.titleKey | translate }}</h2>
         @if (section.introKey) {
-          <p class="info__intro">{{ section.introKey | translate }}</p>
+          <p class="info-intro">{{ section.introKey | translate }}</p>
         }
         @for (key of section.paragraphKeys; track key) {
-          <p class="info__para">{{ key | translate }}</p>
+          <p class="info-para">{{ key | translate }}</p>
         }
       </div>
     </section>
@@ -36,11 +46,12 @@
 
   <!-- ── Videos ────────────────────────────────────────── -->
   <section class="videos">
-    <h2 class="videos__title">{{ "home.formulaOneVid" | translate }}</h2>
-    <div class="videos__grid">
+    <h2 class="videos-title">{{ "home.formulaOneVid" | translate }}</h2>
+    <p class="videos-subtitle">{{ "home.videoSubtitle" | translate }}</p>
+    <div class="videos-grid">
       @for (video of videos; track video.src) {
         <div class="video-card">
-          <p class="video-card__label">{{ video.titleKey | translate }}</p>
+          <p class="video-card-label">{{ video.titleKey | translate }}</p>
           <video
             [src]="video.src"
             controls

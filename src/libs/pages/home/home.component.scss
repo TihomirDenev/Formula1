@@ -5,7 +5,9 @@ $max-width: 1100px;
 .hero {
   position: relative;
   width: 100%;
-  height: 320px;
+  min-height: 320px;
+  display: flex;
+  align-items: center;
   overflow: hidden;
   background: linear-gradient(
     115deg,
@@ -26,25 +28,31 @@ $max-width: 1100px;
   }
 
   @media (max-width: 768px) {
-    height: 260px;
+    min-height: 260px;
   }
 
   @media (max-width: 480px) {
-    height: 220px;
+    min-height: 220px;
   }
 
-  &__bg {
+  &-bg {
     display: none;
   }
 
-  &__overlay {
-    position: absolute;
-    inset: 0;
+  &-overlay {
+    position: relative;
+    z-index: 1;
+    width: 100%;
     display: flex;
     align-items: center;
+    padding: 2.5rem 0;
+
+    @media (max-width: 480px) {
+      padding: 2rem 0;
+    }
   }
 
-  &__content {
+  &-content {
     max-width: $max-width;
     width: 100%;
     margin: 0 auto;
@@ -60,31 +68,32 @@ $max-width: 1100px;
     }
   }
 
-  &__eyebrow {
+  &-eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.75rem;
+    font-size: 0.72rem;
     font-weight: 700;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--text-red);
-    background: rgba(255, 0, 0, 0.12);
-    border: 1px solid rgba(255, 0, 0, 0.35);
-    padding: 0.25rem 0.75rem;
-    border-radius: 2rem;
+    color: #fff;
+    background: rgba(255, 0, 0, 0.2);
+    border: 1px solid rgba(255, 0, 0, 0.45);
+    padding: 0.28rem 0.8rem;
+    border-radius: 2px;
 
     i {
       color: var(--accent-yellow);
-      font-size: 0.8rem;
+      font-size: 0.68rem;
     }
 
     @media (max-width: 480px) {
       font-size: 0.65rem;
+      letter-spacing: 0.04em;
     }
   }
 
-  &__title {
+  &-title {
     font-size: clamp(2.2rem, 5.5vw, 4rem);
     font-weight: 900;
     color: #ffffff;
@@ -98,7 +107,7 @@ $max-width: 1100px;
     }
   }
 
-  &__subtitle {
+  &-subtitle {
     font-size: clamp(0.875rem, 1.4vw, 1rem);
     color: var(--text-light);
     max-width: 600px;
@@ -106,13 +115,67 @@ $max-width: 1100px;
     margin: 0;
   }
 
-  &__red-stripe {
+  &-red-stripe {
     position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     height: 5px;
     background: var(--text-red);
+  }
+}
+
+// ── Stats Bar ─────────────────────────────────────────────────────────────────
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  background: linear-gradient(90deg, #1a0000, #3a0000, #1a0000);
+  border-bottom: 1px solid rgba(255, 0, 0, 0.25);
+
+  &-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.1rem 2.5rem;
+    border-right: 1px solid rgba(255, 255, 255, 0.07);
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+
+  &-value {
+    font-size: clamp(1.4rem, 3vw, 2rem);
+    font-weight: 900;
+    color: var(--accent-yellow);
+    line-height: 1.1;
+    letter-spacing: -0.01em;
+  }
+
+  &-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255, 255, 255, 0.45);
+    margin-top: 0.2rem;
+  }
+
+  @media (max-width: 600px) {
+    &-item {
+      padding: 0.9rem 1rem;
+      flex: 1;
+    }
+
+    &-value {
+      font-size: 1.2rem;
+    }
+
+    &-label {
+      font-size: 0.55rem;
+      letter-spacing: 0.06em;
+    }
   }
 }
 
@@ -138,14 +201,14 @@ $max-width: 1100px;
     max-width: 100%;
   }
 
-  &--reverse {
+  &-reverse {
     flex-direction: row-reverse;
 
     @media (max-width: 768px) {
       flex-direction: column;
     }
 
-    .info__image-col {
+    .info-image-col {
       border-left: none;
       border-right: 1px solid var(--border-gray);
 
@@ -156,7 +219,7 @@ $max-width: 1100px;
     }
   }
 
-  &__image-col {
+  &-image-col {
     flex: 0 0 340px;
     border-right: 1px solid var(--border-gray);
     overflow: hidden;
@@ -177,7 +240,7 @@ $max-width: 1100px;
     }
   }
 
-  &__img {
+  &-img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -189,7 +252,7 @@ $max-width: 1100px;
     }
   }
 
-  &__text-col {
+  &-text-col {
     flex: 1;
     padding: 2rem 2.25rem;
     display: flex;
@@ -201,7 +264,7 @@ $max-width: 1100px;
     }
   }
 
-  &__title {
+  &-title {
     font-size: clamp(1.3rem, 2.2vw, 1.6rem);
     font-weight: 800;
     color: var(--accent-yellow);
@@ -211,7 +274,7 @@ $max-width: 1100px;
     display: inline-block;
   }
 
-  &__intro {
+  &-intro {
     font-size: 0.9rem;
     color: var(--text-muted);
     line-height: 1.65;
@@ -219,7 +282,7 @@ $max-width: 1100px;
     font-style: italic;
   }
 
-  &__para {
+  &-para {
     font-size: clamp(0.83rem, 1.1vw, 0.92rem);
     color: var(--text-light);
     line-height: 1.75;
@@ -241,17 +304,27 @@ $max-width: 1100px;
     padding: 0 1rem;
   }
 
-  &__title {
+  &-title {
     font-size: clamp(1.3rem, 2.2vw, 1.6rem);
     font-weight: 800;
     color: var(--accent-yellow);
     text-align: center;
-    margin: 0 0 1.5rem;
+    margin: 0 0 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.06em;
   }
 
-  &__grid {
+  &-subtitle {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    text-align: center;
+    margin: 0 auto 1.5rem;
+    max-width: 560px;
+    line-height: 1.6;
+    font-style: italic;
+  }
+
+  &-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
@@ -279,7 +352,7 @@ $max-width: 1100px;
     box-shadow: var(--shadow-lg);
   }
 
-  &__label {
+  &-label {
     font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.05em;

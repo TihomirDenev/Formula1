@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject } from 'rxjs';
 
 export interface ImageLoadState {
   [key: string]: {
@@ -10,31 +10,22 @@ export interface ImageLoadState {
 }
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ImageOptimizationService {
-  private imageStates = new BehaviorSubject<ImageLoadState>({});
-  private imageCache = new Map<string, string>();
-
-  constructor() {}
-
-  getImageState(imageUrl: string): Observable<ImageLoadState> {
-    return this.imageStates.asObservable();
-  }
+  private readonly imageStates = new BehaviorSubject<ImageLoadState>({});
+  private readonly imageCache = new Map<string, string>();
 
   isImageLoaded(imageUrl: string): boolean {
-    const states = this.imageStates.value;
-    return states[imageUrl]?.loaded || false;
+    return this.imageStates.value[imageUrl]?.loaded || false;
   }
 
   isImageLoading(imageUrl: string): boolean {
-    const states = this.imageStates.value;
-    return states[imageUrl]?.loading || false;
+    return this.imageStates.value[imageUrl]?.loading || false;
   }
 
   hasImageError(imageUrl: string): boolean {
-    const states = this.imageStates.value;
-    return states[imageUrl]?.error || false;
+    return this.imageStates.value[imageUrl]?.error || false;
   }
 
   preloadImage(imageUrl: string): Promise<string> {
@@ -60,20 +51,18 @@ export class ImageOptimizationService {
     });
   }
 
-  getOptimizedImageUrl(originalUrl: string, width?: number, quality?: number): string {
-    return originalUrl;
-  }
-
   clearCache(): void {
     this.imageCache.clear();
     this.imageStates.next({});
   }
 
-  private updateImageState(imageUrl: string, state: { loaded: boolean; loading: boolean; error: boolean }): void {
-    const currentStates = this.imageStates.value;
+  private updateImageState(
+    imageUrl: string,
+    state: { loaded: boolean; loading: boolean; error: boolean }
+  ): void {
     this.imageStates.next({
-      ...currentStates,
-      [imageUrl]: state
+      ...this.imageStates.value,
+      [imageUrl]: state,
     });
   }
-} 
+}

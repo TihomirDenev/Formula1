@@ -8,20 +8,22 @@
   [infiniteScrollThrottle]="300"
   (scrolled)="loadMorePhotos()"
 >
-  <div class="photo" *ngFor="let photo of photos; trackBy: trackByPhoto">
-    <a [href]="photo" target="_blank" rel="noopener noreferrer">
-      <img
-        [src]="photo"
-        [alt]="'Formula One'"
-        [class.loaded]="isImageLoaded(photo)"
-        [class.loading]="isImageLoading(photo)"
-        loading="lazy"
-      />
-    </a>
-  </div>
+  @for (photo of photos; track photo; let first = $first) {
+    <div class="photo">
+      <a [href]="photo" target="_blank" rel="noopener noreferrer">
+        <img
+          [src]="photo"
+          [alt]="'Formula One'"
+          [loading]="first ? 'eager' : 'lazy'"
+        />
+      </a>
+    </div>
+  }
 </div>
 
-<div class="infinite-loading" *ngIf="photos.length < allPhotos.length">
-  <div class="loading-spinner"></div>
-  <p>Load More Photos</p>
-</div>
+@if (photos.length < allPhotos.length) {
+  <div class="infinite-loading">
+    <div class="loading-spinner"></div>
+    <p>Load More Photos</p>
+  </div>
+}

@@ -23,11 +23,11 @@
     pointer-events: none;
   }
 
-  &__overlay {
+  &-overlay {
     display: none;
   }
 
-  &__content {
+  &-content {
     position: relative;
     z-index: 1;
     padding: 0 4rem;
@@ -40,7 +40,7 @@
     text-align: center;
   }
 
-  &__eyebrow {
+  &-eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
@@ -61,7 +61,7 @@
     }
   }
 
-  &__title {
+  &-title {
     margin: 0 0 0.45rem;
     font-size: clamp(2rem, 4.5vw, 3.2rem);
     font-weight: 900;
@@ -71,7 +71,7 @@
     line-height: 1.05;
   }
 
-  &__subtitle {
+  &-subtitle {
     margin: 0;
     font-size: 1rem;
     font-style: italic;
@@ -79,11 +79,11 @@
     letter-spacing: 0.02em;
   }
 
-  &__description {
+  &-description {
     display: none;
   }
 
-  &__stripe {
+  &-stripe {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -266,7 +266,7 @@ h2 {
   .hof-hero {
     height: 200px;
 
-    &__content {
+    &-content {
       padding: 0 1.25rem;
     }
   }
@@ -282,11 +282,11 @@ h2 {
   .hof-hero {
     height: 180px;
 
-    &__content {
+    &-content {
       padding: 0 1.25rem;
     }
 
-    &__subtitle {
+    &-subtitle {
       font-size: 0.85rem;
     }
   }

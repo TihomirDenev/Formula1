@@ -1,3 +1,99 @@
+// ── Hero ──────────────────────────────────────────────────
+.hof-hero {
+  position: relative;
+  height: 260px;
+  background: linear-gradient(
+    115deg,
+    #0a0000 0%,
+    #1a0000 25%,
+    #6b0000 55%,
+    #3a0000 80%,
+    #0a0000 100%
+  );
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+
+  // Subtle noise/depth layer
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 60% 50%, rgba(255, 0, 0, 0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  &__overlay {
+    display: none;
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    padding: 0 4rem;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 0, 0, 0.2);
+    border: 1px solid rgba(255, 0, 0, 0.45);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.28rem 0.8rem;
+    border-radius: 2px;
+    margin-bottom: 0.75rem;
+
+    i {
+      font-size: 0.68rem;
+      color: var(--accent-yellow);
+    }
+  }
+
+  &__title {
+    margin: 0 0 0.45rem;
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #fff;
+    line-height: 1.05;
+  }
+
+  &__subtitle {
+    margin: 0;
+    font-size: 1rem;
+    font-style: italic;
+    color: var(--accent-yellow);
+    letter-spacing: 0.02em;
+  }
+
+  &__description {
+    display: none;
+  }
+
+  &__stripe {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--text-red);
+  }
+}
+
+// ── Page title ────────────────────────────────────────────
 h2 {
   color: var(--accent-yellow);
   font-size: 2rem;
@@ -5,6 +101,7 @@ h2 {
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 }
 
 .hall-of-fame-container {
@@ -14,7 +111,7 @@ h2 {
   padding: 0 2rem 4rem;
 }
 
-// ── Card ──────────────────────────────────────────
+// ── Card ──────────────────────────────────────────────────
 .card {
   display: flex;
   flex-direction: column;
@@ -40,7 +137,7 @@ h2 {
   }
 }
 
-// ── Photo ─────────────────────────────────────────
+// ── Photo ─────────────────────────────────────────────────
 .card-photo {
   position: relative;
   width: 100%;
@@ -64,7 +161,23 @@ h2 {
   }
 }
 
-// ── Info ──────────────────────────────────────────
+// ── Badge ─────────────────────────────────────────────────
+.card-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: var(--text-red);
+  color: #fff;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  line-height: 1.4;
+  pointer-events: none;
+}
+
+// ── Info ──────────────────────────────────────────────────
 .card-info {
   display: flex;
   flex-direction: column;
@@ -118,7 +231,7 @@ h2 {
   }
 }
 
-// ── Infinite scroll indicator ─────────────────────
+// ── Infinite scroll indicator ─────────────────────────────
 .infinite-loading {
   display: flex;
   flex-direction: column;
@@ -148,8 +261,16 @@ h2 {
   to { transform: rotate(360deg); }
 }
 
-// ── Responsive ────────────────────────────────────
+// ── Responsive ────────────────────────────────────────────
 @media (max-width: 768px) {
+  .hof-hero {
+    height: 200px;
+
+    &__content {
+      padding: 0 1.25rem;
+    }
+  }
+
   .hall-of-fame-container {
     grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 1rem;
@@ -158,6 +279,18 @@ h2 {
 }
 
 @media (max-width: 480px) {
+  .hof-hero {
+    height: 180px;
+
+    &__content {
+      padding: 0 1.25rem;
+    }
+
+    &__subtitle {
+      font-size: 0.85rem;
+    }
+  }
+
   h2 {
     font-size: 1.5rem;
   }

@@ -4,7 +4,12 @@ import { TranslateModule } from '@ngx-translate/core';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 import { Racer } from '@libs/models/racer.model';
+import { HOF_CONSTANTS } from '@libs/constants/hof.constants';
 import { HALL_OF_FAME } from './hof.data';
+
+interface HofRacer extends Racer {
+  championshipCount: number;
+}
 
 @Component({
   selector: 'app-hof',
@@ -17,14 +22,17 @@ import { HALL_OF_FAME } from './hof.data';
 export class HofComponent implements OnInit {
   private readonly router = inject(Router);
 
-  readonly RACERS_PER_PAGE = 10;
+  readonly c = HOF_CONSTANTS;
 
-  readonly hallOfFame: Racer[] = HALL_OF_FAME.map((racer) => ({
+  readonly hallOfFame: HofRacer[] = HALL_OF_FAME.map((racer) => ({
     ...racer,
-    photo: `assets/images/hof/${racer.id}.jpg`,
+    photo: `${HOF_CONSTANTS.photoBasePath}${racer.id}${HOF_CONSTANTS.photoExtension}`,
+    championshipCount: racer.winDate.split(',').length,
   })).reverse();
 
-  displayedRacers: Racer[] = [];
+  readonly totalChampions = this.hallOfFame.length;
+
+  displayedRacers: HofRacer[] = [];
 
   ngOnInit(): void {
     this.loadMoreRacers();
@@ -33,13 +41,13 @@ export class HofComponent implements OnInit {
   loadMoreRacers(): void {
     const nextRacers = this.hallOfFame.slice(
       this.displayedRacers.length,
-      this.displayedRacers.length + this.RACERS_PER_PAGE
+      this.displayedRacers.length + this.c.racersPerPage
     );
     this.displayedRacers = [...this.displayedRacers, ...nextRacers];
   }
 
   viewRacerDetails(racer: Racer): void {
     const formattedName = racer.name.split(' ').join('');
-    this.router.navigate(['/hall-of-fame', formattedName]);
+    this.router.navigate([this.c.routeBase, formattedName]);
   }
 }

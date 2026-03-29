@@ -2,30 +2,57 @@ import { Routes } from '@angular/router';
 
 import { LayoutComponent } from './layout/layout.component';
 
-import { HomeComponent } from './pages/home/home.component';
-import { PhotosComponent } from './pages/photos/photos.component';
-import { PointSystemComponent } from './pages/point-system/point-system.component';
-import { HofComponent } from './pages/hof/hof.component';
-import { NotFoundComponent } from './pages/not-found/not-found.component';
-import { ContactsComponent } from './pages/contacts/contacts.component';
-import { TeamsComponent } from './pages/teams/teams.component';
-import { RacerComponent } from './pages/racer/racer.component';
-import { TeamComponent } from './pages/team/team.component';
-
 export const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
     children: [
-      { path: '', component: HomeComponent },
-      { path: 'photos', component: PhotosComponent },
-      { path: 'point-system', component: PointSystemComponent },
-      { path: 'hall-of-fame', component: HofComponent },
-      { path: 'hall-of-fame/:racer', component: RacerComponent },
-      { path: 'teams', component: TeamsComponent },
-      { path: 'teams/:team', component: TeamComponent },
-      { path: 'contacts', component: ContactsComponent },
-      { path: '**', component: NotFoundComponent },
+      {
+        path: '',
+        loadComponent: () => import('./pages/home/home.component').then((m) => m.HomeComponent),
+      },
+      {
+        path: 'photos',
+        loadComponent: () =>
+          import('./pages/photos/photos.component').then((m) => m.PhotosComponent),
+      },
+      {
+        path: 'point-system',
+        loadComponent: () =>
+          import('./pages/point-system/point-system.component').then(
+            (m) => m.PointSystemComponent
+          ),
+      },
+      {
+        path: 'hall-of-fame',
+        loadComponent: () =>
+          import('./pages/hof/hof.component').then((m) => m.HofComponent),
+      },
+      {
+        path: 'hall-of-fame/:racer',
+        loadComponent: () =>
+          import('./pages/racer/racer.component').then((m) => m.RacerComponent),
+      },
+      {
+        path: 'teams',
+        loadComponent: () =>
+          import('./pages/teams/teams.component').then((m) => m.TeamsComponent),
+      },
+      {
+        path: 'teams/:team',
+        loadComponent: () =>
+          import('./pages/team/team.component').then((m) => m.TeamComponent),
+      },
+      {
+        path: 'contacts',
+        loadComponent: () =>
+          import('./pages/contacts/contacts.component').then((m) => m.ContactsComponent),
+      },
+      {
+        path: '**',
+        loadComponent: () =>
+          import('./pages/not-found/not-found.component').then((m) => m.NotFoundComponent),
+      },
     ],
   },
 ];

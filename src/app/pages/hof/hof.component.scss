@@ -4,117 +4,171 @@ h2 {
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-bottom: 2rem;
 }
 
 .hall-of-fame-container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 1.5rem;
-  flex-wrap: wrap;
-  justify-content: center;
-  padding: 0 2rem 4rem 2rem;
+  padding: 0 2rem 4rem;
+}
 
-  .card {
+// ── Card ──────────────────────────────────────────
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  background-color: #111111;
+  border: 1px solid #2a2a2a;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: var(--text-red);
+    box-shadow: 0 8px 24px rgba(255, 0, 0, 0.18);
+
+    .card-photo img {
+      transform: scale(1.05);
+    }
+
+    .card-overlay {
+      opacity: 1;
+    }
+  }
+}
+
+// ── Photo ─────────────────────────────────────────
+.card-photo {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.35s ease;
+  }
+
+  .card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, transparent 40%, rgba(0, 0, 0, 0.7));
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+}
+
+// ── Info ──────────────────────────────────────────
+.card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.9rem 1rem;
+  border-top: 2px solid var(--text-red);
+
+  h3 {
+    margin: 0;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.card-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+
+  .country {
     display: flex;
     align-items: center;
-    width: 100%;
-    max-width: 600px;
-    border-radius: 1rem;
-    background: linear-gradient(90deg,
-        var(--background-main),
-        var(--background-green-end));
-    cursor: pointer;
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    color: #aaaaaa;
+  }
 
-    &:hover {
-      transform: scale(1.02);
+  .country-flag {
+    width: 20px;
+    height: 13px;
+    border-radius: 2px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  .win-date {
+    font-size: 0.75rem;
+    color: var(--accent-yellow);
+
+    .label {
+      color: #666666;
+      margin-right: 0.2rem;
     }
+  }
+}
 
-    .racer-photo {
-      width: 150px;
-      height: 150px;
-      object-fit: cover;
-      transition: opacity 0.3s ease;
-      opacity: 0;
+// ── Infinite scroll indicator ─────────────────────
+.infinite-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
 
-      &.loaded {
-        opacity: 1;
-      }
+  .loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(255, 255, 255, 0.15);
+    border-top-color: var(--text-red);
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+    margin-bottom: 0.75rem;
+  }
 
-      &.loading {
-        opacity: 0.3;
-      }
-    }
+  p {
+    margin: 0;
+    color: #666666;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+}
 
-    .racer-info {
-      padding: 0 2rem;
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
 
-      h3 {
-        margin: 0.5rem 0;
-        color: var(--accent-yellow);
-        font-size: 1.5rem;
-        text-transform: uppercase;
-      }
-
-      p {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-        margin: 0.5rem 0;
-        font-size: 1rem;
-
-        strong {
-          color: var(--text-muted);
-        }
-      }
-
-      .country-flag {
-        width: 24px;
-        height: 16px;
-        border: 1px solid var(--text-light);
-        border-radius: 3px;
-      }
-    }
+// ── Responsive ────────────────────────────────────
+@media (max-width: 768px) {
+  .hall-of-fame-container {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+    padding: 0 1rem 3rem;
   }
 }
 
 @media (max-width: 480px) {
   h2 {
     font-size: 1.5rem;
-    letter-spacing: 0.8px;
   }
 
   .hall-of-fame-container {
-    .card {
-      flex-direction: column;
-      max-width: 100%;
-      text-align: center;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+    padding: 0 0.75rem 2rem;
+  }
 
-      .racer-photo {
-        width: 100%;
-        height: auto;
-      }
-
-      .racer-info {
-        padding: 1rem;
-        font-size: 1rem;
-
-        h3 {
-          margin-bottom: 0.5rem;
-          font-size: 1.2rem;
-        }
-
-        p {
-          margin: 0.5rem 0;
-          font-size: 1rem;
-        }
-
-        .country-flag {
-          width: 24px;
-          height: 16px;
-        }
-      }
-    }
+  .card-info h3 {
+    font-size: 0.8rem;
   }
 }

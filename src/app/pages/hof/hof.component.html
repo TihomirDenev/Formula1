@@ -8,35 +8,44 @@
   [infiniteScrollThrottle]="300"
   (scrolled)="loadMoreRacers()"
 >
-  <div
-    class="card"
-    *ngFor="let racer of displayedRacers; trackBy: trackByRacer"
-    (click)="viewRacerDetails(racer)"
-  >
-    <img
-      [src]="racer.photo"
-      [alt]="racer.name"
-      class="racer-photo"
-      [class.loaded]="isImageLoaded(racer.photo)"
-      [class.loading]="isImageLoading(racer.photo)"
-      loading="lazy"
-    />
-
-    <div class="racer-info">
-      <h3>{{ racer.name }}</h3>
-      <p>
-        <strong>{{ "hof.country" | translate }}:</strong>
-        {{ racer.country }}
+  @for (racer of displayedRacers; track racer.name; let first = $first) {
+    <div class="card" (click)="viewRacerDetails(racer)">
+      <div class="card-photo">
         <img
-          [src]="'assets/images/flags/' + racer.flag + '.svg'"
-          [alt]="racer.country + ' flag'"
-          class="country-flag"
-          loading="lazy"
+          [src]="racer.photo"
+          [alt]="racer.name"
+          [loading]="first ? 'eager' : 'lazy'"
         />
-      </p>
-      <p>
-        <strong>{{ "hof.winDate" | translate }}:</strong> {{ racer.winDate }}
-      </p>
+        <div class="card-overlay"></div>
+      </div>
+
+      <div class="card-info">
+        <h3>{{ racer.name }}</h3>
+
+        <div class="card-meta">
+          <span class="country">
+            <img
+              [src]="'assets/images/flags/' + racer.flag + '.svg'"
+              [alt]="racer.country + ' flag'"
+              class="country-flag"
+              loading="lazy"
+            />
+            {{ racer.country }}
+          </span>
+
+          <span class="win-date">
+            <span class="label">{{ "hof.winDate" | translate }}</span>
+            {{ racer.winDate }}
+          </span>
+        </div>
+      </div>
     </div>
-  </div>
+  }
 </div>
+
+@if (displayedRacers.length < hallOfFame.length) {
+  <div class="infinite-loading">
+    <div class="loading-spinner"></div>
+    <p>{{ "hof.loadMore" | translate }}</p>
+  </div>
+}

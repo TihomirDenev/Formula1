@@ -21,7 +21,7 @@ $max-width: 960px;
     pointer-events: none;
   }
 
-  &__inner {
+  &-inner {
     position: relative;
     z-index: 1;
     max-width: $max-width;
@@ -33,11 +33,11 @@ $max-width: 960px;
   }
 
   // ── Photo ────────────────────────────────────────────────
-  &__photo-wrap {
+  &-photo-wrap {
     flex-shrink: 0;
   }
 
-  &__photo {
+  &-photo {
     width: 220px;
     height: 260px;
     object-fit: cover;
@@ -49,7 +49,7 @@ $max-width: 960px;
   }
 
   // ── Text side ────────────────────────────────────────────
-  &__info {
+  &-info {
     flex: 1;
     min-width: 0;
     display: flex;
@@ -57,35 +57,14 @@ $max-width: 960px;
     gap: 0.75rem;
   }
 
-  &__back {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: rgba(255, 255, 255, 0.55);
-    text-decoration: none;
-    transition: color 0.2s;
-
-    &:hover {
-      color: #fff;
-    }
-
-    i {
-      font-size: 0.7rem;
-    }
-  }
-
-  &__flag-name {
+  &-flag-name {
     display: flex;
     align-items: center;
     gap: 0.85rem;
     flex-wrap: wrap;
   }
 
-  &__flag {
+  &-flag {
     width: 44px;
     height: 30px;
     object-fit: cover;
@@ -94,7 +73,7 @@ $max-width: 960px;
     flex-shrink: 0;
   }
 
-  &__name {
+  &-name {
     margin: 0;
     font-size: clamp(1.8rem, 4vw, 3rem);
     font-weight: 900;
@@ -104,7 +83,7 @@ $max-width: 960px;
     line-height: 1.05;
   }
 
-  &__country {
+  &-country {
     margin: 0;
     font-size: 0.85rem;
     color: rgba(255, 255, 255, 0.5);
@@ -112,7 +91,14 @@ $max-width: 960px;
     letter-spacing: 0.12em;
   }
 
-  &__stripe {
+  &-stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin-top: 0.25rem;
+  }
+
+  &-stripe {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -123,13 +109,6 @@ $max-width: 960px;
 }
 
 // ── Stat Pills ────────────────────────────────────────────
-.racer-hero__stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.6rem;
-  margin-top: 0.25rem;
-}
-
 .stat-pill {
   display: flex;
   flex-direction: column;
@@ -139,14 +118,14 @@ $max-width: 960px;
   padding: 0.45rem 0.85rem;
   min-width: 80px;
 
-  &__value {
+  &-value {
     font-size: 0.88rem;
     font-weight: 700;
     color: #fff;
     line-height: 1.3;
   }
 
-  &__label {
+  &-label {
     font-size: 0.68rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -154,10 +133,10 @@ $max-width: 960px;
     margin-top: 0.1rem;
   }
 
-  &--death {
+  &-death {
     border-color: rgba(255, 0, 0, 0.25);
 
-    .stat-pill__label {
+    .stat-pill-label {
       color: rgba(255, 100, 100, 0.7);
     }
   }
@@ -174,7 +153,7 @@ $max-width: 960px;
   margin: 2.5rem auto 0;
   padding: 0 2rem;
 
-  &__title {
+  &-title {
     font-size: 1rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -186,7 +165,7 @@ $max-width: 960px;
     display: inline-block;
   }
 
-  &__list {
+  &-list {
     display: flex;
     flex-wrap: wrap;
     gap: 0.75rem;
@@ -201,6 +180,7 @@ $max-width: 960px;
   border: 1px solid var(--border-gray);
   border-radius: 8px;
   padding: 0.5rem 1rem 0.5rem 0.6rem;
+  min-width: 180px;
   transition: border-color 0.2s, background 0.2s;
 
   &:hover {
@@ -208,14 +188,14 @@ $max-width: 960px;
     background: #1a0000;
   }
 
-  &__logo {
-    width: 40px;
-    height: 28px;
+  &-logo {
+    width: 64px;
+    height: 40px;
     object-fit: contain;
     flex-shrink: 0;
   }
 
-  &__name {
+  &-name {
     font-size: 0.82rem;
     font-weight: 600;
     color: var(--text-light);
@@ -232,19 +212,19 @@ $max-width: 960px;
   flex-direction: column;
   gap: 1.25rem;
 
-  &__block {
+  &-block {
     background: var(--background-darker);
     border: 1px solid var(--border-gray);
     border-left: 4px solid var(--text-red);
     border-radius: 0 8px 8px 0;
     padding: 1.5rem 1.75rem;
 
-    &--secondary {
+    &-secondary {
       border-left-color: var(--accent-yellow);
     }
   }
 
-  &__heading {
+  &-heading {
     margin: 0 0 1rem;
     font-size: 1rem;
     font-weight: 700;
@@ -253,7 +233,7 @@ $max-width: 960px;
     color: var(--accent-yellow);
   }
 
-  &__text {
+  &-text {
     margin: 0;
     font-size: 0.92rem;
     line-height: 1.85;
@@ -264,7 +244,7 @@ $max-width: 960px;
 // ── Responsive ────────────────────────────────────────────
 @media (max-width: 768px) {
   .racer-hero {
-    &__inner {
+    &-inner {
       flex-direction: column;
       align-items: center;
       text-align: center;
@@ -272,20 +252,16 @@ $max-width: 960px;
       padding: 2rem 1.25rem 2.5rem;
     }
 
-    &__flag-name {
+    &-flag-name {
       justify-content: center;
     }
 
-    &__country {
+    &-country {
       text-align: center;
     }
 
-    &__stats {
+    &-stats {
       justify-content: center;
-    }
-
-    &__back {
-      align-self: flex-start;
     }
   }
 
@@ -294,19 +270,19 @@ $max-width: 960px;
     padding: 0 1.25rem;
   }
 
-  .racer-teams__list {
+  .racer-teams-list {
     justify-content: center;
   }
 }
 
 @media (max-width: 480px) {
   .racer-hero {
-    &__photo {
+    &-photo {
       width: 160px;
       height: 190px;
     }
 
-    &__name {
+    &-name {
       font-size: 1.6rem;
     }
   }

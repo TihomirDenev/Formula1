@@ -1,5 +1,4 @@
 import { ChangeDetectionStrategy, Component, DestroyRef, inject, OnInit } from '@angular/core';
-import { RouterLink } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { TranslateModule } from '@ngx-translate/core';
@@ -11,7 +10,7 @@ import { RACER_CONSTANTS } from '@libs/constants/racer.constants';
 @Component({
   selector: 'app-racer',
   standalone: true,
-  imports: [TranslateModule, RouterLink],
+  imports: [TranslateModule],
   templateUrl: './racer.component.html',
   styleUrl: './racer.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -34,5 +33,10 @@ export class RacerComponent implements OnInit {
         if (!selectedRacer) return;
         this.racer = RACERS_INFO.find((r) => r.identifier === selectedRacer);
       });
+  }
+
+  getLogoSrc(team: string): string {
+    const ext = this.c.logoSvgTeams.includes(team) ? '.svg' : this.c.logoExtension;
+    return `${this.c.logoBasePath}${team}${ext}`;
   }
 }

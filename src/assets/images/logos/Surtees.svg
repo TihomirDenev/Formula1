@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" width="200" height="80">
+  <!-- Background -->
+  <rect width="200" height="80" rx="6" fill="#1a1a1a"/>
+  <!-- Red accent bar on left -->
+  <rect x="0" y="0" width="6" height="80" rx="3" fill="#cc0000"/>
+  <!-- Team name -->
+  <text
+    x="108"
+    y="34"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="22"
+    font-weight="900"
+    fill="#ffffff"
+    text-anchor="middle"
+    letter-spacing="3"
+  >SURTEES</text>
+  <!-- Subtitle -->
+  <text
+    x="108"
+    y="56"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="11"
+    font-weight="400"
+    fill="#999999"
+    text-anchor="middle"
+    letter-spacing="2"
+  >FORMULA ONE</text>
+  <!-- Thin red underline -->
+  <rect x="24" y="62" width="168" height="2" fill="#cc0000" opacity="0.6"/>
+</svg>

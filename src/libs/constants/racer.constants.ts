@@ -5,5 +5,6 @@ export const RACER_CONSTANTS = {
   flagExtension: '.svg',
   logoBasePath: 'assets/images/logos/',
   logoExtension: '.png',
+  logoSvgTeams: ['Surtees'] as string[],
   hofRoute: '/hall-of-fame',
 } as const;

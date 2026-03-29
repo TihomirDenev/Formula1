@@ -1,37 +1,55 @@
-<div class="points-system-container">
-  <h2>{{ "pointSystem.evolutionOfPoints" | translate }}</h2>
+<!-- ── Hero ──────────────────────────────────────────────────────────────── -->
+<section class="ps-hero">
+  <div class="ps-hero-content">
+    <span class="ps-hero-eyebrow">
+      <i [class]="c.heroIcon"></i>
+      FIA Formula One World Championship
+    </span>
+    <h1 class="ps-hero-title">{{ "pointSystem.evolutionOfPoints" | translate }}</h1>
+    <p class="ps-hero-subtitle">{{ "pointSystem.heroSubtitle" | translate }}</p>
+  </div>
+  <div class="ps-hero-stripe"></div>
+</section>
 
-  <table>
-    <thead>
-      <tr>
-        <th>{{ pointSystemHeader.position }}</th>
-        <th>{{ pointSystemHeader.pointsByEra1 }}</th>
-        <th>{{ pointSystemHeader.pointsByEra2 }}</th>
-        <th>{{ pointSystemHeader.pointsByEra3 }}</th>
-        <th>{{ pointSystemHeader.pointsByEra4 }}</th>
-        <th>{{ pointSystemHeader.pointsByEra5 }}</th>
-        <th>{{ pointSystemHeader.pointsByEra6 }}</th>
-      </tr>
-    </thead>
-
-    <tbody>
-      @for (system of pointsSystems; track system.position) {
+<!-- ── Table ─────────────────────────────────────────────── -->
+<section class="ps-table-section">
+  <div class="ps-table-wrap">
+    <table class="ps-table">
+      <thead>
         <tr>
-          <td>{{ system.position }}</td>
-          <td>{{ system.pointsByEra1 }} {{ "pointSystem.points" | translate }}</td>
-          <td>{{ system.pointsByEra2 }} {{ "pointSystem.points" | translate }}</td>
-          <td>{{ system.pointsByEra3 }} {{ "pointSystem.points" | translate }}</td>
-          <td>{{ system.pointsByEra4 }} {{ "pointSystem.points" | translate }}</td>
-          <td>{{ system.pointsByEra5 }} {{ "pointSystem.points" | translate }}</td>
-          <td>{{ system.pointsByEra6 }} {{ "pointSystem.points" | translate }}</td>
+          <th class="ps-table-pos-col">{{ "pointSystem.position" | translate }}</th>
+          <th>{{ pointSystemHeader.pointsByEra1 }}</th>
+          <th>{{ pointSystemHeader.pointsByEra2 }}</th>
+          <th>{{ pointSystemHeader.pointsByEra3 }}</th>
+          <th>{{ pointSystemHeader.pointsByEra4 }}</th>
+          <th>{{ pointSystemHeader.pointsByEra5 }}</th>
+          <th class="ps-table-current-col">{{ pointSystemHeader.pointsByEra6 }}</th>
         </tr>
-      }
-    </tbody>
-  </table>
+      </thead>
 
-  <img
-    src="assets/images/gallery/points.webp"
-    class="image"
-    alt="Points System"
-  />
-</div>
+      <tbody>
+        @for (system of pointsSystems; track system.position) {
+          <tr>
+            <td class="ps-table-pos-cell">{{ system.position }}</td>
+            <td>{{ system.pointsByEra1 === '0' ? '—' : system.pointsByEra1 }}</td>
+            <td>{{ system.pointsByEra2 === '0' ? '—' : system.pointsByEra2 }}</td>
+            <td>{{ system.pointsByEra3 === '0' ? '—' : system.pointsByEra3 }}</td>
+            <td>{{ system.pointsByEra4 === '0' ? '—' : system.pointsByEra4 }}</td>
+            <td>{{ system.pointsByEra5 === '0' ? '—' : system.pointsByEra5 }}</td>
+            <td class="ps-table-current-col">
+              {{ system.pointsByEra6 === '0' ? '—' : system.pointsByEra6 + ' ' }}
+              @if (system.pointsByEra6 !== '0') {
+                <span class="ps-table-pts">{{ "pointSystem.points" | translate }}</span>
+              }
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ── Image ─────────────────────────────────────────────── -->
+<section class="ps-image-section">
+  <img [src]="c.pointsImage" alt="Points System" class="ps-image" loading="lazy" />
+</section>

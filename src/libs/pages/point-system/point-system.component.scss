@@ -1,134 +1,238 @@
-.points-system-container {
-  padding: 0 5rem;
-  text-align: center;
+// ── Hero ──────────────────────────────────────────────────────────────────────
+.ps-hero {
+  position: relative;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  background: linear-gradient(
+    115deg,
+    #0a0000 0%,
+    #1a0000 25%,
+    #6b0000 55%,
+    #3a0000 80%,
+    #0a0000 100%
+  );
 
-  h2 {
-    color: var(--accent-yellow);
-    text-transform: uppercase;
-    font-size: 2rem;
-    letter-spacing: 1px;
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 60% 50%, rgba(255, 0, 0, 0.12) 0%, transparent 70%);
+    pointer-events: none;
   }
 
-  table {
+  &-content {
+    position: relative;
+    z-index: 1;
     width: 100%;
-    border-collapse: collapse;
-    overflow: hidden;
-    border-radius: 1rem;
-
-    th,
-    td {
-      padding: 12px 15px;
-      border: 1px solid var(--border-gray);
-      text-align: center;
-      font-size: 1rem;
-    }
-
-    th {
-      background: linear-gradient(
-        90deg,
-        var(--background-green-start),
-        var(--background-green-end)
-      );
-      color: var(--text-color);
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-
-    tr {
-      &:nth-child(even) {
-        background-color: var(--background-dark);
-      }
-
-      &:nth-child(odd) {
-        background-color: var(--background-darker);
-      }
-
-      &:hover {
-        background-color: var(--background-gray);
-        transition: background-color 0.3s ease;
-      }
-    }
-
-    td {
-      color: var(--text-light);
-
-      &:first-child {
-        font-weight: bold;
-        color: var(--accent-yellow);
-      }
-    }
-
-    caption {
-      margin-bottom: 10px;
-      font-size: 1.2rem;
-      color: var(--text-caption);
-      font-style: italic;
-    }
-  }
-
-  .image {
-    display: block;
+    max-width: 800px;
     margin: 0 auto;
-    padding-top: 3rem;
-    max-width: 100%;
-    height: auto;
-    border-radius: 0.5rem;
+    padding: 2.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.75rem;
   }
 
-  // Responsive Design
-  @media (max-width: 1024px) {
-    padding: 0 3rem;
+  &-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 0, 0, 0.2);
+    border: 1px solid rgba(255, 0, 0, 0.45);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 0.28rem 0.8rem;
+    border-radius: 2px;
 
-    h2 {
-      font-size: 1.8rem;
+    i {
+      font-size: 0.68rem;
+      color: var(--accent-yellow);
     }
+  }
 
-    table {
-      th,
-      td {
-        font-size: 0.9rem;
-        padding: 10px;
-      }
-    }
+  &-title {
+    margin: 0;
+    font-size: clamp(1.6rem, 3.5vw, 2.6rem);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: #fff;
+    line-height: 1.1;
+  }
+
+  &-subtitle {
+    margin: 0;
+    font-size: clamp(0.82rem, 1.2vw, 0.95rem);
+    color: var(--text-light);
+    line-height: 1.65;
+    max-width: 640px;
+    font-style: italic;
+  }
+
+  &-stripe {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--text-red);
   }
 
   @media (max-width: 768px) {
-    padding: 0 2rem;
+    min-height: 200px;
 
-    h2 {
-      font-size: 1.6rem;
-    }
-
-    table {
-      th,
-      td {
-        font-size: 0.8rem;
-        padding: 8px;
-      }
-    }
-
-    .image {
-      padding-top: 2rem;
+    &-content {
+      padding: 2rem 1.25rem;
     }
   }
 
   @media (max-width: 480px) {
+    min-height: 180px;
+  }
+}
+
+// ── Table section ─────────────────────────────────────────────────────────────
+.ps-table-section {
+  max-width: 960px;
+  margin: 2.5rem auto;
+  padding: 0 1.5rem;
+
+  @media (max-width: 768px) {
     padding: 0 1rem;
+    margin: 1.5rem auto;
+  }
+}
 
-    h2 {
-      font-size: 1.4rem;
+.ps-table-wrap {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border-gray);
+  box-shadow: var(--shadow-md);
+}
+
+.ps-table-wrap {
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid var(--border-gray);
+  box-shadow: var(--shadow-md);
+  -webkit-overflow-scrolling: touch;
+}
+
+.ps-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 560px;
+
+  thead tr {
+    background: linear-gradient(90deg, #3a0000, #6b0000);
+  }
+
+  th {
+    padding: 12px 16px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #fff;
+    text-align: center;
+    border-bottom: 3px solid var(--text-red);
+    white-space: nowrap;
+  }
+
+  td {
+    padding: 11px 16px;
+    font-size: 0.92rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border-gray);
+    color: var(--text-light);
+  }
+
+  tbody tr {
+    &:nth-child(odd) {
+      background: var(--background-darker);
     }
 
-    table {
-      th,
-      td {
-        font-size: 0.7rem;
-        padding: 6px;
-      }
+    &:nth-child(even) {
+      background: var(--background-dark);
     }
 
-    .image {
-      padding-top: 1.5rem;
+    &:last-child td {
+      border-bottom: none;
+    }
+
+    &:hover td {
+      background: #1a0000;
+      transition: background 0.2s ease;
     }
   }
+
+  &-pos-col {
+    width: 60px;
+  }
+
+  &-pos-cell {
+    font-weight: 900;
+    font-size: 1rem;
+    color: var(--accent-yellow) !important;
+  }
+
+  &-current-col {
+    background: rgba(255, 0, 0, 0.06);
+    border-left: 2px solid rgba(255, 0, 0, 0.3);
+  }
+
+  &-pts {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
+
+  @media (max-width: 600px) {
+    min-width: 320px;
+
+    th {
+      padding: 6px 4px;
+      font-size: 0.55rem;
+      letter-spacing: 0.02em;
+    }
+
+    td {
+      padding: 6px 4px;
+      font-size: 0.68rem;
+    }
+
+    &-pos-cell {
+      font-size: 0.75rem;
+    }
+
+    &-pts {
+      display: none;
+    }
+  }
+}
+
+// ── Image section ─────────────────────────────────────────────────────────────
+.ps-image-section {
+  max-width: 960px;
+  margin: 0 auto 3rem;
+  padding: 0 1.5rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+}
+
+.ps-image {
+  display: block;
+  width: min(100%, 420px);
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
 }

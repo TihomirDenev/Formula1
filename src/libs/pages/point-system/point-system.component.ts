@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { PointsSystem } from '@libs/models/points-system.model';
+import { POINT_SYSTEM_CONSTANTS } from '@libs/constants/point-system.constants';
 import { POINT_SYSTEM, POINT_SYSTEM_HEADER } from './point-system.data';
 
 @Component({
@@ -13,6 +14,7 @@ import { POINT_SYSTEM, POINT_SYSTEM_HEADER } from './point-system.data';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PointSystemComponent {
+  readonly c = POINT_SYSTEM_CONSTANTS;
   readonly pointsSystems: PointsSystem[] = POINT_SYSTEM;
   readonly pointSystemHeader: PointsSystem = POINT_SYSTEM_HEADER;
 }

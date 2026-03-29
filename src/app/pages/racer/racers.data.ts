@@ -431,4 +431,16 @@ export const RACERS_INFO: RacerInfo[] = [
     dateOfDeath: '',
     f1Teams: ['Toro Rosso', 'Red Bull'],
   },
+  {
+    id: 35,
+    identifier: 'LandoNorris',
+    name: 'Lando Norris',
+    country: 'United Kingdom',
+    flag: 'gb',
+    wins: 7,
+    placeOfBirth: 'Bristol, United Kingdom',
+    dateOfBirth: '13 November 1999',
+    dateOfDeath: '',
+    f1Teams: ['McLaren'],
+  },
 ];

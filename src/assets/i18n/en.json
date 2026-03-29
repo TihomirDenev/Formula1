@@ -12,7 +12,9 @@
   },
   "footer": {
     "allRightsReserved": "All rights reserved.",
-    "content": "Bringing you the best of Formula 1 since 2011."
+    "content": "Bringing you the best of Formula 1 since 2011.",
+    "explore": "Explore",
+    "followUs": "Follow Us"
   },
   "gallery": {
     "f1Photos": "Formula 1 Photo Gallery"
@@ -20,7 +22,8 @@
   "hof": {
     "country": "Country",
     "hallOfFame": "Hall of Fame",
-    "winDate": "Win Date"
+    "winDate": "Win Date",
+    "loadMore": "Load More Racers"
   },
   "home": {
     "circuitIntro": "Formula One races on some of the most challenging and historic circuits worldwide. From the tight streets of Monaco to the high-speed straights of Monza, each track presents unique challenges that test the skill of the world's best drivers.",
@@ -161,8 +164,12 @@
       "main": "Mario Andretti personified the American Dream, an immigrant who came to the land of the free and the home of the brave and achieved considerable fame and fortune. He did so in a job he would have done in anonymity and for nothing. Few drivers loved their racing more, and few suited stardom as much as the congenial man whose unforced charm was as natural as the talent that brought him so much success in so many types of racing. His insistence on racing in his adopted homeland meant he came late to realising his boyhood ambition of becoming Formula 1 World Champion."
     },
     "MaxVerstappen": {
-      "additional": "Max Emilian Verstappen was born 30 September, 1997 in Hasselt, Belgium, and has a younger sister, Victoria. His Belgian mother, Sophie Kumpen, was a successful kart racer and his Dutch father, Jos Verstappen, a former F1 driver. After his parents separated Max lived in Holland with his father, who masterminded the boy racer’s fast-moving career. As a two-year-old toddler Max first flogged a mini quad bike around the family garden, then drove a rented go-kart as a four-year-old. Four years later he began competing, progressing quickly through various karting categories and winning titles in several European countries.",
-      "main": "In 2021 24-year-old Max Verstappen became the 34th Formula 1 World Champion, taking the title from seven-time champion Lewis Hamilton amid controversy on the last lap of the last race. Driving on the limit – sometimes over it – their intense rivalry became a personal feud that pushed them far beyond the rest of the field. The enthralling battle between the ultra-confident Dutch youngster and the most successful driver in the sport’s history captured the imagination of a worldwide audience as never before."
+      "additional": "Max Emilian Verstappen was born 30 September, 1997 in Hasselt, Belgium, and has a younger sister, Victoria. His Belgian mother, Sophie Kumpen, was a successful kart racer and his Dutch father, Jos Verstappen, a former F1 driver. After his parents separated Max lived in Holland with his father, who masterminded the boy racer's fast-moving career. As a two-year-old toddler Max first flogged a mini quad bike around the family garden, then drove a rented go-kart as a four-year-old. Four years later he began competing, progressing quickly through various karting categories and winning titles in several European countries.",
+      "main": "In 2021 24-year-old Max Verstappen became the 34th Formula 1 World Champion, taking the title from seven-time champion Lewis Hamilton amid controversy on the last lap of the last race. Driving on the limit – sometimes over it – their intense rivalry became a personal feud that pushed them far beyond the rest of the field. The enthralling battle between the ultra-confident Dutch youngster and the most successful driver in the sport's history captured the imagination of a worldwide audience as never before."
+    },
+    "LandoNorris": {
+      "additional": "Lando Norris was born on 13 November 1999 in Bristol, United Kingdom, into a wealthy family — his father Adam Norris is a retired pension fund manager. He showed extraordinary talent from a very young age, winning multiple karting championships across Europe before moving into single-seater racing. He progressed rapidly through Formula 4, Formula 3 and Formula 2, winning the Formula 3 European Championship in 2017 and the Formula 2 championship runner-up title in 2018, before being signed by McLaren for the 2019 Formula 1 season at just 19 years old.",
+      "main": "Lando Norris spent six seasons proving himself as one of Formula 1's most naturally gifted drivers before claiming his first World Championship in 2025. Racing for McLaren throughout his entire F1 career, he delivered increasingly dominant performances as the team's MCL39 became the class of the field. In a tense three-way championship battle with defending champion Max Verstappen and teammate Oscar Piastri, Norris held his nerve in the final Abu Dhabi Grand Prix to clinch the title by two points — becoming the 35th Formula 1 World Champion and McLaren's first drivers' champion since Lewis Hamilton in 2008."
     },
     "MichaelSchumacher": {
       "additional": "The most extraordinary driver's origins were most ordinary. He was born on 3 January, 1969, near Cologne, Germany, six years before his brother Ralf, who would also become a Formula One driver of note. Their father, a bricklayer, ran the local kart track, at Kerpen, where Mrs Schumacher operated the canteen. As a four-year old Michael enjoyed playing on a pedal kart, though when his father fitted it with a small motorcycle engine the future superstar promptly crashed into a lamppost. But Michael quickly mastered his machine and won his first kart championship at six, following which his far from affluent parents arranged sponsorship from wealthy enthusiasts that enabled Michael to make rapid progress. By 1987 he was German and European kart champion and had left school to work as an apprentice car mechanic, a job that was soon replaced by full-time employment as a race driver. In 1990 he won the German F3 championship and was hired by Mercedes to drive sportscars. The next year he made a stunning Formula One debut, qualifying an astonishing seventh in a Jordan for the Belgian Grand Prix at Spa, whereupon he was immediately snapped up by Benetton, with whom in 1992 he won his first F1 race, again at Spa, among the most demanding circuits of them all.",

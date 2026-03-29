@@ -1,4 +1,6 @@
-export const HALL_OF_FAME = [
+import { Racer } from '../../interfaces';
+
+export const HALL_OF_FAME: Omit<Racer, 'photo'>[] = [
   { id: 1, name: 'Nino Farina', country: 'Italy', winDate: '1950', flag: 'it' },
   {
     id: 2,
@@ -230,5 +232,12 @@ export const HALL_OF_FAME = [
     country: 'Netherlands',
     winDate: '2021, 2022, 2023, 2024',
     flag: 'nl',
+  },
+  {
+    id: 35,
+    name: 'Lando Norris',
+    country: 'United Kingdom',
+    winDate: '2025',
+    flag: 'gb',
   },
 ];

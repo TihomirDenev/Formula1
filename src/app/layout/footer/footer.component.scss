@@ -1,23 +1,103 @@
 .app-footer {
-  text-align: center;
-  padding: 1.5rem 1rem;
-  border-top: 2px solid var(--background-navigation);
+  background-color: #0d0d0d;
+  border-top: 2px solid var(--text-red);
+  color: #cccccc;
+  font-size: 0.875rem;
+}
 
-  .footer-content {
-    p {
-      margin: 0.5rem 0;
+// ── Single-row inner bar ───────────────────────────
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  max-width: 85rem;
+  margin: 0 auto;
+  padding: 0.6rem 2rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1.25rem;
+  }
+}
+
+// ── Logo ──────────────────────────────────────────
+.footer-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+
+  img {
+    height: 18px;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 1;
     }
   }
+}
 
-  .footer-links {
-    a {
-      color: var(--text-color);
-      text-decoration: none;
-      margin: 0 0.5rem;
+// ── Nav links ─────────────────────────────────────
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 1rem;
 
-      &:hover {
-        color: var(--text-muted);
-      }
+  a {
+    color: #999999;
+    font-size: 0.78rem;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: color 0.2s;
+
+    &:hover,
+    &.active {
+      color: #ffffff;
     }
+  }
+}
+
+// ── Social icons ──────────────────────────────────
+.footer-social {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-shrink: 0;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #aaaaaa;
+    font-size: 0.75rem;
+    text-decoration: none;
+    transition: color 0.2s, border-color 0.2s, background-color 0.2s;
+
+    &:hover {
+      color: #ffffff;
+      border-color: var(--text-red);
+      background-color: rgba(255, 0, 0, 0.08);
+    }
+  }
+}
+
+// ── Bottom bar ────────────────────────────────────
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.4rem 2rem;
+  text-align: center;
+
+  p {
+    margin: 0;
+    color: #555555;
+    font-size: 0.72rem;
   }
 }

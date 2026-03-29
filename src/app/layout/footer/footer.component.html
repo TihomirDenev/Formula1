@@ -1,11 +1,32 @@
 <footer class="app-footer">
-  <div class="footer-content">
-    <p>&copy; 2011-2025. {{ "footer.allRightsReserved" | translate }}</p>
-    <p>{{ "footer.content" | translate }}</p>
+  <div class="footer-inner">
+    <a routerLink="/" class="footer-logo">
+      <img src="assets/images/f1-logo.png" alt="Formula 1 logo" width="72" height="18" />
+    </a>
+
+    <nav class="footer-links">
+      <a [routerLink]="['/']">{{ "navigation.home" | translate }}</a>
+      <a [routerLink]="['/hall-of-fame']">{{ "navigation.hof" | translate }}</a>
+      <a [routerLink]="['/teams']">{{ "navigation.teams" | translate }}</a>
+      <a [routerLink]="['/photos']">{{ "navigation.gallery" | translate }}</a>
+      <a [routerLink]="['/point-system']">{{ "navigation.pointSystem" | translate }}</a>
+      <a [routerLink]="['/contacts']">{{ "navigation.contacts" | translate }}</a>
+    </nav>
+
+    <div class="footer-social">
+      <a href="https://youtube.com/f1" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+        <i class="fab fa-youtube"></i>
+      </a>
+      <a href="https://facebook.com/formula1" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://www.formula1.com" target="_blank" rel="noopener noreferrer" aria-label="Official Website">
+        <i class="fas fa-globe"></i>
+      </a>
+    </div>
   </div>
-  <div class="footer-links">
-    <a [routerLink]="['/']">{{ "navigation.home" | translate }}</a> |
-    <a [routerLink]="['/not-found']">Not Found</a> |
-    <a [routerLink]="['/contacts']">{{ "navigation.contacts" | translate }}</a>
+
+  <div class="footer-bottom">
+    <p>&copy; 2011–2025. {{ "footer.allRightsReserved" | translate }}</p>
   </div>
 </footer>

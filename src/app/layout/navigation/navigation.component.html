@@ -1,46 +1,55 @@
-<nav>
-  <img src="assets/images/f1-logo.png" alt="logo" (click)="navigateToHome()" />
-  <ul>
+<nav [class.open]="menuOpen">
+  <a class="nav-logo" routerLink="/">
+    <img src="assets/images/f1-logo.png" alt="Formula 1 logo" width="112" height="28" />
+  </a>
+
+  <button
+    class="nav-hamburger"
+    (click)="toggleMenu()"
+    [attr.aria-expanded]="menuOpen"
+    aria-label="Toggle navigation"
+  >
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <ul class="nav-links" (click)="closeMenu()">
     <li>
-      <a
-        routerLink="/"
-        routerLinkActive="active"
-        [routerLinkActiveOptions]="{ exact: true }"
-        >{{ "navigation.home" | translate }}</a
-      >
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        {{ "navigation.home" | translate }}
+      </a>
     </li>
     <li>
-      <a routerLink="/point-system" routerLinkActive="active">{{
-        "navigation.pointSystem" | translate
-      }}</a>
+      <a routerLink="/point-system" routerLinkActive="active">
+        {{ "navigation.pointSystem" | translate }}
+      </a>
     </li>
     <li>
-      <a routerLink="/hall-of-fame" routerLinkActive="active">{{
-        "navigation.hof" | translate
-      }}</a>
+      <a routerLink="/hall-of-fame" routerLinkActive="active">
+        {{ "navigation.hof" | translate }}
+      </a>
     </li>
     <li>
-      <a routerLink="/teams" routerLinkActive="active">{{
-        "navigation.teams" | translate
-      }}</a>
+      <a routerLink="/teams" routerLinkActive="active">
+        {{ "navigation.teams" | translate }}
+      </a>
     </li>
     <li>
-      <a routerLink="/photos" routerLinkActive="active">{{
-        "navigation.gallery" | translate
-      }}</a>
+      <a routerLink="/photos" routerLinkActive="active">
+        {{ "navigation.gallery" | translate }}
+      </a>
+    </li>
+    <li class="nav-lang-mobile">
+      <div class="nav-lang" (click)="$event.stopPropagation()">
+        <img src="assets/images/flags/bg.svg" alt="BG" (click)="translateText('bg')" />
+        <img src="assets/images/flags/gb.svg" alt="EN" (click)="translateText('en')" />
+      </div>
     </li>
   </ul>
 
-  <div>
-    <img
-      src="assets/images/flags/bg.svg"
-      alt="BG"
-      (click)="translateText('bg')"
-    />
-    <img
-      src="assets/images/flags/gb.svg"
-      alt="EN"
-      (click)="translateText('en')"
-    />
+  <div class="nav-lang nav-lang-desktop">
+    <img src="assets/images/flags/bg.svg" alt="BG" (click)="translateText('bg')" />
+    <img src="assets/images/flags/gb.svg" alt="EN" (click)="translateText('en')" />
   </div>
 </nav>

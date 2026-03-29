@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import { NavigationComponent } from './navigation/navigation.component';
-import { FooterComponent } from './footer/footer.component';
+import { NavigationComponent } from '@libs/components/navigation/navigation.component';
+import { FooterComponent } from '@libs/components/footer/footer.component';
 
 @Component({
   selector: 'app-layout',

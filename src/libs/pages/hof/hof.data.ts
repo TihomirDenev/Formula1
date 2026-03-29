@@ -1,4 +1,4 @@
-import { Racer } from '../../interfaces';
+import { Racer } from '@libs/models/racer.model';
 
 export const HALL_OF_FAME: Omit<Racer, 'photo'>[] = [
   { id: 1, name: 'Nino Farina', country: 'Italy', winDate: '1950', flag: 'it' },

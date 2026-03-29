@@ -1,4 +1,4 @@
-import { RacerInfo } from '../../interfaces';
+import { RacerInfo } from '@libs/models/racer-info.model';
 
 export const RACERS_INFO: RacerInfo[] = [
   {

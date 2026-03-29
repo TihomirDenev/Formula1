@@ -1,4 +1,4 @@
-import { PointsSystem } from '../../interfaces';
+import { PointsSystem } from '@libs/models/points-system.model';
 
 export const POINT_SYSTEM_HEADER: PointsSystem = {
   position: 'Position',

@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { PointsSystem } from '../../interfaces';
+import { PointsSystem } from '@libs/models/points-system.model';
 import { POINT_SYSTEM, POINT_SYSTEM_HEADER } from './point-system.data';
 
 @Component({

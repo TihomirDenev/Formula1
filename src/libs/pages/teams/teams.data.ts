@@ -1,6 +1,6 @@
-import { F1_Team } from '../../interfaces';
+import { F1Team } from '@libs/models/f1-team.model';
 
-export const F1_TEAMS: F1_Team[] = [
+export const F1_TEAMS: F1Team[] = [
   {
     id: 1,
     name: 'Ferrari',

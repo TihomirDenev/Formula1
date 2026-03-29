@@ -3,21 +3,9 @@ import { Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
+import { F1Team } from '@libs/models/f1-team.model';
+import { TEAM_NAME_MAP } from '@libs/constants/teams.constants';
 import { F1_TEAMS } from './teams.data';
-import { F1_Team } from '../../interfaces';
-
-const TEAM_NAME_MAP: Record<string, string> = {
-  'Red Bull Racing': 'RedBull',
-  Mercedes: 'Mercedes',
-  Ferrari: 'Ferrari',
-  McLaren: 'McLaren',
-  'Aston Martin': 'AstonMartin',
-  Alpine: 'Alpine',
-  Williams: 'Williams',
-  Haas: 'Haas',
-  'Visa Cash App RB': 'VisaCashAppRB',
-  'Kick Sauber': 'KickSauber',
-};
 
 @Component({
   selector: 'app-teams',
@@ -32,13 +20,13 @@ export class TeamsComponent implements OnInit {
 
   readonly TEAMS_PER_PAGE = 2;
 
-  readonly allTeams: F1_Team[] = F1_TEAMS.map((team, index) => ({
+  readonly allTeams: F1Team[] = F1_TEAMS.map((team, index) => ({
     ...team,
     photo: `assets/images/teams/${index + 1}.webp`,
     logo: `assets/images/logos/${index + 1}.png`,
   }));
 
-  displayedTeams: F1_Team[] = [];
+  displayedTeams: F1Team[] = [];
 
   ngOnInit(): void {
     this.loadMoreTeams();
@@ -56,7 +44,7 @@ export class TeamsComponent implements OnInit {
     return `teamInfo.${TEAM_NAME_MAP[teamName] ?? teamName}`;
   }
 
-  viewTeamDetails(team: F1_Team): void {
+  viewTeamDetails(team: F1Team): void {
     const formattedName = team.name.split(' ').join('');
     this.router.navigate(['/teams', formattedName]);
   }

@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
-import { Racer } from '../../interfaces';
+import { Racer } from '@libs/models/racer.model';
 import { HALL_OF_FAME } from './hof.data';
 
 @Component({

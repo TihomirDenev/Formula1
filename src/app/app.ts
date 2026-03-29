@@ -2,15 +2,16 @@ import { ChangeDetectionStrategy, Component, DestroyRef, inject, OnInit } from '
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
-import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 import { filter } from 'rxjs';
+
+import { APP_CONSTANTS } from '@libs/constants/app.constants';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, InfiniteScrollModule],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  imports: [RouterOutlet],
+  templateUrl: './app.html',
+  styleUrl: './app.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent implements OnInit {
@@ -19,7 +20,7 @@ export class AppComponent implements OnInit {
   private readonly destroyRef = inject(DestroyRef);
 
   constructor() {
-    this.translateService.use('en');
+    this.translateService.use(APP_CONSTANTS.defaultLang);
   }
 
   ngOnInit(): void {

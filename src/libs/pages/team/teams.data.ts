@@ -1,4 +1,4 @@
-import { TeamInfo } from '../../interfaces';
+import { TeamInfo } from '@libs/models/team-info.model';
 
 export const TEAMS_INFO: TeamInfo[] = [
   {

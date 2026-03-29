@@ -3,32 +3,32 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
-import { TEAMS_INFO } from './teams.data';
-import { TeamInfo } from '../../interfaces';
+import { RACERS_INFO } from './racers.data';
+import { RacerInfo } from '@libs/models/racer-info.model';
 
 @Component({
-  selector: 'app-team',
+  selector: 'app-racer',
   standalone: true,
   imports: [TranslateModule],
-  templateUrl: './team.component.html',
-  styleUrl: './team.component.scss',
+  templateUrl: './racer.component.html',
+  styleUrl: './racer.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TeamComponent implements OnInit {
+export class RacerComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
   private readonly destroyRef = inject(DestroyRef);
 
-  private readonly TEAM = 'team';
+  private readonly RACER = 'racer';
 
-  team: TeamInfo | undefined;
+  racer: RacerInfo | undefined;
 
   ngOnInit(): void {
     this.route.paramMap
       .pipe(takeUntilDestroyed(this.destroyRef))
       .subscribe((params) => {
-        const selectedTeam = params.get(this.TEAM);
-        if (!selectedTeam) return;
-        this.team = TEAMS_INFO.find((t) => t.identifier === selectedTeam);
+        const selectedRacer = params.get(this.RACER);
+        if (!selectedRacer) return;
+        this.racer = RACERS_INFO.find((r) => r.identifier === selectedRacer);
       });
   }
 }

@@ -47,6 +47,7 @@
     "f1SprintRaces": "The season's format also includes F1 Sprint races, which are shorter and held over a portion of the regular race distance. These events are designed to add additional excitement and competitive racing opportunities, contributing points to the overall championship.",
     "facebook": "Facebook",
     "formulaOneVid": "This is Formula One",
+    "videoSubtitle": "Watch iconic moments, dramatic crashes and the finest highlights from the world's greatest racing series.",
     "grosjeanVid": "Grosjean's Insane Fireball Crash",
     "officialWebsite": "Formula One",
     "supplier": "Formula One currently uses a single tyre supplier, Pirelli, which provides teams with a range of compounds designed for varying race conditions. Pirelli's exclusive partnership with the FIA ensures that all teams compete on a level playing field while adapting to different race strategies.",
@@ -77,7 +78,11 @@
   },
   "pointSystem": {
     "evolutionOfPoints": "Evolution of Formula 1 Points System",
-    "points": "points"
+    "heroSubtitle": "From 8 points for a win in 1950 to 25 today — see how F1 has rewarded its champions across every era.",
+    "points": "pts",
+    "position": "Pos",
+    "tableCaption": "Points awarded per finishing position across all scoring eras",
+    "imageCaption": "The modern points system in action"
   },
   "racer": {
     "AlainProst": {

@@ -1,131 +1,54 @@
 <div class="home">
-  <section class="intro">
-    <h1>{{ "home.welcomeTitle" | translate }}</h1>
-    <p>
-      {{ "home.welcomeDescription" | translate }}
-    </p>
-    <div class="f1-info-container">
-      <div class="image-container">
-        <img src="assets/images/logo.jpg" alt="Formula 1 Racing" />
-      </div>
 
-      <div class="text-content">
-        <p>
-          {{ "home.f1Introduction" | translate }}
-        </p>
-        <p>
-          {{ "home.f1Championship" | translate }}
-        </p>
-        <p>
-          {{ "home.f1SprintRaces" | translate }}
-        </p>
+  <!-- ── Hero ─────────────────────────────────────────── -->
+  <section class="hero">
+    <img [src]="c.heroBg" [alt]="c.heroBgAlt" class="hero__bg" />
+    <div class="hero__overlay">
+      <div class="hero__content">
+        <span class="hero__eyebrow">
+          <i class="fas fa-flag-checkered"></i>
+          FIA Formula One World Championship
+        </span>
+        <h1 class="hero__title">{{ "home.welcomeTitle" | translate }}</h1>
+        <p class="hero__subtitle">{{ "home.welcomeDescription" | translate }}</p>
       </div>
     </div>
+    <div class="hero__red-stripe"></div>
   </section>
 
-  <section class="tyre">
-    <h1>{{ "home.tyreTitle" | translate }}</h1>
-    <p>
-      {{ "home.tyreIntro" | translate }}
-    </p>
-    <div class="f1-info-container">
-      <div class="text-content">
-        <p>
-          {{ "home.supplier" | translate }}
-        </p>
-        <p>
-          {{ "home.compounds" | translate }}
-        </p>
-        <p>
-          {{ "home.technology" | translate }}
-        </p>
+  <!-- ── Info Sections ─────────────────────────────────── -->
+  @for (section of sections; track section.titleKey) {
+    <section class="info" [class.info--reverse]="section.reverse">
+      <div class="info__image-col">
+        <img [src]="section.image" [alt]="section.imageAlt" class="info__img" />
       </div>
-
-      <div class="image-container">
-        <img src="assets/images/tyres.jpg" alt="Formula 1 Racing" />
+      <div class="info__text-col">
+        <h2 class="info__title">{{ section.titleKey | translate }}</h2>
+        @if (section.introKey) {
+          <p class="info__intro">{{ section.introKey | translate }}</p>
+        }
+        @for (key of section.paragraphKeys; track key) {
+          <p class="info__para">{{ key | translate }}</p>
+        }
       </div>
+    </section>
+  }
+
+  <!-- ── Videos ────────────────────────────────────────── -->
+  <section class="videos">
+    <h2 class="videos__title">{{ "home.formulaOneVid" | translate }}</h2>
+    <div class="videos__grid">
+      @for (video of videos; track video.src) {
+        <div class="video-card">
+          <p class="video-card__label">{{ video.titleKey | translate }}</p>
+          <video
+            [src]="video.src"
+            controls
+            preload="none"
+          ></video>
+        </div>
+      }
     </div>
   </section>
 
-  <section class="circuit">
-    <h1>{{ "home.circuitTitle" | translate }}</h1>
-    <p>
-      {{ "home.circuitIntro" | translate }}
-    </p>
-    <div class="f1-info-container">
-      <div class="image-container">
-        <img src="assets/images/circuit.jpg" alt="Formula 1 Racing" />
-      </div>
-
-      <div class="text-content">
-        <p>
-          {{ "home.circuitMonaco" | translate }}
-        </p>
-        <p>
-          {{ "home.circuitSilverstone" | translate }}
-        </p>
-        <p>
-          {{ "home.circuitSuzuka" | translate }}
-        </p>
-        <p>
-          {{ "home.circuitSpa" | translate }}
-        </p>
-        <p>
-          {{ "home.circuitMonza" | translate }}
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="video-section">
-    <h1>{{ "home.formulaOneVid" | translate }}</h1>
-    <div class="video-container">
-      <video
-        src="assets/videos/This is Formula One.mp4"
-        controls
-        preload="none"
-        poster="assets/images/play.png"
-      ></video>
-    </div>
-  </section>
-
-  <section class="video-section">
-    <h1>{{ "home.grosjeanVid" | translate }}</h1>
-    <div class="video-container">
-      <video
-        src="assets/videos/Grosjean's Insane Fireball Crash.mp4"
-        controls
-        preload="none"
-        poster="assets/images/play.png"
-      ></video>
-    </div>
-  </section>
-
-  <section class="video-section">
-    <h1>{{ "home.topFiveVid" | translate }}</h1>
-    <div class="video-container">
-      <video
-        src="assets/videos/Most Nail-Biting Moments.mp4"
-        controls
-        preload="none"
-        poster="assets/images/play.png"
-      ></video>
-    </div>
-  </section>
-
-  <section class="connect-with-us">
-    <h1>{{ "home.exploreMore" | translate }}</h1>
-    <div class="social-links">
-      <a href="https://youtube.com/f1" target="_blank"
-        ><i class="fab fa-youtube"></i> {{ "home.youtube" | translate }}</a
-      >
-      <a href="https://facebook.com/formula1" target="_blank"
-        ><i class="fab fa-facebook-f"></i> {{ "home.facebook" | translate }}</a
-      >
-      <a href="https://www.formula1.com" target="_blank"
-        ><i class="fas fa-globe"></i>
-        {{ "home.officialWebsite" | translate }}</a
-      >
-    </div>
-  </section>
 </div>

@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject, OnInit } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { ActivatedRoute } from '@angular/router';
-
 import { TranslateModule } from '@ngx-translate/core';
 
 import { TEAMS_INFO } from './teams.data';
@@ -8,31 +8,27 @@ import { TeamInfo } from '../../interfaces';
 
 @Component({
   selector: 'app-team',
+  standalone: true,
   imports: [TranslateModule],
   templateUrl: './team.component.html',
   styleUrl: './team.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TeamComponent implements OnInit {
-  TEAM = 'team';
-  TEAMS_INFO = TEAMS_INFO;
+  private readonly route = inject(ActivatedRoute);
+  private readonly destroyRef = inject(DestroyRef);
+
+  private readonly TEAM = 'team';
 
   team: TeamInfo | undefined;
 
-  constructor(private route: ActivatedRoute) {}
-
   ngOnInit(): void {
-    this.getTeamInfo();
-  }
-
-  private getTeamInfo(): void {
-    this.route.paramMap.subscribe((params) => {
-      const selectedTeam = params.get(this.TEAM);
-
-      this.team = this.TEAMS_INFO.find(
-        (team) => team.identifier === selectedTeam!
-      );
-    });
-
-    console.log(this.team);
+    this.route.paramMap
+      .pipe(takeUntilDestroyed(this.destroyRef))
+      .subscribe((params) => {
+        const selectedTeam = params.get(this.TEAM);
+        if (!selectedTeam) return;
+        this.team = TEAMS_INFO.find((t) => t.identifier === selectedTeam);
+      });
   }
 }

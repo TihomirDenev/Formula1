@@ -15,27 +15,17 @@
     </thead>
 
     <tbody>
-      <tr *ngFor="let system of pointsSystems">
-        <td>{{ system.position }}</td>
-        <td>
-          {{ system.pointsByEra1 }} {{ "pointSystem.points" | translate }}
-        </td>
-        <td>
-          {{ system.pointsByEra2 }} {{ "pointSystem.points" | translate }}
-        </td>
-        <td>
-          {{ system.pointsByEra3 }} {{ "pointSystem.points" | translate }}
-        </td>
-        <td>
-          {{ system.pointsByEra4 }} {{ "pointSystem.points" | translate }}
-        </td>
-        <td>
-          {{ system.pointsByEra5 }} {{ "pointSystem.points" | translate }}
-        </td>
-        <td>
-          {{ system.pointsByEra6 }} {{ "pointSystem.points" | translate }}
-        </td>
-      </tr>
+      @for (system of pointsSystems; track system.position) {
+        <tr>
+          <td>{{ system.position }}</td>
+          <td>{{ system.pointsByEra1 }} {{ "pointSystem.points" | translate }}</td>
+          <td>{{ system.pointsByEra2 }} {{ "pointSystem.points" | translate }}</td>
+          <td>{{ system.pointsByEra3 }} {{ "pointSystem.points" | translate }}</td>
+          <td>{{ system.pointsByEra4 }} {{ "pointSystem.points" | translate }}</td>
+          <td>{{ system.pointsByEra5 }} {{ "pointSystem.points" | translate }}</td>
+          <td>{{ system.pointsByEra6 }} {{ "pointSystem.points" | translate }}</td>
+        </tr>
+      }
     </tbody>
   </table>
 

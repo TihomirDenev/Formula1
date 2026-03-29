@@ -7,7 +7,7 @@ export const POINT_SYSTEM_HEADER: PointsSystem = {
   pointsByEra3: '1961-1990',
   pointsByEra4: '1991-2002',
   pointsByEra5: '2003-2009',
-  pointsByEra6: '2010-2025',
+  pointsByEra6: '2010–present',
 };
 
 export const POINT_SYSTEM: PointsSystem[] = [

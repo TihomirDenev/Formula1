@@ -5,7 +5,7 @@ export const APP_CONSTANTS = {
     pointSystem: '/point-system',
     hallOfFame: '/hall-of-fame',
     teams: '/teams',
-    photos: '/photos',
+    gallery: '/gallery',
     contacts: '/contacts',
   },
 } as const;

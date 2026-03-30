@@ -12,9 +12,9 @@ export const routes: Routes = [
         loadComponent: () => import('@libs/pages/home/home.component').then((m) => m.HomeComponent),
       },
       {
-        path: 'photos',
+        path: 'gallery',
         loadComponent: () =>
-          import('@libs/pages/photos/photos.component').then((m) => m.PhotosComponent),
+          import('@libs/pages/gallery/gallery.component').then((m) => m.GalleryComponent),
       },
       {
         path: 'point-system',

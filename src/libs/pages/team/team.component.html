@@ -1,98 +1,123 @@
-<div class="team">
-  <header class="team-header">
-    <img
-      [src]="'assets/images/cars/' + team?.identifier + '.png'"
-      alt="Photo of {{ team?.name }}"
-      class="team-photo"
-    />
+@if (team) {
+  <article class="team-detail">
 
-    <h1>{{ team?.name }}</h1>
-  </header>
+    <!-- ── Hero ──────────────────────────────────────────────── -->
+    <section class="team-detail-hero">
 
-  <div class="team-info">
-    <div class="info-section">
-      <div>
-        <div class="team-overview">
-          <h1>{{ "team.teamOverview" | translate }}</h1>
+      <div class="team-detail-hero-inner">
 
-          <img
-            [src]="'assets/images/flags/' + team?.flag + '.svg'"
-            alt="{{ team?.flag }} flag"
-            class="country-flag"
-          />
+        <!-- Info -->
+        <div class="team-detail-hero-info">
+          <div class="team-detail-hero-flag-name">
+            <img
+              [src]="c.flagBasePath + team.flag + c.flagExtension"
+              [alt]="team.name"
+              class="team-detail-hero-flag"
+            />
+            <h1 class="team-detail-hero-name">{{ team.name }}</h1>
+          </div>
+
+          <p class="team-detail-hero-fullname">{{ team.fullName }}</p>
+
+          <div class="team-detail-hero-stats">
+            <div class="stat-pill">
+              <span class="stat-pill-value">{{ team.worldChampionships }}</span>
+              <span class="stat-pill-label">{{ "team.worldChampionships" | translate }}</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-pill-value">{{ team.polePositions }}</span>
+              <span class="stat-pill-label">{{ "team.polePositions" | translate }}</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-pill-value">{{ team.fastestLaps }}</span>
+              <span class="stat-pill-label">{{ "team.fastestLaps" | translate }}</span>
+            </div>
+            <div class="stat-pill">
+              <span class="stat-pill-value">{{ team.firstTeamEntry }}</span>
+              <span class="stat-pill-label">{{ "team.firstTeamEntry" | translate }}</span>
+            </div>
+          </div>
         </div>
 
-        <p>
-          <strong>{{ "team.fullName" | translate }}: </strong>
-          {{ team?.fullName }}
-        </p>
-        <p>
-          <strong>{{ "team.base" | translate }}: </strong>
-          {{ team?.base }}
-        </p>
-        <p>
-          <strong>{{ "team.teamChief" | translate }}: </strong>
-          {{ team?.teamChief }}
-        </p>
-        <p>
-          <strong>{{ "team.technicalChief" | translate }}: </strong>
-          {{ team?.technicalChief }}
-        </p>
-        <p>
-          <strong>{{ "team.chassis" | translate }}: </strong>
-          {{ team?.chassis }}
-        </p>
-        <p>
-          <strong>{{ "team.powerUnit" | translate }}: </strong>
-          {{ team?.powerUnit }}
-        </p>
-        <p>
-          <strong>{{ "team.firstTeamEntry" | translate }}: </strong>
-          {{ team?.firstTeamEntry }}
-        </p>
+        <!-- Car image -->
+        @if (hasCar(team.identifier)) {
+          <div class="team-detail-hero-car-wrap">
+            <img
+              [src]="c.carBasePath + team.identifier + c.carExtension"
+              [alt]="team.name + ' car'"
+              class="team-detail-hero-car"
+            />
+          </div>
+        }
+
       </div>
-    </div>
 
-    <div class="info-section">
-      <div>
-        <div class="team-overview">
-          <h1>{{ "team.racingAchievements" | translate }}</h1>
+      <div class="team-detail-hero-stripe"></div>
+    </section>
 
-          <img
-            [src]="'assets/images/logos/' + team?.name + '.png'"
-            alt="{{ team?.name }} logo"
-            class="logo"
-          />
-        </div>
-        <p>
-          <strong>{{ "team.worldChampionships" | translate }}: </strong>
-          {{ team?.worldChampionships }}
-        </p>
-        <p>
-          <strong>{{ "team.highestRaceFinish" | translate }}: </strong>
-          {{ team?.highestRaceFinish }}
-        </p>
-        <p>
-          <strong>{{ "team.polePositions" | translate }}: </strong>
-          {{ team?.polePositions }}
-        </p>
-        <p>
-          <strong>{{ "team.fastestLaps" | translate }}: </strong>
-          {{ team?.fastestLaps }}
-        </p>
+    <!-- ── Overview ──────────────────────────────────────────── -->
+    <div class="team-detail-overview">
+
+      <div class="team-detail-card">
+        <h2 class="team-detail-card-title">{{ "team.teamOverview" | translate }}</h2>
+        <dl class="team-detail-dl">
+          <dt>{{ "team.fullName" | translate }}</dt>
+          <dd>{{ team.fullName }}</dd>
+          <dt>{{ "team.base" | translate }}</dt>
+          <dd>
+            <img
+              [src]="c.flagBasePath + team.flag + c.flagExtension"
+              [alt]="team.name"
+              class="team-detail-dl-flag"
+            />
+            {{ team.base }}
+          </dd>
+          <dt>{{ "team.teamChief" | translate }}</dt>
+          <dd>{{ team.teamChief }}</dd>
+          <dt>{{ "team.technicalChief" | translate }}</dt>
+          <dd>{{ team.technicalChief }}</dd>
+          <dt>{{ "team.chassis" | translate }}</dt>
+          <dd>{{ team.chassis }}</dd>
+          <dt>{{ "team.powerUnit" | translate }}</dt>
+          <dd>{{ team.powerUnit }}</dd>
+          <dt>{{ "team.firstTeamEntry" | translate }}</dt>
+          <dd>{{ team.firstTeamEntry }}</dd>
+        </dl>
       </div>
+
+      <div class="team-detail-card">
+        <h2 class="team-detail-card-title">{{ "team.racingAchievements" | translate }}</h2>
+        <dl class="team-detail-dl">
+          <dt>{{ "team.worldChampionships" | translate }}</dt>
+          <dd>{{ team.worldChampionships }}</dd>
+          <dt>{{ "team.highestRaceFinish" | translate }}</dt>
+          <dd>{{ team.highestRaceFinish }}</dd>
+          <dt>{{ "team.polePositions" | translate }}</dt>
+          <dd>{{ team.polePositions }}</dd>
+          <dt>{{ "team.fastestLaps" | translate }}</dt>
+          <dd>{{ team.fastestLaps }}</dd>
+        </dl>
+      </div>
+
     </div>
 
-    <div>
-      <p class="bio-summary">
-        {{ "team." + team?.identifier + ".main" | translate }}
-      </p>
-      <p class="bio-additional">
-        {{ "team." + team?.identifier + ".additional" | translate }}
-      </p>
-      <p class="bio-additional">
-        {{ "team." + team?.identifier + ".secondary" | translate }}
-      </p>
-    </div>
-  </div>
-</div>
+    <!-- ── Bio ───────────────────────────────────────────────── -->
+    <section class="team-detail-bio">
+
+      <div class="team-detail-bio-block">
+        <h2 class="team-detail-bio-heading">{{ "team.aboutTeam" | translate }}</h2>
+        <p class="team-detail-bio-text">{{ "team." + team.identifier + ".main" | translate }}</p>
+      </div>
+
+      <div class="team-detail-bio-block team-detail-bio-block-secondary">
+        <p class="team-detail-bio-text">{{ "team." + team.identifier + ".additional" | translate }}</p>
+      </div>
+
+      <div class="team-detail-bio-block team-detail-bio-block-tertiary">
+        <p class="team-detail-bio-text">{{ "team." + team.identifier + ".secondary" | translate }}</p>
+      </div>
+
+    </section>
+
+  </article>
+}

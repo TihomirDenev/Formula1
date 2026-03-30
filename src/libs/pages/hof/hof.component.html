@@ -16,15 +16,8 @@
 <!-- ── Grid ───────────────────────────────────────────── -->
 <h2>{{ "hof.hallOfFame" | translate }}</h2>
 
-<div
-  class="hall-of-fame-container"
-  infinite-scroll
-  [infiniteScrollDistance]="2"
-  [infiniteScrollUpDistance]="1.5"
-  [infiniteScrollThrottle]="300"
-  (scrolled)="loadMoreRacers()"
->
-  @for (racer of displayedRacers; track racer.name; let first = $first) {
+<div class="hall-of-fame-container">
+  @for (racer of hallOfFame; track racer.name; let first = $first) {
     <div class="card" (click)="viewRacerDetails(racer)">
       <div class="card-photo">
         <img
@@ -59,10 +52,3 @@
     </div>
   }
 </div>
-
-@if (displayedRacers.length < hallOfFame.length) {
-  <div class="infinite-loading">
-    <div class="loading-spinner"></div>
-    <p>{{ "hof.loadMore" | translate }}</p>
-  </div>
-}

@@ -1,7 +1,6 @@
-import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 import { Racer } from '@libs/models/racer.model';
 import { HOF_CONSTANTS } from '@libs/constants/hof.constants';
@@ -14,12 +13,12 @@ interface HofRacer extends Racer {
 @Component({
   selector: 'app-hof',
   standalone: true,
-  imports: [InfiniteScrollModule, TranslateModule],
+  imports: [TranslateModule],
   templateUrl: './hof.component.html',
   styleUrl: './hof.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HofComponent implements OnInit {
+export class HofComponent {
   private readonly router = inject(Router);
 
   readonly c = HOF_CONSTANTS;
@@ -31,20 +30,6 @@ export class HofComponent implements OnInit {
   })).reverse();
 
   readonly totalChampions = this.hallOfFame.length;
-
-  displayedRacers: HofRacer[] = [];
-
-  ngOnInit(): void {
-    this.loadMoreRacers();
-  }
-
-  loadMoreRacers(): void {
-    const nextRacers = this.hallOfFame.slice(
-      this.displayedRacers.length,
-      this.displayedRacers.length + this.c.racersPerPage
-    );
-    this.displayedRacers = [...this.displayedRacers, ...nextRacers];
-  }
 
   viewRacerDetails(racer: Racer): void {
     const formattedName = racer.name.split(' ').join('');

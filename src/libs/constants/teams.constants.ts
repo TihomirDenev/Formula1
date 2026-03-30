@@ -4,7 +4,9 @@ export const TEAMS_CONSTANTS = {
   logoBasePath: 'assets/images/logos/',
   photoExtension: '.webp',
   logoExtension: '.png',
+  photoCount: 21,
   routeBase: '/teams',
+  heroIcon: 'fas fa-flag-checkered',
 } as const;
 
 export const TEAM_NAME_MAP: Record<string, string> = {

@@ -321,7 +321,43 @@
       "main": "Williams Racing is one of Formula 1's most revered teams, known for its rich history of innovation and success. The team has played a pivotal role in the development of some of the sport's most groundbreaking technologies and remains a symbol of technical excellence.",
       "secondary": "Despite facing financial and competitive challenges in recent years, Williams is actively working to reclaim its status at the forefront of F1, focusing on leveraging its rich heritage to inspire new innovations and achieve future successes."
     },
-    "worldChampionships": "World Championships"
+    "worldChampionships": "World Championships",
+    "aboutTeam": "About the Team",
+    "Brabham": {
+      "main": "Brabham was one of Formula 1's most storied private constructors, founded in 1962 by Australian world champion Jack Brabham and his engineering partner Ron Tauranac. The team made history by becoming the first constructor to win the Drivers' and Constructors' Championships with a car bearing the driver's own name, achieving back-to-back titles in 1966 and 1967.",
+      "additional": "The Brabham-Repco combination of 1966 was a masterpiece of ingenuity on a budget, using a modified Oldsmobile V8 engine to beat more powerful rivals. The team was always known for its resourcefulness, engineering intelligence, and the hands-on approach that Jack Brabham brought from his racing and workshop background.",
+      "secondary": "Though the team fell into decline after Jack Brabham's retirement from driving in 1970, it found renewed success under Bernie Ecclestone's stewardship. Nelson Piquet won back-to-back Drivers' Championships for Brabham in 1981 and 1983, cementing the team's legacy as one of F1's most successful private constructors before finally withdrawing from the sport in 1992."
+    },
+    "Cooper": {
+      "main": "Cooper Car Company, founded by Charles and John Cooper in 1946, achieved something few constructors have managed: fundamentally changing the way Formula 1 cars are designed. Before Cooper's influence, the accepted wisdom was that the engine should sit at the front of the car. Cooper proved the rear-engined layout was faster, and within a few years every team had adopted it.",
+      "additional": "The Surbiton-based team won back-to-back Constructors' Championships in 1959 and 1960, with Jack Brabham claiming both Drivers' titles. The 1959 season was particularly dramatic, with Brabham pushing his car across the finish line at the final race to secure enough points for the championship.",
+      "secondary": "Cooper's contribution to Formula 1 was transformative but short-lived at the top level. As rivals adopted and refined the rear-engined layout with greater resources, Cooper found it harder to compete. The team withdrew from Formula 1 at the end of 1969, but its legacy lives on in every modern racing car built since."
+    },
+    "BRM": {
+      "main": "British Racing Motors was a grand British ambition: a state-backed project to produce a truly British Formula 1 world champion. Founded in 1945 and managed by Alfred Owen's industrial consortium, BRM spent years developing an enormously complex V16 engine that proved difficult to tame before settling on simpler and more competitive designs.",
+      "additional": "Success finally came in 1962 when Graham Hill won the Drivers' Championship and BRM claimed their only Constructors' title. The Bourne-based operation was known for developing talented drivers and produced some highly competitive cars during the mid-1960s, competing fiercely against Lotus and Ferrari.",
+      "secondary": "Despite never replicating their 1962 championship success, BRM remained a significant presence in Formula 1 through the late 1960s and early 1970s. Their complex history — marked by engineering ambition that often outstripped their resources — made them one of the sport's most fascinating teams, before finally folding in 1977."
+    },
+    "Tyrrell": {
+      "main": "Ken Tyrrell was one of Formula 1's great team managers, transforming from a timber merchant with a passion for motor racing into the head of one of the sport's most successful teams of the early 1970s. Working initially with Matra chassis and Jackie Stewart as his driver, Tyrrell forged a near-perfect partnership that yielded three Drivers' Championships for Stewart in four seasons.",
+      "additional": "When Tyrrell began building his own cars in 1970, the success continued. The Tyrrell 003 was elegantly simple, reliable, and fast. Jackie Stewart won the Constructors' title for Tyrrell in 1971, and the team remained highly competitive throughout the decade. Tyrrell is also remembered for the extraordinary six-wheeled P34, which raced in 1976 and 1977.",
+      "secondary": "Ken Tyrrell's later years were marked by a gradual decline in competitiveness as the sport moved towards turbo engines and greater technical sophistication. The team eventually sold to British American Tobacco in 1998, which rebranded it as BAR. It was the end of a proud and distinctive chapter in Formula 1 history, though the Enstone factory lives on as the home of Alpine F1."
+    },
+    "Matra": {
+      "main": "Matra was a French aerospace and arms manufacturing company that entered Formula 1 in 1966 with ambitions that matched its industrial pedigree. The company built beautiful, technically sophisticated chassis that were initially run by Ken Tyrrell with Ford Cosworth power, before Matra developed their own V12 engine for a works effort.",
+      "additional": "The combination of a Matra chassis, a Cosworth engine, and Jackie Stewart driving for Ken Tyrrell proved to be the dominant formula in the 1969 season. Stewart won six of eleven races as the team claimed the Constructors' Championship in commanding fashion, delivering one of the most complete performances in Formula 1 history.",
+      "secondary": "Matra withdrew from Formula 1 as a constructor after 1972 to focus on sports car racing, where they went on to win the Le Mans 24 Hours three consecutive times. Their F1 legacy, though brief, was significant — they demonstrated that French engineering could compete at the very highest levels of motorsport."
+    },
+    "Vanwall": {
+      "main": "Vanwall, named for founder Tony Vandervell, was the first great British Formula 1 constructor. Vandervell, an industrialist who had previously been involved with BRM, set out to build a truly competitive British racing car and succeeded spectacularly in the late 1950s, establishing a template for British motorsport dominance that would follow.",
+      "additional": "In 1958, Vanwall won the inaugural Constructors' Championship — the first time this title was awarded — with Stirling Moss and Tony Brooks sharing the victories across the season. The Vanwall cars were notably fast in a straight line and well-suited to the circuits of that era, with aerodynamic bodywork designed by Frank Costin.",
+      "secondary": "The team's success was tragically cut short when Tony Vandervell suffered a serious illness, and Vanwall withdrew from racing after 1958. A comeback attempt in 1960 yielded little. Despite their brief competitive career, Vanwall earned an immortal place in F1 history as pioneers of British racing excellence and the sport's very first Constructors' Champions."
+    },
+    "Benetton": {
+      "main": "Benetton Formula entered Formula 1 in 1986 when the Italian fashion group took over the Toleman team, initially running as a midfield outfit before transforming into a championship-winning force in the early 1990s. The turning point came when a young German driver named Michael Schumacher joined the team in 1991.",
+      "additional": "Under the technical direction of Ross Brawn and Rory Byrne, and with Schumacher driving, Benetton became the dominant force in Formula 1 in the mid-1990s. Schumacher won the Drivers' Championship in 1994 and 1995, with the team also claiming the Constructors' title in 1995. The distinctive blue and green Benetton livery became one of the most recognisable in the sport.",
+      "secondary": "After Schumacher left for Ferrari in 1996, Benetton's performance declined, though they continued to run former champions such as Gerhard Berger and Giancarlo Fisichella. The team was sold to Renault in 2000 and eventually rebranded as the Renault F1 Team. The Enstone factory that Benetton called home continues today as the base for the Alpine F1 Team."
+    }
   },
   "teamInfo": {
     "Alfa Romeo": "The headquarters of Alfa Romeo is based in Hinwil, Switzerland. Situated amidst the picturesque Swiss countryside, the Hinwil facility accommodates the team's administrative offices, manufacturing facilities, and wind tunnel. With a rich motorsport heritage, the area has been home to the Sauber operation for many years, with them carrying the Alfa Romeo name for the final time in 2023.",
@@ -337,14 +373,24 @@
     "Racing Bulls": "Though the RB branding is still young, the team’s Faenza base is strongly linked to the historic Minardi squad. Founder Giancarlo Minardi had in fact included the town’s crest – a rampant lion – in its team badge. The perennial F1 tail-enders were based there from 1985 until 2005, after which the location was taken over by Red Bull and morphed into Scuderia Toro Rosso. The factory underwent its switch to AlphaTauri colours ahead of the 2020 season, before the Red Bull-owned squad went through another rebrand for 2024, this time as RB. ",
     "Red Bull Racing": "Red Bull Racing has its headquarters in Milton Keynes, England, which is known as the Red Bull Technology Campus. This expansive site encompasses the team's factory and design areas, and was once home to predecessors Stewart Grand Prix and Jaguar Racing. The Red Bull Technology Campus showcases the team's dedication to pushing boundaries and thinking outside the box, resulting in their impressive success on the Formula One grid, with them also in recent years striving to produce their own power units in-house.",
     "Renault": "Renault's Formula One team is based in Enstone, Oxfordshire, England. The Enstone facility has a rich history, having been home to Toleman Motorsport, Benetton Formula, and Lotus F1 before Renault's acquisition. This site houses the team's chassis development and operations. Additionally, Renault's engine operations are located in Viry-Châtillon, France, where they develop and manufacture power units. Renault has been a significant presence in Formula One, both as a constructor and an engine supplier, achieving multiple Constructors' and Drivers' Championships.",
-    "Williams": "Williams, named after founder Sir Frank Williams, have their headquarters in Grove, England. The Williams headquarters is home to the team's design and engineering departments, and also houses a number of their old cars which were so successful in the sport at the hands of the likes of Nigel Mansell and Damon Hill."
+    "Williams": "Williams, named after founder Sir Frank Williams, have their headquarters in Grove, England. The Williams headquarters is home to the team's design and engineering departments, and also houses a number of their old cars which were so successful in the sport at the hands of the likes of Nigel Mansell and Damon Hill.",
+    "Brabham": "Brabham was a British Formula One constructor founded in 1962 by Australian driver Jack Brabham and engineer Ron Tauranac. Based in Chessington, Surrey, the team became the first constructor to win the championship with a car bearing the driver's own name, when Brabham took the 1966 title. They secured back-to-back Constructors' Championships in 1966 and 1967 and were a dominant force in Grand Prix racing through the late 1960s.",
+    "Cooper": "Cooper Car Company was a pioneering British constructor founded by Charles and John Cooper in 1946, based in Surbiton, Surrey. Cooper revolutionised Formula One by popularising the rear-engined layout that became universal in the sport. They won back-to-back Constructors' Championships in 1959 and 1960 with Jack Brabham, fundamentally changing how racing cars were designed.",
+    "BRM": "British Racing Motors (BRM) was a British constructor founded in 1945, based in Bourne, Lincolnshire. A state-backed endeavour supported by British industry, BRM aimed to build a truly British world champion. After years of development they achieved their goal when Graham Hill won the Drivers' Championship in 1962, bringing BRM their only Constructors' title in the process.",
+    "Tyrrell": "Tyrrell Racing was a British Formula One constructor founded by Ken Tyrrell in 1968, based in Ockham, Surrey. The team became famous for running Jackie Stewart to multiple Drivers' Championships and claimed the Constructors' title in 1971. Tyrrell was also known for innovation, most notably running the unorthodox six-wheeled P34 car in 1976 and 1977.",
+    "Matra": "Matra was a French aerospace and automotive company that entered Formula One in 1966, operating from Vélizy-Villacoublay, France. Matra provided chassis to Ken Tyrrell's team, with which Jackie Stewart dominated the 1969 season to win both titles. The Matra MS80 proved to be one of the most complete Formula One cars of its era, helping the team claim the Constructors' Championship in 1969.",
+    "Vanwall": "Vanwall was a pioneering British racing team founded in 1954 by industrialist Tony Vandervell, based in Acton, London. Vanwall became the first team to win the newly created Constructors' Championship in 1958, with Stirling Moss and Tony Brooks sharing the victories. The Vanwall cars were technologically advanced for their time and demonstrated that a British constructor could beat the dominant Italian teams.",
+    "Benetton": "Benetton Formula was a British Formula One constructor founded in 1986 when the Italian Benetton clothing group took over the Toleman team. Based in Enstone, Oxfordshire, the team is best known for launching the career of Michael Schumacher and winning the Constructors' Championship in 1995. The Enstone facility later became home to the Renault and Alpine teams that followed."
   },
   "teams": {
     "constructorChampionships": "Constructor Championships",
-    "foundedYear": "Founded Year",
-    "grandPrixWins": "Grand Prix Wins",
+    "foundedYear": "Founded",
+    "grandPrixWins": "GP Wins",
     "header": "Formula 1 Teams",
     "headquarters": "Headquarters",
-    "originCountry": "Origin Country"
+    "heroSubtitle": "Explore the iconic constructors that have shaped Formula 1 history — from legendary champions to today's grid.",
+    "loadMore": "Loading more teams...",
+    "originCountry": "Origin Country",
+    "viewDetails": "View Team"
   }
 }

@@ -17,7 +17,9 @@
     "followUs": "Follow Us"
   },
   "gallery": {
-    "f1Photos": "Formula 1 Photo Gallery"
+    "f1Photos": "Formula 1 Photo Gallery",
+    "heroSubtitle": "A visual journey through the greatest moments in Formula 1 history — iconic cars, legendary drivers, and unforgettable races.",
+    "loadMore": "Loading more photos..."
   },
   "hof": {
     "country": "Country",

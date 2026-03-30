@@ -1,0 +1,62 @@
+<!-- ── Hero ─────────────────────────────────────────────── -->
+<section class="gallery-hero">
+  <div class="gallery-hero-content">
+    <h1 class="gallery-hero-title">{{ "gallery.f1Photos" | translate }}</h1>
+    <p class="gallery-hero-subtitle">{{ "gallery.heroSubtitle" | translate }}</p>
+  </div>
+</section>
+
+<!-- ── Grid ───────────────────────────────────────────────── -->
+<div
+  class="photos-container"
+  infinite-scroll
+  [infiniteScrollDistance]="2"
+  [infiniteScrollUpDistance]="1.5"
+  [infiniteScrollThrottle]="300"
+  (scrolled)="loadMorePhotos()"
+>
+  @for (thumb of thumbs; track thumb; let i = $index; let first = $first) {
+    <div class="photo" (click)="openLightbox(i)">
+      <img
+        [src]="thumb"
+        [alt]="'Formula One photo ' + (i + 1)"
+        [loading]="first ? 'eager' : 'lazy'"
+      />
+    </div>
+  }
+</div>
+
+@if (photos.length < allPhotos.length) {
+  <div class="infinite-loading">
+    <div class="loading-spinner"></div>
+    <p>{{ "gallery.loadMore" | translate }}</p>
+  </div>
+}
+
+<!-- ── Lightbox ───────────────────────────────────────────── -->
+@if (lightboxIndex() !== null) {
+  <div class="lightbox-overlay" (click)="closeLightbox()">
+    <button class="lightbox-close" (click)="closeLightbox()">&#x2715;</button>
+
+    <button
+      class="lightbox-nav lightbox-nav-prev"
+      (click)="$event.stopPropagation(); prevPhoto()"
+      [class.lightbox-nav-hidden]="lightboxIndex() === 0"
+    >&#8249;</button>
+
+    <img
+      class="lightbox-img"
+      [src]="lightboxSrc"
+      [alt]="'Formula One photo'"
+      (click)="$event.stopPropagation()"
+    />
+
+    <button
+      class="lightbox-nav lightbox-nav-next"
+      (click)="$event.stopPropagation(); nextPhoto()"
+      [class.lightbox-nav-hidden]="lightboxIndex() === allPhotos.length - 1"
+    >&#8250;</button>
+
+    <span class="lightbox-counter">{{ (lightboxIndex() ?? 0) + 1 }} / {{ allPhotos.length }}</span>
+  </div>
+}

@@ -1,44 +1,33 @@
-import { ChangeDetectionStrategy, Component, inject, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
-import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 import { F1Team } from '@libs/models/f1-team.model';
-import { TEAM_NAME_MAP } from '@libs/constants/teams.constants';
+import { TEAMS_CONSTANTS, TEAM_NAME_MAP } from '@libs/constants/teams.constants';
 import { F1_TEAMS } from './teams.data';
 
 @Component({
   selector: 'app-teams',
   standalone: true,
-  imports: [TranslateModule, InfiniteScrollModule],
+  imports: [TranslateModule],
   templateUrl: './teams.component.html',
   styleUrl: './teams.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TeamsComponent implements OnInit {
+export class TeamsComponent {
   private readonly router = inject(Router);
 
-  readonly TEAMS_PER_PAGE = 2;
+  readonly c = TEAMS_CONSTANTS;
 
   readonly allTeams: F1Team[] = F1_TEAMS.map((team, index) => ({
     ...team,
-    photo: `assets/images/teams/${index + 1}.webp`,
-    logo: `assets/images/logos/${index + 1}.png`,
+    photo:
+      team.photo ??
+      (index + 1 <= TEAMS_CONSTANTS.photoCount
+        ? `${TEAMS_CONSTANTS.photoBasePath}${index + 1}${TEAMS_CONSTANTS.photoExtension}`
+        : undefined),
+    logo: team.logo ?? `${TEAMS_CONSTANTS.logoBasePath}${index + 1}${TEAMS_CONSTANTS.logoExtension}`,
   }));
-
-  displayedTeams: F1Team[] = [];
-
-  ngOnInit(): void {
-    this.loadMoreTeams();
-  }
-
-  loadMoreTeams(): void {
-    const nextTeams = this.allTeams.slice(
-      this.displayedTeams.length,
-      this.displayedTeams.length + this.TEAMS_PER_PAGE
-    );
-    this.displayedTeams = [...this.displayedTeams, ...nextTeams];
-  }
 
   getTeamInfoTranslation(teamName: string): string {
     return `teamInfo.${TEAM_NAME_MAP[teamName] ?? teamName}`;
@@ -46,6 +35,6 @@ export class TeamsComponent implements OnInit {
 
   viewTeamDetails(team: F1Team): void {
     const formattedName = team.name.split(' ').join('');
-    this.router.navigate(['/teams', formattedName]);
+    this.router.navigate([TEAMS_CONSTANTS.routeBase, formattedName]);
   }
 }

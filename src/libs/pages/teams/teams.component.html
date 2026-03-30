@@ -1,83 +1,85 @@
-<h2>{{ "teams.header" | translate }}</h2>
+<!-- ── Hero ──────────────────────────────────────────────────────────────── -->
+<section class="teams-hero">
+  <div class="teams-hero-content">
+    <span class="teams-hero-eyebrow">
+      <i [class]="c.heroIcon"></i>
+      FIA Formula One World Championship
+    </span>
+    <h1 class="teams-hero-title">{{ "teams.header" | translate }}</h1>
+    <p class="teams-hero-subtitle">{{ "teams.heroSubtitle" | translate }}</p>
+  </div>
+  <div class="teams-hero-stripe"></div>
+</section>
 
-<div
-  class="teams-container"
-  infinite-scroll
-  [infiniteScrollDistance]="2"
-  [infiniteScrollUpDistance]="1.5"
-  [infiniteScrollThrottle]="300"
-  (scrolled)="loadMoreTeams()"
->
-  @for (team of displayedTeams; track team.name; let first = $first) {
-    <div class="team-card" (click)="viewTeamDetails(team)">
-      <div class="team-photo">
-        <img
-          [src]="team.photo"
-          [alt]="team.name + ' photo'"
-          [loading]="first ? 'eager' : 'lazy'"
-        />
-      </div>
+<!-- ── Teams List ─────────────────────────────────────────────────────────── -->
+<div class="teams-list">
+  @for (team of allTeams; track team.name; let first = $first) {
+    <article class="team-card" [class.team-card-no-photo]="!team.photo" (click)="viewTeamDetails(team)">
 
-      <div class="team-details">
-        <div class="team-header">
-          <h2>{{ team.name }}</h2>
+      <!-- Photo -->
+      @if (team.photo) {
+        <div class="team-card-photo">
+          <img
+            [src]="team.photo"
+            [alt]="team.name"
+            [loading]="first ? 'eager' : 'lazy'"
+          />
         </div>
+      }
 
-        <div class="team-info">
-          <p>
-            <strong>{{ "teams.originCountry" | translate }}:</strong>
-            {{ team.originCountry }}
-            <img
-              [src]="'assets/images/flags/' + team.originCountryFlag + '.svg'"
-              [alt]="team.originCountry + ' flag'"
-              class="country-flag"
-              loading="lazy"
-            />
-          </p>
-          <p>
-            <strong>{{ "teams.headquarters" | translate }}:</strong>
-            {{ team.headquarters }}
-            <img
-              [src]="'assets/images/flags/' + team.headquartersFlag + '.svg'"
-              [alt]="team.headquarters + ' flag'"
-              class="country-flag"
-              loading="lazy"
-            />
-          </p>
-          <p>
-            <strong>{{ "teams.foundedYear" | translate }}:</strong>
-            {{ team.foundedYear }}
-          </p>
-          <p>
-            <strong>{{ "teams.grandPrixWins" | translate }}:</strong>
-            {{ team.grandPrixWins }}
-          </p>
-          <p>
-            <strong>{{ "teams.constructorChampionships" | translate }}:</strong>
-            {{ team.constructorChampionships }}
-          </p>
+      <!-- Body -->
+      <div class="team-card-body">
 
-          <span class="additional-info">
-            {{ getTeamInfoTranslation(team.name) | translate }}
-          </span>
-        </div>
-
-        <div class="team-logo-container">
+        <!-- Logo + Name -->
+        <div class="team-card-top">
           <img
             [src]="team.logo"
             [alt]="team.name + ' logo'"
-            class="team-logo"
+            class="team-card-logo"
             loading="lazy"
           />
+          <h2 class="team-card-name">{{ team.name }}</h2>
         </div>
+
+        <!-- Stat pills -->
+        <div class="team-card-stats">
+          <div class="stat-pill">
+            <span class="stat-pill-value">{{ team.foundedYear }}</span>
+            <span class="stat-pill-label">{{ "teams.foundedYear" | translate }}</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-pill-value">{{ team.grandPrixWins }}</span>
+            <span class="stat-pill-label">{{ "teams.grandPrixWins" | translate }}</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-pill-value">{{ team.constructorChampionships }}</span>
+            <span class="stat-pill-label">{{ "teams.constructorChampionships" | translate }}</span>
+          </div>
+        </div>
+
+        <!-- Origin + HQ meta -->
+        <div class="team-card-meta">
+          <img
+            [src]="'assets/images/flags/' + team.originCountryFlag + '.svg'"
+            [alt]="team.originCountry"
+            class="team-card-flag"
+            loading="lazy"
+          />
+          <span class="team-card-meta-text">{{ team.originCountry }}</span>
+          <span class="team-card-meta-sep">·</span>
+          <span class="team-card-meta-text">{{ team.headquarters }}</span>
+        </div>
+
+        <!-- Info snippet -->
+        <p class="team-card-info">{{ getTeamInfoTranslation(team.name) | translate }}</p>
+
+        <!-- CTA -->
+        <span class="team-card-cta">
+          {{ "teams.viewDetails" | translate }}
+          <i class="fas fa-arrow-right"></i>
+        </span>
+
       </div>
-    </div>
+    </article>
   }
 </div>
-
-@if (displayedTeams.length < allTeams.length) {
-  <div class="infinite-loading">
-    <div class="loading-spinner"></div>
-    <p>Load More Teams</p>
-  </div>
-}

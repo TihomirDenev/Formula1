@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 
 import { F1Team } from '@libs/models/f1-team.model';
-import { TEAMS_CONSTANTS, TEAM_NAME_MAP } from '@libs/constants/teams.constants';
+import { TEAMS_CONSTANTS } from '@libs/constants/teams.constants';
 import { F1_TEAMS } from './teams.data';
 
 @Component({
@@ -30,7 +30,7 @@ export class TeamsComponent {
   }));
 
   getTeamInfoTranslation(teamName: string): string {
-    return `teamInfo.${TEAM_NAME_MAP[teamName] ?? teamName}`;
+    return `teamInfo.${teamName}`;
   }
 
   viewTeamDetails(team: F1Team): void {

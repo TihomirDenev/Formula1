@@ -8,7 +8,7 @@ import { FooterComponent } from '@libs/components/footer/footer.component';
   selector: 'app-layout',
   standalone: true,
   templateUrl: './layout.component.html',
-  styles: [`main { max-width: 85rem; margin: auto; }`],
+  styleUrl: './layout.component.scss',
   imports: [RouterOutlet, NavigationComponent, FooterComponent],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

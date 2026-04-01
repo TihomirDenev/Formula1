@@ -1,0 +1,473 @@
+$max-width: 1000px;
+
+// ── Hero ──────────────────────────────────────────────────
+.compare-hero {
+  position: relative;
+  background: linear-gradient(
+    115deg,
+    #0a0000 0%,
+    #1a0000 20%,
+    #6b0000 55%,
+    #3a0000 80%,
+    #0a0000 100%
+  );
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: radial-gradient(ellipse at 50% 50%, rgba(255, 0, 0, 0.12) 0%, transparent 65%);
+    inset: 0;
+    pointer-events: none;
+  }
+
+  &-inner {
+    position: relative;
+    z-index: 1;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 3rem 2rem 2.5rem;
+    text-align: center;
+  }
+
+  &-title {
+    margin: 0 0 0.75rem;
+    color: var(--text-color);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  &-subtitle {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  &-stripe {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: var(--text-red);
+  }
+}
+
+// ── Selectors ─────────────────────────────────────────────
+.compare-selectors-section {
+  padding: 2rem 1.5rem;
+  border-bottom: 1px solid var(--border-gray);
+  background: var(--background-dark);
+}
+
+.compare-selectors {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.5rem;
+  justify-content: center;
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.selector-wrap {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  max-width: 360px;
+  flex: 1;
+}
+
+.selector-label {
+  color: var(--accent-yellow);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.selector-input {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  border: 1px solid var(--border-gray);
+  border-radius: 8px;
+  background: var(--background-darker);
+  color: var(--text-color);
+  font-family: inherit;
+  font-size: 0.92rem;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath stroke='rgba(255,255,255,0.4)' stroke-width='1.5' fill='none' d='M1 1l4 4 4-4'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+
+  &:focus {
+    outline: none;
+    border-color: var(--text-red);
+  }
+
+  option {
+    background: var(--background-darker);
+    color: var(--text-color);
+  }
+}
+
+.vs-badge {
+  padding-bottom: 0.8rem;
+  color: var(--text-red);
+  font-size: 1.4rem;
+  font-weight: 900;
+  flex-shrink: 0;
+  letter-spacing: 0.1em;
+  text-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+// ── Profiles ──────────────────────────────────────────────
+.compare-profiles {
+  display: grid;
+  align-items: center;
+  gap: 1.5rem;
+  grid-template-columns: 1fr auto 1fr;
+  max-width: $max-width;
+  margin: 2.5rem auto 2.5rem;
+  padding: 0 1.5rem;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 280px;
+  padding: 1.75rem 1.5rem;
+  border: 1px solid var(--border-gray);
+  border-radius: 12px;
+  background: var(--background-darker);
+  transition: border-color 0.2s;
+}
+
+.profile-photo-wrap {
+  flex-shrink: 0;
+}
+
+.profile-photo {
+  display: block;
+  width: 120px;
+  height: 150px;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  object-fit: cover;
+  object-position: top;
+}
+
+.profile-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.profile-flag {
+  width: 28px;
+  height: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 2px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.profile-name {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.profile-country {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.profile-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+
+  &-text {
+    color: rgba(255, 255, 255, 0.2);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
+
+.profiles-vs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-badge {
+    color: var(--text-red);
+    font-size: 2rem;
+    font-weight: 900;
+    text-shadow: 0 0 24px rgba(255, 0, 0, 0.6);
+    letter-spacing: 0.1em;
+  }
+}
+
+// ── Stat Cards Grid ───────────────────────────────────────
+.compare-cards-grid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: 1fr 1fr;
+  max-width: $max-width;
+  margin: 2rem auto 4rem;
+  padding: 0 1.5rem;
+}
+
+.stat-card {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border-gray);
+  border-radius: 10px;
+  background: var(--background-darker);
+  transition: border-color 0.2s;
+
+  &-label {
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 0.62rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+
+  &-value {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 2.25rem;
+    font-weight: 900;
+    line-height: 1.1;
+
+    &-sm {
+      color: var(--text-color);
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+  }
+
+  &-numeric {
+    // base for numeric stat cards — value size handled by &-value
+  }
+
+  &-winner {
+    background: rgba(255, 203, 5, 0.05);
+    border-color: var(--accent-yellow);
+
+    .stat-card-value {
+      color: var(--accent-yellow);
+      text-shadow: 0 0 16px rgba(255, 203, 5, 0.35);
+    }
+  }
+
+  &-loser {
+    .stat-card-value {
+      color: rgba(255, 255, 255, 0.2);
+      text-shadow: none;
+    }
+  }
+
+  &-death {
+    background: rgba(255, 60, 60, 0.04);
+    border-color: rgba(255, 80, 80, 0.4);
+
+    .stat-card-value-sm {
+      color: rgba(255, 100, 100, 0.8);
+    }
+  }
+
+  &-flag-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  &-flag {
+    width: 22px;
+    height: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 2px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+
+  &-teams {
+    grid-column: span 1;
+  }
+
+  &-teams-list {
+    display: flex;
+    gap: 0.4rem;
+    flex-direction: column;
+  }
+}
+
+.team-chip {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.75rem 0.4rem 0.5rem;
+  border: 1px solid var(--border-gray);
+  border-radius: 6px;
+  background: var(--background-darker);
+  transition: border-color 0.2s;
+
+  &:hover {
+    border-color: var(--text-red);
+  }
+
+  &-logo {
+    width: 48px;
+    height: 30px;
+    object-fit: contain;
+    flex-shrink: 0;
+  }
+
+  &-name {
+    color: var(--text-light);
+    font-size: 0.78rem;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+}
+
+// ── Empty State ────────────────────────────────────────────
+.compare-empty {
+  max-width: $max-width;
+  margin: 5rem auto;
+  padding: 0 1.5rem;
+  text-align: center;
+
+  &-text {
+    color: rgba(255, 255, 255, 0.28);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+  }
+}
+
+// ── Wrapper ────────────────────────────────────────────────
+.compare {
+  padding-bottom: 0;
+}
+
+// ── Responsive ────────────────────────────────────────────
+@media (max-width: 768px) {
+  .compare-selectors {
+    align-items: stretch;
+    gap: 0.75rem;
+    flex-direction: column;
+  }
+
+  .selector-wrap {
+    max-width: 100%;
+  }
+
+  .vs-badge {
+    padding: 0;
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .compare-profiles {
+    gap: 0.75rem;
+    grid-template-columns: 1fr;
+  }
+
+  .profiles-vs {
+    order: 2;
+
+    &-badge {
+      font-size: 1.4rem;
+    }
+  }
+
+  .profile-card:last-of-type {
+    order: 3;
+  }
+
+  .compare-cards-grid {
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+
+  .stat-card {
+    padding: 0.75rem 1rem;
+
+    &-value {
+      font-size: 1.75rem;
+    }
+
+    &-value-sm {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-photo {
+    width: 90px;
+    height: 115px;
+  }
+
+  .profile-name {
+    font-size: 0.85rem;
+  }
+
+  .compare-cards-grid {
+    gap: 0.4rem;
+    margin-bottom: 3rem;
+    padding: 0 0.75rem;
+  }
+
+  .stat-card {
+    padding: 0.6rem 0.75rem;
+
+    &-value {
+      font-size: 1.4rem;
+    }
+
+    &-value-sm {
+      font-size: 0.8rem;
+    }
+  }
+
+  .team-chip {
+    padding: 0.35rem 0.6rem 0.35rem 0.4rem;
+
+    &-logo {
+      width: 36px;
+      height: 24px;
+    }
+
+    &-name {
+      font-size: 0.72rem;
+    }
+  }
+}

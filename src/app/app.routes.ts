@@ -44,6 +44,11 @@ export const routes: Routes = [
           import('@libs/pages/team/team.component').then((m) => m.TeamComponent),
       },
       {
+        path: 'compare',
+        loadComponent: () =>
+          import('@libs/pages/compare/compare.component').then((m) => m.CompareComponent),
+      },
+      {
         path: 'contacts',
         loadComponent: () =>
           import('@libs/pages/contacts/contacts.component').then((m) => m.ContactsComponent),

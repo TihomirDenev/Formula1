@@ -40,6 +40,11 @@
         {{ "navigation.gallery" | translate }}
       </a>
     </li>
+    <li>
+      <a routerLink="/compare" routerLinkActive="active">
+        {{ "navigation.compare" | translate }}
+      </a>
+    </li>
     <li class="nav-lang-mobile">
       <div class="nav-lang" (click)="$event.stopPropagation()">
         <img src="assets/images/flags/bg.svg" alt="BG" (click)="translateText('bg')" />

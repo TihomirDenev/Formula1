@@ -1,4 +1,20 @@
 {
+  "compare": {
+    "active": "—",
+    "birthplace": "Birthplace",
+    "championships": "Championships",
+    "dateOfBirth": "Date of Birth",
+    "driver1": "Driver 1",
+    "driver2": "Driver 2",
+    "emptyState": "Select two drivers above to begin the comparison",
+    "nationality": "Nationality",
+    "raceWins": "Race Wins",
+    "selectDriver": "Select a driver",
+    "status": "Deceased",
+    "subtitle": "Select two World Champions to compare their career statistics head-to-head.",
+    "teams": "Teams",
+    "title": "Driver Comparison"
+  },
   "contacts": {
     "checkoutMyPortfolio": "Check out my portfolio:",
     "email": "Email",
@@ -67,6 +83,7 @@
     "exploreHof": "Explore Hall of Fame"
   },
   "navigation": {
+    "compare": "Compare",
     "contacts": "Contacts",
     "gallery": "Gallery",
     "hof": "Hall Of Fame",

@@ -6,6 +6,7 @@ export const APP_CONSTANTS = {
     hallOfFame: '/hall-of-fame',
     teams: '/teams',
     gallery: '/gallery',
+    compare: '/compare',
     contacts: '/contacts',
   },
 } as const;

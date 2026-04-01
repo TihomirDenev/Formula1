@@ -1,0 +1,233 @@
+<div class="compare">
+
+  <!-- ── Hero ──────────────────────────────────────────────── -->
+  <section class="compare-hero">
+    <div class="compare-hero-inner">
+      <h1 class="compare-hero-title">{{ 'compare.title' | translate }}</h1>
+      <p class="compare-hero-subtitle">{{ 'compare.subtitle' | translate }}</p>
+    </div>
+    <div class="compare-hero-stripe"></div>
+  </section>
+
+  <!-- ── Selectors ─────────────────────────────────────────── -->
+  <section class="compare-selectors-section">
+    <div class="compare-selectors">
+
+      <div class="selector-wrap">
+        <label class="selector-label" for="driver-a">{{ 'compare.driver1' | translate }}</label>
+        <select id="driver-a" class="selector-input" (change)="onDriverAChange($event)">
+          <option value="">{{ 'compare.selectDriver' | translate }}</option>
+          @for (racer of allRacers; track racer.id) {
+            <option [value]="racer.id">{{ racer.name }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="vs-badge">VS</div>
+
+      <div class="selector-wrap">
+        <label class="selector-label" for="driver-b">{{ 'compare.driver2' | translate }}</label>
+        <select id="driver-b" class="selector-input" (change)="onDriverBChange($event)">
+          <option value="">{{ 'compare.selectDriver' | translate }}</option>
+          @for (racer of allRacers; track racer.id) {
+            <option [value]="racer.id">{{ racer.name }}</option>
+          }
+        </select>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Content ───────────────────────────────────────────── -->
+  @if (driverA() || driverB()) {
+
+    <!-- Profile Cards -->
+    <section class="compare-profiles">
+
+      <div class="profile-card">
+        @if (driverA(); as a) {
+          <div class="profile-photo-wrap">
+            <img [src]="a.photo" [alt]="a.name" class="profile-photo" />
+          </div>
+          <div class="profile-meta">
+            <img
+              [src]="c.flagBasePath + a.flag + c.flagExtension"
+              [alt]="a.country"
+              class="profile-flag"
+            />
+            <h2 class="profile-name">{{ a.name }}</h2>
+          </div>
+          <p class="profile-country">{{ a.country }}</p>
+        } @else {
+          <div class="profile-placeholder">
+            <span class="profile-placeholder-text">{{ 'compare.selectDriver' | translate }}</span>
+          </div>
+        }
+      </div>
+
+      <div class="profiles-vs">
+        <span class="profiles-vs-badge">VS</span>
+      </div>
+
+      <div class="profile-card">
+        @if (driverB(); as b) {
+          <div class="profile-photo-wrap">
+            <img [src]="b.photo" [alt]="b.name" class="profile-photo" />
+          </div>
+          <div class="profile-meta">
+            <img
+              [src]="c.flagBasePath + b.flag + c.flagExtension"
+              [alt]="b.country"
+              class="profile-flag"
+            />
+            <h2 class="profile-name">{{ b.name }}</h2>
+          </div>
+          <p class="profile-country">{{ b.country }}</p>
+        } @else {
+          <div class="profile-placeholder">
+            <span class="profile-placeholder-text">{{ 'compare.selectDriver' | translate }}</span>
+          </div>
+        }
+      </div>
+
+    </section>
+
+    <!-- Stats + Teams (only when both are selected) -->
+    @if (comparison(); as comp) {
+
+      <section class="compare-cards-grid">
+
+        <!-- Race Wins -->
+        <div
+          class="stat-card stat-card-numeric"
+          [class.stat-card-winner]="comp.a.wins > comp.b.wins"
+          [class.stat-card-loser]="comp.a.wins < comp.b.wins"
+        >
+          <span class="stat-card-label">{{ 'compare.raceWins' | translate }}</span>
+          <span class="stat-card-value">{{ comp.a.wins }}</span>
+        </div>
+        <div
+          class="stat-card stat-card-numeric"
+          [class.stat-card-winner]="comp.b.wins > comp.a.wins"
+          [class.stat-card-loser]="comp.b.wins < comp.a.wins"
+        >
+          <span class="stat-card-label">{{ 'compare.raceWins' | translate }}</span>
+          <span class="stat-card-value">{{ comp.b.wins }}</span>
+        </div>
+
+        <!-- Championships -->
+        <div
+          class="stat-card stat-card-numeric"
+          [class.stat-card-winner]="comp.a.championships > comp.b.championships"
+          [class.stat-card-loser]="comp.a.championships < comp.b.championships"
+        >
+          <span class="stat-card-label">{{ 'compare.championships' | translate }}</span>
+          <span class="stat-card-value">{{ comp.a.championships }}</span>
+        </div>
+        <div
+          class="stat-card stat-card-numeric"
+          [class.stat-card-winner]="comp.b.championships > comp.a.championships"
+          [class.stat-card-loser]="comp.b.championships < comp.a.championships"
+        >
+          <span class="stat-card-label">{{ 'compare.championships' | translate }}</span>
+          <span class="stat-card-value">{{ comp.b.championships }}</span>
+        </div>
+
+        <!-- Nationality -->
+        <div class="stat-card">
+          <span class="stat-card-label">{{ 'compare.nationality' | translate }}</span>
+          <div class="stat-card-flag-row">
+            <img
+              [src]="c.flagBasePath + comp.a.flag + c.flagExtension"
+              [alt]="comp.a.country"
+              class="stat-card-flag"
+            />
+            <span class="stat-card-value stat-card-value-sm">{{ comp.a.country }}</span>
+          </div>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-label">{{ 'compare.nationality' | translate }}</span>
+          <div class="stat-card-flag-row">
+            <img
+              [src]="c.flagBasePath + comp.b.flag + c.flagExtension"
+              [alt]="comp.b.country"
+              class="stat-card-flag"
+            />
+            <span class="stat-card-value stat-card-value-sm">{{ comp.b.country }}</span>
+          </div>
+        </div>
+
+        <!-- Date of Birth -->
+        <div class="stat-card">
+          <span class="stat-card-label">{{ 'compare.dateOfBirth' | translate }}</span>
+          <span class="stat-card-value stat-card-value-sm">{{ comp.a.dateOfBirth }}</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-label">{{ 'compare.dateOfBirth' | translate }}</span>
+          <span class="stat-card-value stat-card-value-sm">{{ comp.b.dateOfBirth }}</span>
+        </div>
+
+        <!-- Birthplace -->
+        <div class="stat-card">
+          <span class="stat-card-label">{{ 'compare.birthplace' | translate }}</span>
+          <span class="stat-card-value stat-card-value-sm">{{ comp.a.placeOfBirth }}</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-card-label">{{ 'compare.birthplace' | translate }}</span>
+          <span class="stat-card-value stat-card-value-sm">{{ comp.b.placeOfBirth }}</span>
+        </div>
+
+        <!-- Deceased (only shown when at least one driver is deceased) -->
+        @if (comp.a.dateOfDeath || comp.b.dateOfDeath) {
+          <div class="stat-card" [class.stat-card-death]="comp.a.dateOfDeath">
+            <span class="stat-card-label">{{ 'compare.status' | translate }}</span>
+            <span class="stat-card-value stat-card-value-sm">
+              @if (comp.a.dateOfDeath) { {{ comp.a.dateOfDeath }} } @else { — }
+            </span>
+          </div>
+          <div class="stat-card" [class.stat-card-death]="comp.b.dateOfDeath">
+            <span class="stat-card-label">{{ 'compare.status' | translate }}</span>
+            <span class="stat-card-value stat-card-value-sm">
+              @if (comp.b.dateOfDeath) { {{ comp.b.dateOfDeath }} } @else { — }
+            </span>
+          </div>
+        }
+
+        <!-- Teams -->
+        <div class="stat-card stat-card-teams">
+          <span class="stat-card-label">{{ 'compare.teams' | translate }}</span>
+          <div class="stat-card-teams-list">
+            @for (team of comp.a.f1Teams; track team) {
+              <div class="team-chip">
+                <img [src]="getLogoSrc(team)" [alt]="team" class="team-chip-logo" />
+                <span class="team-chip-name">{{ team }}</span>
+              </div>
+            }
+          </div>
+        </div>
+        <div class="stat-card stat-card-teams">
+          <span class="stat-card-label">{{ 'compare.teams' | translate }}</span>
+          <div class="stat-card-teams-list">
+            @for (team of comp.b.f1Teams; track team) {
+              <div class="team-chip">
+                <img [src]="getLogoSrc(team)" [alt]="team" class="team-chip-logo" />
+                <span class="team-chip-name">{{ team }}</span>
+              </div>
+            }
+          </div>
+        </div>
+
+      </section>
+
+    }
+
+  } @else {
+
+    <!-- Empty State -->
+    <div class="compare-empty">
+      <p class="compare-empty-text">{{ 'compare.emptyState' | translate }}</p>
+    </div>
+
+  }
+
+</div>

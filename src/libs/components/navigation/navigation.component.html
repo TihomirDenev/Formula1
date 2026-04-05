@@ -45,6 +45,11 @@
         {{ "navigation.compare" | translate }}
       </a>
     </li>
+    <li>
+      <a routerLink="/stats" routerLinkActive="active">
+        {{ "navigation.stats" | translate }}
+      </a>
+    </li>
     <li class="nav-lang-mobile">
       <div class="nav-lang" (click)="$event.stopPropagation()">
         <img src="assets/images/flags/bg.svg" alt="BG" (click)="translateText('bg')" />

@@ -7,6 +7,7 @@ export const APP_CONSTANTS = {
     teams: '/teams',
     gallery: '/gallery',
     compare: '/compare',
+    stats: '/stats',
     contacts: '/contacts',
   },
 } as const;

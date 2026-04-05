@@ -1,0 +1,355 @@
+$max-width: 1100px;
+$highlights-max-width: 760px;
+$bar-anim-duration: 0.7s;
+$bar-anim-easing: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+// ── Hero ──────────────────────────────────────────────────
+.stats-hero {
+  position: relative;
+  background: linear-gradient(
+    115deg,
+    #0a0000 0%,
+    #1a0000 20%,
+    #6b0000 55%,
+    #3a0000 80%,
+    #0a0000 100%
+  );
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    background: radial-gradient(ellipse at 50% 50%, rgba(255, 0, 0, 0.12) 0%, transparent 65%);
+    inset: 0;
+    pointer-events: none;
+  }
+
+  &-inner {
+    position: relative;
+    z-index: 1;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 3rem 2rem 2.5rem;
+    text-align: center;
+  }
+
+  &-title {
+    margin: 0 0 0.75rem;
+    color: var(--text-color);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  &-subtitle {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  &-stripe {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    background: var(--text-red);
+  }
+}
+
+// ── Highlight Cards ───────────────────────────────────────
+.stats-highlights {
+  border-bottom: 1px solid rgba(255, 0, 0, 0.25);
+  background: linear-gradient(90deg, #1a0000, #3a0000, #1a0000);
+
+  &-inner {
+    display: flex;
+    width: calc(100% - 2rem);
+    max-width: $highlights-max-width;
+    margin: 0 auto;
+  }
+}
+
+.highlight-card {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 0;
+  padding: 1.1rem 2.5rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.07);
+  text-align: center;
+  flex: 1;
+
+  &:last-child {
+    border-right: none;
+  }
+}
+
+.highlight-value {
+  display: block;
+  color: var(--accent-yellow);
+  font-size: clamp(1.4rem, 3vw, 2rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+.highlight-label {
+  display: block;
+  margin-top: 0.2rem;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+@media (max-width: 600px) {
+  .stats-highlights-inner {
+    width: 100%;
+  }
+
+  .highlight-card {
+    padding: 0.9rem 1rem;
+    flex: 1;
+  }
+
+  .highlight-value {
+    font-size: 1.2rem;
+  }
+
+  .highlight-label {
+    font-size: 0.55rem;
+    letter-spacing: 0.06em;
+  }
+}
+
+// ── Section ───────────────────────────────────────────────
+.stats-section {
+  padding: 3rem 2rem;
+  background: var(--background-dark);
+
+  &-alt {
+    background: var(--background-darker);
+  }
+
+  &-inner {
+    max-width: $max-width;
+    margin: 0 auto;
+  }
+
+  &-title {
+    margin: 0 0 2rem;
+    padding-left: 0.75rem;
+    border-left: 3px solid var(--text-red);
+    color: var(--text-color);
+    font-size: 1.35rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
+// ── Horizontal Bar Chart ──────────────────────────────────
+.bar-chart-horizontal {
+  display: flex;
+  gap: 0.6rem;
+  flex-direction: column;
+}
+
+.bar-row {
+  display: grid;
+  align-items: center;
+  gap: 0.75rem;
+  grid-template-columns: 220px 1fr 2.5rem;
+}
+
+.bar-row-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.bar-flag {
+  width: 22px;
+  height: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.bar-country {
+  color: var(--text-light);
+  font-size: 0.82rem;
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.bar-track {
+  height: 20px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.bar-fill {
+  width: 0;
+  height: 100%;
+  border-radius: 4px;
+  background: var(--text-red);
+  animation: bar-grow-h $bar-anim-duration $bar-anim-easing forwards;
+
+  &-gold {
+    background: var(--accent-yellow);
+  }
+}
+
+@keyframes bar-grow-h {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--pct, 100%);
+  }
+}
+
+.bar-value {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-align: right;
+}
+
+// ── Vertical Bar Chart ────────────────────────────────────
+.bar-chart-vertical {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 0.75rem;
+  height: 260px;
+  padding-bottom: 3rem;
+}
+
+.bar-col {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  flex: 1;
+}
+
+.bar-col-value {
+  margin-bottom: 0.3rem;
+  color: var(--text-muted);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.bar-col-track {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  border-radius: 4px 4px 0 0;
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+  flex: 1;
+}
+
+.bar-col-fill {
+  width: 100%;
+  height: 0;
+  border-radius: 4px 4px 0 0;
+  background: var(--text-red);
+  animation: bar-grow-v $bar-anim-duration $bar-anim-easing forwards;
+
+  &-ongoing {
+    border: 1px solid var(--accent-yellow);
+    border-bottom: none;
+    background: rgba(255, 203, 5, 0.7);
+  }
+}
+
+@keyframes bar-grow-v {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--pct, 100%);
+  }
+}
+
+.bar-col-label {
+  position: absolute;
+  bottom: -2.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.1rem;
+  flex-direction: column;
+  color: var(--text-muted);
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.bar-col-ongoing {
+  color: var(--accent-yellow);
+  font-size: 0.6rem;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+// ── Responsive ────────────────────────────────────────────
+@media (max-width: 768px) {
+  .bar-row {
+    gap: 0.5rem;
+    grid-template-columns: 140px 1fr 2rem;
+  }
+
+  .bar-country {
+    font-size: 0.75rem;
+  }
+
+  .bar-chart-vertical {
+    gap: 0.4rem;
+    height: 200px;
+    padding-bottom: 3.5rem;
+  }
+
+  .bar-col-label {
+    bottom: -3rem;
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .stats-section {
+    padding: 2rem 1rem;
+  }
+
+  .bar-row {
+    gap: 0.4rem;
+    grid-template-columns: 110px 1fr 1.8rem;
+  }
+
+  .bar-country {
+    font-size: 0.68rem;
+  }
+
+  .bar-chart-vertical {
+    gap: 0.25rem;
+  }
+}

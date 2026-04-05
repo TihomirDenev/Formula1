@@ -38,17 +38,17 @@
     "loadMore": "Loading more photos..."
   },
   "hof": {
-    "country": "Country",
-    "hallOfFame": "Hall of Fame",
-    "heroSubtitle": "Every name. Every title. Every legend.",
-    "heroDescription": "Celebrating the greatest drivers in the history of Formula One — from Nino Farina's inaugural crown in 1950 to today's champions.",
-    "sectionTitle": "World Champions",
-    "sectionSubtitle": "Click on a driver to explore their full story",
-    "championsSuffix": "Champions",
-    "winDate": "Win Date",
     "championships": "Championship",
     "championshipsPlural": "Championships",
-    "loadMore": "Load More Racers"
+    "championsSuffix": "Champions",
+    "country": "Country",
+    "hallOfFame": "Hall of Fame",
+    "heroDescription": "Celebrating the greatest drivers in the history of Formula One — from Nino Farina's inaugural crown in 1950 to today's champions.",
+    "heroSubtitle": "Every name. Every title. Every legend.",
+    "loadMore": "Load More Racers",
+    "sectionSubtitle": "Click on a driver to explore their full story",
+    "sectionTitle": "World Champions",
+    "winDate": "Win Date"
   },
   "home": {
     "circuitIntro": "Formula One races on some of the most challenging and historic circuits worldwide. From the tight streets of Monaco to the high-speed straights of Monza, each track presents unique challenges that test the skill of the world's best drivers.",
@@ -59,28 +59,28 @@
     "circuitSuzuka": "Suzuka Circuit in Japan is one of the most technical tracks in F1, featuring the famous 'S' curves and the high-speed 130R corner, making it a true test of driver skill.",
     "circuitTitle": "F1 Circuit Highlights",
     "compounds": "Each F1 season features a selection of tyre compounds categorized into slick tyres for dry conditions, intermediate tyres for damp conditions, and wet tyres for heavy rain. Slick tyres are further divided into hard, medium, and soft compounds, offering different trade-offs between grip and durability.",
+    "exploreHof": "Explore Hall of Fame",
     "exploreMore": "Dive Deeper into the World of F1",
     "f1Championship": "The 2025 Formula One World Championship involves ten teams competing over a season that comprises 24 rounds, each hosted as a Grand Prix. Teams field two primary drivers and usually have at least one reserve or test driver. Points are awarded based on finish positions in each race, with the winner receiving 25 points. The total points accumulated by drivers contribute towards the Drivers' World Championship, while the combined points of a team's drivers determine the Constructors' Championship standings.",
     "f1Introduction": "Formula One, often abbreviated as F1 and commonly referred to as Formula 1, is the highest class of international auto racing for single-seater formula racing cars. Governed by the Fédération Internationale de l'Automobile (FIA), it represents the pinnacle of motor racing technology and driver skill. The series was inaugurated in 1950 and operates under the Concorde Agreement, which outlines the competition's commercial and governance structures.",
     "f1SprintRaces": "The season's format also includes F1 Sprint races, which are shorter and held over a portion of the regular race distance. These events are designed to add additional excitement and competitive racing opportunities, contributing points to the overall championship.",
     "facebook": "Facebook",
     "formulaOneVid": "This is Formula One",
-    "videoSubtitle": "Watch iconic moments, dramatic crashes and the finest highlights from the world's greatest racing series.",
     "grosjeanVid": "Grosjean's Insane Fireball Crash",
     "officialWebsite": "Formula One",
+    "statDrivers": "Drivers",
+    "statRaces": "Races in 2025",
+    "statTeams": "Teams",
+    "statYears": "Years of F1",
     "supplier": "Formula One currently uses a single tyre supplier, Pirelli, which provides teams with a range of compounds designed for varying race conditions. Pirelli's exclusive partnership with the FIA ensures that all teams compete on a level playing field while adapting to different race strategies.",
     "technology": "With constant advancements in tyre technology, F1 continues to push the limits of performance, safety, and sustainability. Tyres remain a key factor in motorsport excellence, shaping the outcome of races and influencing team strategies throughout the season.",
     "topFiveVid": "Top 5 Most Nail-Biting Moments from Formula 1",
     "tyreIntro": "Tyres are one of the most crucial components in Formula One racing, directly influencing performance, grip, and race strategy. The right tyre choice can mean the difference between victory and defeat, as teams carefully manage their tyre compounds across different track conditions.",
     "tyreTitle": "F1 Tyre Brands",
+    "videoSubtitle": "Watch iconic moments, dramatic crashes and the finest highlights from the world's greatest racing series.",
     "welcomeDescription": "Experience the speed, the thrill, and the excitement of the Formula One World Championship. Dive into the world of motorsport's pinnacle with races held across the globe, featuring the world's best drivers and the most advanced racing technologies.",
     "welcomeTitle": "Welcome to Formula One",
-    "youtube": "YouTube",
-    "statYears": "Years of F1",
-    "statRaces": "Races in 2025",
-    "statTeams": "Teams",
-    "statDrivers": "Drivers",
-    "exploreHof": "Explore Hall of Fame"
+    "youtube": "YouTube"
   },
   "navigation": {
     "compare": "Compare",
@@ -89,6 +89,7 @@
     "hof": "Hall Of Fame",
     "home": "Home",
     "pointSystem": "Point System",
+    "stats": "Statistics",
     "teams": "Teams"
   },
   "notFound": {
@@ -98,10 +99,10 @@
   "pointSystem": {
     "evolutionOfPoints": "Evolution of Formula 1 Points System",
     "heroSubtitle": "From 8 points for a win in 1950 to 25 today — see how F1 has rewarded its champions across every era.",
+    "imageCaption": "The modern points system in action",
     "points": "pts",
     "position": "Pos",
-    "tableCaption": "Points awarded per finishing position across all scoring eras",
-    "imageCaption": "The modern points system in action"
+    "tableCaption": "Points awarded per finishing position across all scoring eras"
   },
   "racer": {
     "AlainProst": {
@@ -120,6 +121,10 @@
       "additional": "Ayrton Senna da Silva was born on March 21, 1960, into a wealthy Brazilian family where, with his brother and sister, he enjoyed a privileged upbringing. He never needed to race for money but his deep need for racing began with an infatuation for a miniature go-kart his father gave him when he was four years old. As a boy the highlights of Ayrton's life were Grand Prix mornings when he awoke trembling with anticipation at the prospect of watching his Formula 1 heroes in action on television. At 13 he raced a kart for the first time and immediately won. Eight years later he went single-seater racing in Britain, where in three years he won five championships, by which time he had divorced his young wife and forsaken a future in his father's businesses in favour of pursuing success in Formula 1 racing, where he made his debut with Toleman in 1984. At Monaco (a race he would win six times), his sensational second to Alain Prost's McLaren - in torrential rain - was confirmation of the phenomenal talent that would take the sport by storm.",
       "main": "He streaked through the sport like a comet, an other-worldly superstar whose brilliance as a driver was matched by a dazzling intellect and coruscating charisma that illuminated Formula 1 racing as never before. No one tried harder or pushed himself further, nor did anyone shed so much light on the extremes to which only the greatest drivers go. Intensely introspective and passionate in the extreme, Ayrton Senna endlessly sought to extend his limits, to go faster than himself, a quest that ultimately made him a martyr but did not diminish his mystique."
     },
+    "backToHof": "Back to Hall of Fame",
+    "birthplace": "Birthplace",
+    "born": "Born",
+    "careerWins": "Career Wins",
     "country": "Country: ",
     "DamonHill": {
       "additional": "Damon Graham Devereux Hill was born on September 17, 1960, two years before his father Graham won his first driving title. The Hills lived comfortably in a large London house where from an early age Damon was accustomed to visits from such family friends as Stirling Moss, Jim Clark, John Surtees and Jackie Stewart. But he found their line of work boring to watch and was instead much more interested in motorbikes, a small example of which his father bought for him when he was 11. Four years later the Hill's happy home life was torn asunder when Graham and several members of his Formula One team were killed in an air crash. Insurance claims wiped out all the family savings, leaving Bette Hill to bring up Damon and his two sisters in drastically reduced financial circumstances.",
@@ -127,6 +132,7 @@
     },
     "dateOfBirth": "Date of Birth: ",
     "dateOfDeath": "Date of Death: ",
+    "deceased": "Deceased",
     "DennyHulme": {
       "additional": "Denny Hulme's father Clive was a World War II hero who won the Victoria Cross for bravery as a sniper in a bloody battle on the island of Crete. On his return home, to Te Puke on New Zealand's North Island, Clive operated a small farm and a trucking business. Denny, born on June 18, 1936, learned to drive a truck while sitting on his father's lap and by the age of six was driving solo. As a youngster he preferred trout fishing, hunting or working on his father's trucks. At 17 he left school and became a mechanic and a driver, hauling cargo over long distances on New Zealand's winding roads. On these journeys he whiled away the hours with reveries of racing, imagining that he was Stirling Moss or another of the European stars he had seen racing in New Zealand's Tasman Series.",
       "main": "Denny Hulme's dislike of celebrity and preference for anonymity made him the most low key of champions. He hated fame, had no trace of vanity and found social functions an agony. His nickname 'The Bear' was a reference to both his rugged features and a gruff nature that would erupt when he was provoked. Yet he was also a sensitive man unable to express his feelings, except in a racing car, in which he was an accomplished if unspectacular driver. He eventually died behind the wheel, a quarter of a century after he became champion."
@@ -191,6 +197,10 @@
       "additional": "Kimi Matias Raikkonen spent his childhood in a house built by his great grandfather in Espoo, a suburb of the Finnish capital, Helsinki. To provide for Kimi, born on 17 October, 1979, and his older brother Rami, their hard-working parents Matti and Paula toiled, respectively, as a road builder and an office clerk. Money was scarce but the Raikkonens were a happy family and their humble homestead surrounded by open countryside was an ideal environment for the two rambunctious youngsters to flex their racing muscles. At first (when Kimi was just three years old) the brothers tore around on miniature motocross bikes fitted with training wheels. A move to karts paved the way for Kimi (who began competitive karting at 10) and Rami (who eventually became a successful rally driver) to make rapid progress in motorsport, though it came at a cost. Matti had to work nights as a taxi driver and nightclub bouncer and funds diverted to karting meant plans to replace the outside lavatory with a proper bathroom in the family home had to be postponed.",
       "main": "Fast-tracked into the sport with the shortest CV on four wheels, the unknown newcomer who came from nowhere and said next to nothing immediately proved he knew exactly what he was doing: driving a Formula 1 car as fast as it could possibly go. The car couldn't always keep up with his talent and it took seven seasons for Kimi 'Iceman' Raikkonen to become World Champion. Notoriously inanimate and uncommunicative, the silent speedster's frozen expression in fact masked the hidden depths in one of the most original - and popular - characters in the sport's history..."
     },
+    "LandoNorris": {
+      "additional": "Lando Norris was born on 13 November 1999 in Bristol, United Kingdom, into a wealthy family — his father Adam Norris is a retired pension fund manager. He showed extraordinary talent from a very young age, winning multiple karting championships across Europe before moving into single-seater racing. He progressed rapidly through Formula 4, Formula 3 and Formula 2, winning the Formula 3 European Championship in 2017 and the Formula 2 championship runner-up title in 2018, before being signed by McLaren for the 2019 Formula 1 season at just 19 years old.",
+      "main": "Lando Norris spent six seasons proving himself as one of Formula 1's most naturally gifted drivers before claiming his first World Championship in 2025. Racing for McLaren throughout his entire F1 career, he delivered increasingly dominant performances as the team's MCL39 became the class of the field. In a tense three-way championship battle with defending champion Max Verstappen and teammate Oscar Piastri, Norris held his nerve in the final Abu Dhabi Grand Prix to clinch the title by two points — becoming the 35th Formula 1 World Champion and McLaren's first drivers' champion since Lewis Hamilton in 2008."
+    },
     "LewisHamilton": {
       "additional": "Lewis Carl Davidson Hamilton was born into a mixed-race family on 7 January 1985, in Stevenage, a quiet English town north of London. His father Anthony, whose parents immigrated from Grenada in the West Indies in the 1950's, and his mother Carmen divorced when Lewis was about two years old. He lived with Carmen until he was 10 then moved in with Anthony, his wife Linda and their three-year-old son Nicolas. Remaining close to his mother, Lewis also formed a strong bond with his stepmother and credits them both with contributing to the caring, considerate side of his nature. He finds the cheerful bravery of his stepbrother, who suffers from cerebral palsy, inspirational. 'I only have to think of Nic to feel motivated and put a smile on my face.' His steely ambition and iron resolve come from the head of the family. 'Even though he always told me to be courteous and polite, my focus and determination comes from, and has always been driven by, my dad.'",
       "main": "The 30th Formula 1 World Champion was the youngest ever, taking his first title in the most dramatic fashion - on the last corner of the last lap of the last race of one of the most scintillating seasons. The sensational triumph of the sport's first black driver, in only his second year at the pinnacle of motorsport, was a welcome human interest story that focused unprecedented international attention on Formula 1 racing. His prodigious talent and pleasing personality made Lewis Hamilton an inspirational role model and ideal ambassador for his profession..."
@@ -202,10 +212,6 @@
     "MaxVerstappen": {
       "additional": "Max Emilian Verstappen was born 30 September, 1997 in Hasselt, Belgium, and has a younger sister, Victoria. His Belgian mother, Sophie Kumpen, was a successful kart racer and his Dutch father, Jos Verstappen, a former F1 driver. After his parents separated Max lived in Holland with his father, who masterminded the boy racer's fast-moving career. As a two-year-old toddler Max first flogged a mini quad bike around the family garden, then drove a rented go-kart as a four-year-old. Four years later he began competing, progressing quickly through various karting categories and winning titles in several European countries.",
       "main": "In 2021 24-year-old Max Verstappen became the 34th Formula 1 World Champion, taking the title from seven-time champion Lewis Hamilton amid controversy on the last lap of the last race. Driving on the limit – sometimes over it – their intense rivalry became a personal feud that pushed them far beyond the rest of the field. The enthralling battle between the ultra-confident Dutch youngster and the most successful driver in the sport's history captured the imagination of a worldwide audience as never before."
-    },
-    "LandoNorris": {
-      "additional": "Lando Norris was born on 13 November 1999 in Bristol, United Kingdom, into a wealthy family — his father Adam Norris is a retired pension fund manager. He showed extraordinary talent from a very young age, winning multiple karting championships across Europe before moving into single-seater racing. He progressed rapidly through Formula 4, Formula 3 and Formula 2, winning the Formula 3 European Championship in 2017 and the Formula 2 championship runner-up title in 2018, before being signed by McLaren for the 2019 Formula 1 season at just 19 years old.",
-      "main": "Lando Norris spent six seasons proving himself as one of Formula 1's most naturally gifted drivers before claiming his first World Championship in 2025. Racing for McLaren throughout his entire F1 career, he delivered increasingly dominant performances as the team's MCL39 became the class of the field. In a tense three-way championship battle with defending champion Max Verstappen and teammate Oscar Piastri, Norris held his nerve in the final Abu Dhabi Grand Prix to clinch the title by two points — becoming the 35th Formula 1 World Champion and McLaren's first drivers' champion since Lewis Hamilton in 2008."
     },
     "MichaelSchumacher": {
       "additional": "The most extraordinary driver's origins were most ordinary. He was born on 3 January, 1969, near Cologne, Germany, six years before his brother Ralf, who would also become a Formula One driver of note. Their father, a bricklayer, ran the local kart track, at Kerpen, where Mrs Schumacher operated the canteen. As a four-year old Michael enjoyed playing on a pedal kart, though when his father fitted it with a small motorcycle engine the future superstar promptly crashed into a lamppost. But Michael quickly mastered his machine and won his first kart championship at six, following which his far from affluent parents arranged sponsorship from wealthy enthusiasts that enabled Michael to make rapid progress. By 1987 he was German and European kart champion and had left school to work as an apprentice car mechanic, a job that was soon replaced by full-time employment as a race driver. In 1990 he won the German F3 championship and was hired by Mercedes to drive sportscars. The next year he made a stunning Formula One debut, qualifying an astonishing seventh in a Jordan for the Belgian Grand Prix at Spa, whereupon he was immediately snapped up by Benetton, with whom in 1992 he won his first F1 race, again at Spa, among the most demanding circuits of them all.",
@@ -245,11 +251,6 @@
     },
     "placeOfBirth": "Place of Birth: ",
     "racerDetails": "Racer Details",
-    "backToHof": "Back to Hall of Fame",
-    "careerWins": "Career Wins",
-    "born": "Born",
-    "birthplace": "Birthplace",
-    "deceased": "Deceased",
     "SebastianVettel": {
       "additional": "Just three years and half years after he was born, on July 3, 1987, Sebastian Vettel began the way of life that would take him to the very pinnacle of motorsport. His method of transport was a miniature kart, the venue was the yard at his home in Heppenheim, a town in south-western Germany. Little Sebastian quickly mastered the machine and began lapping faster and faster, shrieking with glee and refusing to stop until he was exhausted. The source of little Seb's joy soon became a focal point of family life for the Vettels. Norbert, a carpenter by trade and in his spare time an enthusiastic karter and occasional hillclimber, and his wife Heike had three other children: older daughters Stefanie and Melanie, and a younger son Fabian. His family's support helped the would-be racer fulfil a destiny that would make the Vettel name a household word around the world.",
       "main": "The youngest ever world champion's accumulation of age-related records that began in 2010 continued for four consecutive seasons, culminating in a one-sided 2013 title triumph that confirmed his status as one of the sport’s all-time greats. Sebastian Vettel’s first championship, at the age of 23, provided a surprise ending to an intensely competitive 2010 campaign. There was surely more to come from this fast rising racer, and it came quickly when he completely dominated in 2011 to become the youngest double world champion. In 2012, with a series of comebacks from setbacks against the strongest opposition in the longest ever season, his third driving title in a row was hard-earned and well-deserved. In 2013, and still just 26 years old, he made short work of becoming the youngest ever quadruple world champion. In truth the precocious youngster who came so far so fast was in a hurry from the time he was a toddler..."
@@ -257,7 +258,28 @@
     "teams": "Teams",
     "totalWins": "Total Wins: "
   },
+  "stats": {
+    "byCountry": {
+      "title": "Championships by Country"
+    },
+    "byDecade": {
+      "ongoing": "Ongoing",
+      "title": "Championships per Decade"
+    },
+    "highlights": {
+      "champions": "World Champions",
+      "mostWins": "Race Wins Record",
+      "nationalities": "Nationalities",
+      "seasons": "Seasons"
+    },
+    "subtitle": "Numbers that define the greatest championship in motorsport.",
+    "title": "F1 Statistics",
+    "topWinners": {
+      "title": "Top Race Winners"
+    }
+  },
   "team": {
+    "aboutTeam": "About the Team",
     "AlfaRomeo": {
       "additional": "Alfa Romeo's involvement in motorsport dates back to the early 20th century, and its return to Formula 1 marks a renewed commitment to competing at the highest levels. The team leverages the extensive technical expertise of Sauber Motorsport to develop competitive cars that reflect Alfa Romeo's iconic brand.",
       "main": "Alfa Romeo Racing, operated by Sauber Motorsport, brings a storied brand back to the forefront of Formula 1, combining a rich legacy with the latest in racing technology. The team, re-entering the sport in 2019, aims to blend tradition with innovation.",
@@ -279,7 +301,27 @@
       "secondary": "The iconic British racing green livery of Aston Martin not only reflects its prestigious automotive heritage but also symbolizes a new era for the team in Formula 1, where luxury meets competitive racing."
     },
     "base": "Base",
+    "Benetton": {
+      "additional": "Under the technical direction of Ross Brawn and Rory Byrne, and with Schumacher driving, Benetton became the dominant force in Formula 1 in the mid-1990s. Schumacher won the Drivers' Championship in 1994 and 1995, with the team also claiming the Constructors' title in 1995. The distinctive blue and green Benetton livery became one of the most recognisable in the sport.",
+      "main": "Benetton Formula entered Formula 1 in 1986 when the Italian fashion group took over the Toleman team, initially running as a midfield outfit before transforming into a championship-winning force in the early 1990s. The turning point came when a young German driver named Michael Schumacher joined the team in 1991.",
+      "secondary": "After Schumacher left for Ferrari in 1996, Benetton's performance declined, though they continued to run former champions such as Gerhard Berger and Giancarlo Fisichella. The team was sold to Renault in 2000 and eventually rebranded as the Renault F1 Team. The Enstone factory that Benetton called home continues today as the base for the Alpine F1 Team."
+    },
+    "Brabham": {
+      "additional": "The Brabham-Repco combination of 1966 was a masterpiece of ingenuity on a budget, using a modified Oldsmobile V8 engine to beat more powerful rivals. The team was always known for its resourcefulness, engineering intelligence, and the hands-on approach that Jack Brabham brought from his racing and workshop background.",
+      "main": "Brabham was one of Formula 1's most storied private constructors, founded in 1962 by Australian world champion Jack Brabham and his engineering partner Ron Tauranac. The team made history by becoming the first constructor to win the Drivers' and Constructors' Championships with a car bearing the driver's own name, achieving back-to-back titles in 1966 and 1967.",
+      "secondary": "Though the team fell into decline after Jack Brabham's retirement from driving in 1970, it found renewed success under Bernie Ecclestone's stewardship. Nelson Piquet won back-to-back Drivers' Championships for Brabham in 1981 and 1983, cementing the team's legacy as one of F1's most successful private constructors before finally withdrawing from the sport in 1992."
+    },
+    "BRM": {
+      "additional": "Success finally came in 1962 when Graham Hill won the Drivers' Championship and BRM claimed their only Constructors' title. The Bourne-based operation was known for developing talented drivers and produced some highly competitive cars during the mid-1960s, competing fiercely against Lotus and Ferrari.",
+      "main": "British Racing Motors was a grand British ambition: a state-backed project to produce a truly British Formula 1 world champion. Founded in 1945 and managed by Alfred Owen's industrial consortium, BRM spent years developing an enormously complex V16 engine that proved difficult to tame before settling on simpler and more competitive designs.",
+      "secondary": "Despite never replicating their 1962 championship success, BRM remained a significant presence in Formula 1 through the late 1960s and early 1970s. Their complex history — marked by engineering ambition that often outstripped their resources — made them one of the sport's most fascinating teams, before finally folding in 1977."
+    },
     "chassis": "Chassis",
+    "Cooper": {
+      "additional": "The Surbiton-based team won back-to-back Constructors' Championships in 1959 and 1960, with Jack Brabham claiming both Drivers' titles. The 1959 season was particularly dramatic, with Brabham pushing his car across the finish line at the final race to secure enough points for the championship.",
+      "main": "Cooper Car Company, founded by Charles and John Cooper in 1946, achieved something few constructors have managed: fundamentally changing the way Formula 1 cars are designed. Before Cooper's influence, the accepted wisdom was that the engine should sit at the front of the car. Cooper proved the rear-engined layout was faster, and within a few years every team had adopted it.",
+      "secondary": "Cooper's contribution to Formula 1 was transformative but short-lived at the top level. As rivals adopted and refined the rear-engined layout with greater resources, Cooper found it harder to compete. The team withdrew from Formula 1 at the end of 1969, but its legacy lives on in every modern racing car built since."
+    },
     "fastestLaps": "Fastest Laps",
     "Ferrari": {
       "additional": "The origin of Ferrari dates back to 1939 when Enzo Ferrari founded Auto Avio Costruzioni in Modena, Italy, initially focusing on the production of machine tools and aircraft parts. The transition to automobile manufacturing began in 1940 with the completion of the company's first race car, the AAC 815. It wasn’t until 1947, however, that the first car bearing the iconic Ferrari badge was completed, marking the official establishment of Ferrari as a major player in the automotive industry.",
@@ -303,6 +345,11 @@
       "additional": "Lotus's influence in Formula 1 is characterized by significant innovations, particularly in aerodynamics and lightweight construction, which have shaped the direction of the sport. Their emphasis on performance and efficiency set new standards during their time in the competition.",
       "main": "Though currently not active in Formula 1, Lotus remains a legendary name in the sport, celebrated for its innovative contributions and revolutionary approach to race car design. Known for its pioneering spirit under the guidance of Colin Chapman, Lotus has left a lasting legacy.",
       "secondary": "While they are not currently competing, the historical impact of Lotus on Formula 1 is undeniable. The brand's philosophy of 'simplify, then add lightness' continues to influence modern racing, underlining the enduring relevance of their engineering principles."
+    },
+    "Matra": {
+      "additional": "The combination of a Matra chassis, a Cosworth engine, and Jackie Stewart driving for Ken Tyrrell proved to be the dominant formula in the 1969 season. Stewart won six of eleven races as the team claimed the Constructors' Championship in commanding fashion, delivering one of the most complete performances in Formula 1 history.",
+      "main": "Matra was a French aerospace and arms manufacturing company that entered Formula 1 in 1966 with ambitions that matched its industrial pedigree. The company built beautiful, technically sophisticated chassis that were initially run by Ken Tyrrell with Ford Cosworth power, before Matra developed their own V12 engine for a works effort.",
+      "secondary": "Matra withdrew from Formula 1 as a constructor after 1972 to focus on sports car racing, where they went on to win the Le Mans 24 Hours three consecutive times. Their F1 legacy, though brief, was significant — they demonstrated that French engineering could compete at the very highest levels of motorsport."
     },
     "McLaren": {
       "additional": "Founded in 1963 by racer Bruce McLaren from New Zealand, McLaren quickly distinguished itself as a technological innovator. Over the decades, McLaren has been at the forefront of many of Formula 1's engineering breakthroughs, including pioneering developments in car design and aerodynamics.",
@@ -335,71 +382,45 @@
     "teamChief": "Team Chief",
     "teamOverview": "Team Overview",
     "technicalChief": "Technical Chief",
+    "Tyrrell": {
+      "additional": "When Tyrrell began building his own cars in 1970, the success continued. The Tyrrell 003 was elegantly simple, reliable, and fast. Jackie Stewart won the Constructors' title for Tyrrell in 1971, and the team remained highly competitive throughout the decade. Tyrrell is also remembered for the extraordinary six-wheeled P34, which raced in 1976 and 1977.",
+      "main": "Ken Tyrrell was one of Formula 1's great team managers, transforming from a timber merchant with a passion for motor racing into the head of one of the sport's most successful teams of the early 1970s. Working initially with Matra chassis and Jackie Stewart as his driver, Tyrrell forged a near-perfect partnership that yielded three Drivers' Championships for Stewart in four seasons.",
+      "secondary": "Ken Tyrrell's later years were marked by a gradual decline in competitiveness as the sport moved towards turbo engines and greater technical sophistication. The team eventually sold to British American Tobacco in 1998, which rebranded it as BAR. It was the end of a proud and distinctive chapter in Formula 1 history, though the Enstone factory lives on as the home of Alpine F1."
+    },
+    "Vanwall": {
+      "additional": "In 1958, Vanwall won the inaugural Constructors' Championship — the first time this title was awarded — with Stirling Moss and Tony Brooks sharing the victories across the season. The Vanwall cars were notably fast in a straight line and well-suited to the circuits of that era, with aerodynamic bodywork designed by Frank Costin.",
+      "main": "Vanwall, named for founder Tony Vandervell, was the first great British Formula 1 constructor. Vandervell, an industrialist who had previously been involved with BRM, set out to build a truly competitive British racing car and succeeded spectacularly in the late 1950s, establishing a template for British motorsport dominance that would follow.",
+      "secondary": "The team's success was tragically cut short when Tony Vandervell suffered a serious illness, and Vanwall withdrew from racing after 1958. A comeback attempt in 1960 yielded little. Despite their brief competitive career, Vanwall earned an immortal place in F1 history as pioneers of British racing excellence and the sport's very first Constructors' Champions."
+    },
     "Williams": {
       "additional": "Established by Sir Frank Williams and Patrick Head, Williams quickly made its mark with a focus on aerodynamic efficiency and mechanical reliability. Over the years, the team has been home to some of the greatest drivers and has been at the forefront of many technical advancements in Formula 1.",
       "main": "Williams Racing is one of Formula 1's most revered teams, known for its rich history of innovation and success. The team has played a pivotal role in the development of some of the sport's most groundbreaking technologies and remains a symbol of technical excellence.",
       "secondary": "Despite facing financial and competitive challenges in recent years, Williams is actively working to reclaim its status at the forefront of F1, focusing on leveraging its rich heritage to inspire new innovations and achieve future successes."
     },
-    "worldChampionships": "World Championships",
-    "aboutTeam": "About the Team",
-    "Brabham": {
-      "main": "Brabham was one of Formula 1's most storied private constructors, founded in 1962 by Australian world champion Jack Brabham and his engineering partner Ron Tauranac. The team made history by becoming the first constructor to win the Drivers' and Constructors' Championships with a car bearing the driver's own name, achieving back-to-back titles in 1966 and 1967.",
-      "additional": "The Brabham-Repco combination of 1966 was a masterpiece of ingenuity on a budget, using a modified Oldsmobile V8 engine to beat more powerful rivals. The team was always known for its resourcefulness, engineering intelligence, and the hands-on approach that Jack Brabham brought from his racing and workshop background.",
-      "secondary": "Though the team fell into decline after Jack Brabham's retirement from driving in 1970, it found renewed success under Bernie Ecclestone's stewardship. Nelson Piquet won back-to-back Drivers' Championships for Brabham in 1981 and 1983, cementing the team's legacy as one of F1's most successful private constructors before finally withdrawing from the sport in 1992."
-    },
-    "Cooper": {
-      "main": "Cooper Car Company, founded by Charles and John Cooper in 1946, achieved something few constructors have managed: fundamentally changing the way Formula 1 cars are designed. Before Cooper's influence, the accepted wisdom was that the engine should sit at the front of the car. Cooper proved the rear-engined layout was faster, and within a few years every team had adopted it.",
-      "additional": "The Surbiton-based team won back-to-back Constructors' Championships in 1959 and 1960, with Jack Brabham claiming both Drivers' titles. The 1959 season was particularly dramatic, with Brabham pushing his car across the finish line at the final race to secure enough points for the championship.",
-      "secondary": "Cooper's contribution to Formula 1 was transformative but short-lived at the top level. As rivals adopted and refined the rear-engined layout with greater resources, Cooper found it harder to compete. The team withdrew from Formula 1 at the end of 1969, but its legacy lives on in every modern racing car built since."
-    },
-    "BRM": {
-      "main": "British Racing Motors was a grand British ambition: a state-backed project to produce a truly British Formula 1 world champion. Founded in 1945 and managed by Alfred Owen's industrial consortium, BRM spent years developing an enormously complex V16 engine that proved difficult to tame before settling on simpler and more competitive designs.",
-      "additional": "Success finally came in 1962 when Graham Hill won the Drivers' Championship and BRM claimed their only Constructors' title. The Bourne-based operation was known for developing talented drivers and produced some highly competitive cars during the mid-1960s, competing fiercely against Lotus and Ferrari.",
-      "secondary": "Despite never replicating their 1962 championship success, BRM remained a significant presence in Formula 1 through the late 1960s and early 1970s. Their complex history — marked by engineering ambition that often outstripped their resources — made them one of the sport's most fascinating teams, before finally folding in 1977."
-    },
-    "Tyrrell": {
-      "main": "Ken Tyrrell was one of Formula 1's great team managers, transforming from a timber merchant with a passion for motor racing into the head of one of the sport's most successful teams of the early 1970s. Working initially with Matra chassis and Jackie Stewart as his driver, Tyrrell forged a near-perfect partnership that yielded three Drivers' Championships for Stewart in four seasons.",
-      "additional": "When Tyrrell began building his own cars in 1970, the success continued. The Tyrrell 003 was elegantly simple, reliable, and fast. Jackie Stewart won the Constructors' title for Tyrrell in 1971, and the team remained highly competitive throughout the decade. Tyrrell is also remembered for the extraordinary six-wheeled P34, which raced in 1976 and 1977.",
-      "secondary": "Ken Tyrrell's later years were marked by a gradual decline in competitiveness as the sport moved towards turbo engines and greater technical sophistication. The team eventually sold to British American Tobacco in 1998, which rebranded it as BAR. It was the end of a proud and distinctive chapter in Formula 1 history, though the Enstone factory lives on as the home of Alpine F1."
-    },
-    "Matra": {
-      "main": "Matra was a French aerospace and arms manufacturing company that entered Formula 1 in 1966 with ambitions that matched its industrial pedigree. The company built beautiful, technically sophisticated chassis that were initially run by Ken Tyrrell with Ford Cosworth power, before Matra developed their own V12 engine for a works effort.",
-      "additional": "The combination of a Matra chassis, a Cosworth engine, and Jackie Stewart driving for Ken Tyrrell proved to be the dominant formula in the 1969 season. Stewart won six of eleven races as the team claimed the Constructors' Championship in commanding fashion, delivering one of the most complete performances in Formula 1 history.",
-      "secondary": "Matra withdrew from Formula 1 as a constructor after 1972 to focus on sports car racing, where they went on to win the Le Mans 24 Hours three consecutive times. Their F1 legacy, though brief, was significant — they demonstrated that French engineering could compete at the very highest levels of motorsport."
-    },
-    "Vanwall": {
-      "main": "Vanwall, named for founder Tony Vandervell, was the first great British Formula 1 constructor. Vandervell, an industrialist who had previously been involved with BRM, set out to build a truly competitive British racing car and succeeded spectacularly in the late 1950s, establishing a template for British motorsport dominance that would follow.",
-      "additional": "In 1958, Vanwall won the inaugural Constructors' Championship — the first time this title was awarded — with Stirling Moss and Tony Brooks sharing the victories across the season. The Vanwall cars were notably fast in a straight line and well-suited to the circuits of that era, with aerodynamic bodywork designed by Frank Costin.",
-      "secondary": "The team's success was tragically cut short when Tony Vandervell suffered a serious illness, and Vanwall withdrew from racing after 1958. A comeback attempt in 1960 yielded little. Despite their brief competitive career, Vanwall earned an immortal place in F1 history as pioneers of British racing excellence and the sport's very first Constructors' Champions."
-    },
-    "Benetton": {
-      "main": "Benetton Formula entered Formula 1 in 1986 when the Italian fashion group took over the Toleman team, initially running as a midfield outfit before transforming into a championship-winning force in the early 1990s. The turning point came when a young German driver named Michael Schumacher joined the team in 1991.",
-      "additional": "Under the technical direction of Ross Brawn and Rory Byrne, and with Schumacher driving, Benetton became the dominant force in Formula 1 in the mid-1990s. Schumacher won the Drivers' Championship in 1994 and 1995, with the team also claiming the Constructors' title in 1995. The distinctive blue and green Benetton livery became one of the most recognisable in the sport.",
-      "secondary": "After Schumacher left for Ferrari in 1996, Benetton's performance declined, though they continued to run former champions such as Gerhard Berger and Giancarlo Fisichella. The team was sold to Renault in 2000 and eventually rebranded as the Renault F1 Team. The Enstone factory that Benetton called home continues today as the base for the Alpine F1 Team."
-    }
+    "worldChampionships": "World Championships"
   },
   "teamInfo": {
     "Alfa Romeo": "The headquarters of Alfa Romeo is based in Hinwil, Switzerland. Situated amidst the picturesque Swiss countryside, the Hinwil facility accommodates the team's administrative offices, manufacturing facilities, and wind tunnel. With a rich motorsport heritage, the area has been home to the Sauber operation for many years, with them carrying the Alfa Romeo name for the final time in 2023.",
     "Alpha Tauri": "AlphaTauri operate out of Faenza, Italy, with their headquarters known as the Scuderia AlphaTauri Factory. This purpose-built facility houses the team's design, manufacturing, and engineering departments, and used to be home to the Minardi team - who AlphaTauri were before Red Bull bought them. The town of Faenza is a stone's throw from the Imola circuit, making that their home race.",
     "Alpine": "Alpine's headquarters is based in Enstone, England. Their base has a storied history in Formula One, having previously served as the headquarters for the Benetton and Renault F1 teams - and you can see nods to that with iconic old cars in the building and trophies from the successes of former drivers like Michael Schumacher and Fernando Alonso. The facility houses the team's design and manufacturing departments, whilst the engine side of the team is based in Viry-Châtillon, France.",
     "Aston Martin": "Aston Martin's headquarters is situated in Silverstone, England - right over the road from the iconic Grand Prix circuit. Nestled in the heart of British motorsport, their recently built facility serves as a vibrant, brand-new center for car production, design, and testing. The ambition they are showing with their new HQ fits in with what they are doing on the track. With a rich heritage in Formula One, the area was once home to predecessors Jordan among others, it's a great place to base your F1 team.",
+    "Benetton": "Benetton Formula was a British Formula One constructor founded in 1986 when the Italian Benetton clothing group took over the Toleman team. Based in Enstone, Oxfordshire, the team is best known for launching the career of Michael Schumacher and winning the Constructors' Championship in 1995. The Enstone facility later became home to the Renault and Alpine teams that followed.",
+    "Brabham": "Brabham was a British Formula One constructor founded in 1962 by Australian driver Jack Brabham and engineer Ron Tauranac. Based in Chessington, Surrey, the team became the first constructor to win the championship with a car bearing the driver's own name, when Brabham took the 1966 title. They secured back-to-back Constructors' Championships in 1966 and 1967 and were a dominant force in Grand Prix racing through the late 1960s.",
+    "BRM": "British Racing Motors (BRM) was a British constructor founded in 1945, based in Bourne, Lincolnshire. A state-backed endeavour supported by British industry, BRM aimed to build a truly British world champion. After years of development they achieved their goal when Graham Hill won the Drivers' Championship in 1962, bringing BRM their only Constructors' title in the process.",
+    "Cooper": "Cooper Car Company was a pioneering British constructor founded by Charles and John Cooper in 1946, based in Surbiton, Surrey. Cooper revolutionised Formula One by popularising the rear-engined layout that became universal in the sport. They won back-to-back Constructors' Championships in 1959 and 1960 with Jack Brabham, fundamentally changing how racing cars were designed.",
     "Ferrari": "Scuderia Ferrari's HQ is located in Maranello, Italy, and it is an iconic complex steeped in racing history. The Ferrari headquarters houses the team's manufacturing, design, and development departments, serving as the beating heart of their Formula One endeavors. The facility combines tradition and innovation, with plenty of cues to their storied motorsport past all over the place. It is arguably the most evocative of all the HQs in F1, given the Prancing Horse has been in the sport since the very beginning of the championship back in 1950.",
     "Haas": "The Haas headquarters is located in Kannapolis, North Carolina, United States, but they also have a UK base in 'motorsport valley,' where a number of the teams are located. Their Banbury site houses many of their operations functions – including Logistics, Electrical Engineering, Vehicle Performance and Programme Management, as well as Race Team Support and the Communications Department.",
     "Kick Sauber": "The Sauber F1 team, branded as Alfa Romeo in recent years, is headquartered in Hinwil, Switzerland. The Hinwil facility is known for its advanced wind tunnel and state-of-the-art manufacturing capabilities. Sauber has a long-standing reputation in Formula One, acting as a springboard for drivers like Kimi Räikkönen and Sebastian Vettel in their early careers. With the partnership with Audi on the horizon, the team is set for an exciting future.",
     "Lotus": "Team Lotus, founded by Colin Chapman in 1952, was headquartered in Hethel, Norfolk, England. The Hethel site included design, manufacturing, and testing facilities, and became synonymous with innovation in motorsport. In the mid-1970s, Team Lotus moved its racing operations to Ketteringham Hall, also in Norfolk, which served as their base until 1994. The team's pioneering designs and engineering excellence led to significant success in Formula One, securing seven Constructors' Championships and six Drivers' Championships.",
+    "Matra": "Matra was a French aerospace and automotive company that entered Formula One in 1966, operating from Vélizy-Villacoublay, France. Matra provided chassis to Ken Tyrrell's team, with which Jackie Stewart dominated the 1969 season to win both titles. The Matra MS80 proved to be one of the most complete Formula One cars of its era, helping the team claim the Constructors' Championship in 1969.",
     "McLaren": "McLaren are based at the McLaren Technology Centre, located in Woking, England. Renowned for its striking architecture, this futuristic-looking facility combines workspace, research laboratories, and an upcoming new wind tunnel. The McLaren Technology Centre exemplifies the team's commitment to excellence, but also has plenty of nods to its past - with trophies and old cars from yesteryear dotted around the building.",
     "Mercedes": "The Mercedes team is based in Brackley, England. Their headquarters serves as a hub for design, engineering, and production, and in recent years it has produced some of the most dominant cars in F1 history - as well as being home to the likes of Brawn GP in the past. Nearby Brixworth is home to Mercedes' renowned power unit factory, meanwhile. The HPP (High Performance Powertrains) Technology Centre boasts cutting-edge facilities, enabling the team to produce some of the best engines in the sport - with them being the top force for much of the turbo hybrid era.",
     "Racing Bulls": "Though the RB branding is still young, the team’s Faenza base is strongly linked to the historic Minardi squad. Founder Giancarlo Minardi had in fact included the town’s crest – a rampant lion – in its team badge. The perennial F1 tail-enders were based there from 1985 until 2005, after which the location was taken over by Red Bull and morphed into Scuderia Toro Rosso. The factory underwent its switch to AlphaTauri colours ahead of the 2020 season, before the Red Bull-owned squad went through another rebrand for 2024, this time as RB. ",
     "Red Bull Racing": "Red Bull Racing has its headquarters in Milton Keynes, England, which is known as the Red Bull Technology Campus. This expansive site encompasses the team's factory and design areas, and was once home to predecessors Stewart Grand Prix and Jaguar Racing. The Red Bull Technology Campus showcases the team's dedication to pushing boundaries and thinking outside the box, resulting in their impressive success on the Formula One grid, with them also in recent years striving to produce their own power units in-house.",
     "Renault": "Renault's Formula One team is based in Enstone, Oxfordshire, England. The Enstone facility has a rich history, having been home to Toleman Motorsport, Benetton Formula, and Lotus F1 before Renault's acquisition. This site houses the team's chassis development and operations. Additionally, Renault's engine operations are located in Viry-Châtillon, France, where they develop and manufacture power units. Renault has been a significant presence in Formula One, both as a constructor and an engine supplier, achieving multiple Constructors' and Drivers' Championships.",
-    "Williams": "Williams, named after founder Sir Frank Williams, have their headquarters in Grove, England. The Williams headquarters is home to the team's design and engineering departments, and also houses a number of their old cars which were so successful in the sport at the hands of the likes of Nigel Mansell and Damon Hill.",
-    "Brabham": "Brabham was a British Formula One constructor founded in 1962 by Australian driver Jack Brabham and engineer Ron Tauranac. Based in Chessington, Surrey, the team became the first constructor to win the championship with a car bearing the driver's own name, when Brabham took the 1966 title. They secured back-to-back Constructors' Championships in 1966 and 1967 and were a dominant force in Grand Prix racing through the late 1960s.",
-    "Cooper": "Cooper Car Company was a pioneering British constructor founded by Charles and John Cooper in 1946, based in Surbiton, Surrey. Cooper revolutionised Formula One by popularising the rear-engined layout that became universal in the sport. They won back-to-back Constructors' Championships in 1959 and 1960 with Jack Brabham, fundamentally changing how racing cars were designed.",
-    "BRM": "British Racing Motors (BRM) was a British constructor founded in 1945, based in Bourne, Lincolnshire. A state-backed endeavour supported by British industry, BRM aimed to build a truly British world champion. After years of development they achieved their goal when Graham Hill won the Drivers' Championship in 1962, bringing BRM their only Constructors' title in the process.",
     "Tyrrell": "Tyrrell Racing was a British Formula One constructor founded by Ken Tyrrell in 1968, based in Ockham, Surrey. The team became famous for running Jackie Stewart to multiple Drivers' Championships and claimed the Constructors' title in 1971. Tyrrell was also known for innovation, most notably running the unorthodox six-wheeled P34 car in 1976 and 1977.",
-    "Matra": "Matra was a French aerospace and automotive company that entered Formula One in 1966, operating from Vélizy-Villacoublay, France. Matra provided chassis to Ken Tyrrell's team, with which Jackie Stewart dominated the 1969 season to win both titles. The Matra MS80 proved to be one of the most complete Formula One cars of its era, helping the team claim the Constructors' Championship in 1969.",
     "Vanwall": "Vanwall was a pioneering British racing team founded in 1954 by industrialist Tony Vandervell, based in Acton, London. Vanwall became the first team to win the newly created Constructors' Championship in 1958, with Stirling Moss and Tony Brooks sharing the victories. The Vanwall cars were technologically advanced for their time and demonstrated that a British constructor could beat the dominant Italian teams.",
-    "Benetton": "Benetton Formula was a British Formula One constructor founded in 1986 when the Italian Benetton clothing group took over the Toleman team. Based in Enstone, Oxfordshire, the team is best known for launching the career of Michael Schumacher and winning the Constructors' Championship in 1995. The Enstone facility later became home to the Renault and Alpine teams that followed."
+    "Williams": "Williams, named after founder Sir Frank Williams, have their headquarters in Grove, England. The Williams headquarters is home to the team's design and engineering departments, and also houses a number of their old cars which were so successful in the sport at the hands of the likes of Nigel Mansell and Damon Hill."
   },
   "teams": {
     "constructorChampionships": "Constructor Championships",

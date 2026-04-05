@@ -1,0 +1,125 @@
+<div class="stats">
+
+  <!-- ── Hero ──────────────────────────────────────────────────── -->
+  <section class="stats-hero">
+    <div class="stats-hero-inner">
+      <h1 class="stats-hero-title">{{ 'stats.title' | translate }}</h1>
+      <p class="stats-hero-subtitle">{{ 'stats.subtitle' | translate }}</p>
+    </div>
+    <div class="stats-hero-stripe"></div>
+  </section>
+
+  <!-- ── Highlight Cards ───────────────────────────────────────── -->
+  <section class="stats-highlights">
+    <div class="stats-highlights-inner">
+
+      <div class="highlight-card">
+        <span class="highlight-value">{{ c.highlights.champions }}</span>
+        <span class="highlight-label">{{ 'stats.highlights.champions' | translate }}</span>
+      </div>
+
+      <div class="highlight-card">
+        <span class="highlight-value">{{ c.highlights.seasons }}</span>
+        <span class="highlight-label">{{ 'stats.highlights.seasons' | translate }}</span>
+      </div>
+
+      <div class="highlight-card">
+        <span class="highlight-value">{{ c.highlights.nationalities }}</span>
+        <span class="highlight-label">{{ 'stats.highlights.nationalities' | translate }}</span>
+      </div>
+
+      <div class="highlight-card">
+        <span class="highlight-value">{{ c.highlights.mostWins }}</span>
+        <span class="highlight-label">{{ 'stats.highlights.mostWins' | translate }}</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ── Championships by Country ─────────────────────────────── -->
+  <section class="stats-section">
+    <div class="stats-section-inner">
+      <h2 class="stats-section-title">{{ 'stats.byCountry.title' | translate }}</h2>
+
+      <div class="bar-chart bar-chart-horizontal">
+        @for (item of byCountry; track item.country) {
+          <div class="bar-row">
+            <div class="bar-row-label">
+              <img
+                [src]="c.flagBasePath + item.flag + c.flagExtension"
+                [alt]="item.country"
+                class="bar-flag"
+              />
+              <span class="bar-country">{{ item.country }}</span>
+            </div>
+            <div class="bar-track">
+              <div
+                class="bar-fill"
+                [style.--pct]="pct(item.count, maxCountryCount)"
+              ></div>
+            </div>
+            <span class="bar-value">{{ item.count }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Top Race Winners ──────────────────────────────────────── -->
+  <section class="stats-section stats-section-alt">
+    <div class="stats-section-inner">
+      <h2 class="stats-section-title">{{ 'stats.topWinners.title' | translate }}</h2>
+
+      <div class="bar-chart bar-chart-horizontal">
+        @for (item of topWinners; track item.name) {
+          <div class="bar-row">
+            <div class="bar-row-label">
+              <img
+                [src]="c.flagBasePath + item.flag + c.flagExtension"
+                [alt]="item.name"
+                class="bar-flag"
+              />
+              <span class="bar-country">{{ item.name }}</span>
+            </div>
+            <div class="bar-track">
+              <div
+                class="bar-fill bar-fill-gold"
+                [style.--pct]="pct(item.wins, maxWins)"
+              ></div>
+            </div>
+            <span class="bar-value">{{ item.wins }}</span>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Championships per Decade ─────────────────────────────── -->
+  <section class="stats-section">
+    <div class="stats-section-inner">
+      <h2 class="stats-section-title">{{ 'stats.byDecade.title' | translate }}</h2>
+
+      <div class="bar-chart bar-chart-vertical">
+        @for (item of byDecade; track item.decade) {
+          <div class="bar-col">
+            <span class="bar-col-value">{{ item.count }}</span>
+            <div class="bar-col-track">
+              <div
+                class="bar-col-fill"
+                [class.bar-col-fill-ongoing]="item.ongoing"
+                [style.--pct]="pct(item.count, maxDecadeCount)"
+              ></div>
+            </div>
+            <span class="bar-col-label">
+              {{ item.decade }}
+              @if (item.ongoing) {
+                <em class="bar-col-ongoing">{{ 'stats.byDecade.ongoing' | translate }}</em>
+              }
+            </span>
+          </div>
+        }
+      </div>
+    </div>
+  </section>
+
+</div>
